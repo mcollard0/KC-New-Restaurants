@@ -1857,3 +1857,61 @@ Processing business license data...
 Processed 30150 total records, found 474 food businesses in 12.38 seconds
 Connecting to SMTP server smtp.gmail.com:587
 Email sent to mc******@gmail.com
+DRY-RUN MODE ENABLED - No database modifications will be performed
+Skipping random delay due to --nodelay option
+Connected to MongoDB: mongodb+srv://[credentials_removed]@cluster0.6ucxlv7.mongodb.net/
+[DRY-RUN] Skipping drop_index operation for business_name_1
+[DRY-RUN] Skipping index creation for compound business fields
+[DRY-RUN] Skipping index creation for insert_date
+Setup database: kansas_city, collection: food_businesses
+Starting KC New Restaurants processing
+Downloading KC business license data...
+  Getting initial search form...
+  Submitting search form...
+  Looking for CSV export button...
+  Found export button: ctl00$MainContent$exportBtn
+  Submitting export form...
+Response content type: application/octet-stream
+Response status: 200
+First 500 chars of response: Business Name,DBA Name,Address,Business Type,Valid License For
+"PINNACLE LEADERSHIP SOLUTIONS LLC"," ","12732 BYARS RD GRANDVIEW MO 64030-2151","Administrative Management and General Management Consulting Services","2025"
+"HUMPERT JERRY","BEST WAY HEATING & COOLING","2630 N 64TH TER KANSAS CITY KS 66104-2613","Commercial and Institutional Building Construction","2025"
+"EASYVET HOLDINGS INC"," ","30536  PO BOX KNOXVILLE TN 37930-0536","Administrative Management and General Management Consultin
+Number of lines in response: 30162
+First row (header): ['Business Name', 'DBA Name', 'Address', 'Business Type', 'Valid License For']
+Second row (sample): ['PINNACLE LEADERSHIP SOLUTIONS LLC', ' ', '12732 BYARS RD GRANDVIEW MO 64030-2151', 'Administrative Management and General Management Consulting Services', '2025']
+Downloaded 30161 records from KC Business License data in 2.26 seconds
+Processing business license data...
+ Processing 30,161 records...
+Processed 30161 total records, found 474 food businesses in 12.30 seconds
+Connecting to SMTP server smtp.gmail.com:587
+Email sent to mc******@gmail.com
+DRY-RUN MODE ENABLED - No database modifications will be performed
+Skipping random delay due to --nodelay option
+Connected to MongoDB: mongodb+srv://[credentials_removed]@cluster0.6ucxlv7.mongodb.net/
+[DRY-RUN] Skipping drop_index operation for business_name_1
+[DRY-RUN] Skipping index creation for compound business fields
+[DRY-RUN] Skipping index creation for insert_date
+Setup database: kansas_city, collection: food_businesses
+Starting KC New Restaurants processing
+Downloading KC business license data...
+  Getting initial search form...
+  Submitting search form...
+  Looking for CSV export button...
+  Found export button: ctl00$MainContent$exportBtn
+  Submitting export form...
+Response content type: application/octet-stream
+Response status: 200
+First 500 chars of response: Business Name,DBA Name,Address,Business Type,Valid License For
+"PINNACLE LEADERSHIP SOLUTIONS LLC"," ","12732 BYARS RD GRANDVIEW MO 64030-2151","Administrative Management and General Management Consulting Services","2025"
+"HUMPERT JERRY","BEST WAY HEATING & COOLING","2630 N 64TH TER KANSAS CITY KS 66104-2613","Commercial and Institutional Building Construction","2025"
+"EASYVET HOLDINGS INC"," ","30536  PO BOX KNOXVILLE TN 37930-0536","Administrative Management and General Management Consultin
+Number of lines in response: 30162
+First row (header): ['Business Name', 'DBA Name', 'Address', 'Business Type', 'Valid License For']
+Second row (sample): ['PINNACLE LEADERSHIP SOLUTIONS LLC', ' ', '12732 BYARS RD GRANDVIEW MO 64030-2151', 'Administrative Management and General Management Consulting Services', '2025']
+Downloaded 30161 records from KC Business License data in 1.98 seconds
+Processing business license data...
+ Processing 30,161 records...
+Processed 30161 total records, found 474 food businesses in 12.58 seconds
+Connecting to SMTP server smtp.gmail.com:587
+Email sent to mc******@gmail.com

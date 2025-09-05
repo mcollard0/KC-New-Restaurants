@@ -314,6 +314,12 @@ numpy>=1.21.0
 - Sanitize all user input in email templates
 - Rate limiting on email sends to prevent spam
 
+#### Logging Security
+- All MongoDB URIs are sanitized before logging to prevent credential exposure
+- Email addresses are masked in logs (showing only first 2 characters)
+- Sensitive configuration values should never appear in plain text logs
+- Regular cleanup of old log files to prevent credential leakage
+
 ### 12. Known Issues & Future Enhancements
 
 #### Current Limitations

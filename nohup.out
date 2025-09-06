@@ -1,0 +1,12 @@
+============================================================
+Multi-Core Fibonacci Computation
+============================================================
+Target cores: 32
+Duration: 60.00 minute(s) (3600 seconds)
+Start time: 2025-09-06 07:56:17.043212
+End time: 2025-09-06 08:56:17.043221
+Log file: /home/michael/fibonacci_log_20250906_075617.txt
+============================================================
+
+Starting 32 worker processes...
+Using 32 processes on 32 CPU cores (logical)

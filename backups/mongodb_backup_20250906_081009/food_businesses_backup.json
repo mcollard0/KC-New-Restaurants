@@ -1,0 +1,3792 @@
+[
+  {
+    "_id": "68b043c617d80d56c3005870",
+    "business_name": "CARNICERIA EL TORITO III LLC",
+    "dba_name": "",
+    "address": "6200 INDEPENDENCE AVE KANSAS CITY MO 64125-1621",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:50",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c617d80d56c3005871",
+    "business_name": "BSMOOTHIED LLC",
+    "dba_name": "SMOOTHIE KING",
+    "address": "6368 N COSBY AVE KANSAS CITY MO 64151-2344",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:50",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c717d80d56c3005872",
+    "business_name": "HARRIS ERICA",
+    "dba_name": "CUPCAKIN LLC",
+    "address": "2450 GRAND BLVD STE 126 KANSAS CITY MO 64108-2552",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:51",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c717d80d56c3005873",
+    "business_name": "CASEYS MARKETING COMPANY",
+    "dba_name": "CASEY'S #5082",
+    "address": "13831 MADISON AVE KANSAS CITY MO 64145-1609",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:51",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c717d80d56c3005874",
+    "business_name": "OTR KC LLC",
+    "dba_name": "XO",
+    "address": "709 W 17TH ST KANSAS CITY MO 64108-1129",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:51",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c717d80d56c3005875",
+    "business_name": "GROCERIES 4 LESS LLC",
+    "dba_name": "",
+    "address": "4305 N ANTIOCH RD KANSAS CITY MO 64117-1611",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:51",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c717d80d56c3005876",
+    "business_name": "TRACY STARR",
+    "dba_name": "DAY28 WELLNESS CO LLC",
+    "address": "12005 E 47TH ST KANSAS CITY MO 64133-2517",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:51",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c717d80d56c3005877",
+    "business_name": "18TH & VINE PARTNERS JV LLC",
+    "dba_name": "",
+    "address": "1 INTERNATIONAL SQ KANSAS CITY MO 64153-1106",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:51",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c717d80d56c3005878",
+    "business_name": "PER CUP INTERNATIONAL INC",
+    "dba_name": "PERCUP COFFEES",
+    "address": "14 E 57TH ST KANSAS CITY MO 64113-2105",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:51",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c717d80d56c3005879",
+    "business_name": "DONMOA INC",
+    "dba_name": "BARNYARD LIQUOR",
+    "address": "9510 BLUE RIDGE BLVD KANSAS CITY MO 64134-1338",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:51",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c717d80d56c300587a",
+    "business_name": "MISSOURI WINGS XI LLC",
+    "dba_name": "WINGSTOP 2571",
+    "address": "1120 W 103RD ST STE 300 KANSAS CITY MO 64114-4511",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:51",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c717d80d56c300587b",
+    "business_name": "DH 3519 LLC",
+    "dba_name": "MIDTOWN MARKET",
+    "address": "3967 MAIN ST KANSAS CITY MO 64111-1916",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:51",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c717d80d56c300587c",
+    "business_name": "SK DONUT LLC",
+    "dba_name": "YUMMY'S DONUT PALACE",
+    "address": "3120 STADIUM DR KANSAS CITY MO 64128-2244",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:51",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c717d80d56c300587d",
+    "business_name": "HEREFORD HOUSE ZONA ROSA LLC",
+    "dba_name": "",
+    "address": "8661 N STODDARD KANSAS CITY MO 64153-0000",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:51",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c717d80d56c300587e",
+    "business_name": "MBT ENTERPRISES LLC",
+    "dba_name": "YOUR DESSERT DIVA",
+    "address": "9601 N EVANSTON AVE KANSAS CITY MO 64157-8705",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:51",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c300587f",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #218",
+    "address": "7133 NW BARRY RD KANSAS CITY MO 64153-1719",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c3005880",
+    "business_name": "CASEYS MARKETING COMPANY",
+    "dba_name": "CASEYS MARKETING COMPANY (ANKENY DC)",
+    "address": "1 SE CONVENIENCE BLVD ANKENY IA 50021-9672",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c3005881",
+    "business_name": "PRECISE HEALTHCARE OPERATIONS MANAGEMENT LLC",
+    "dba_name": "PRECISE OPERATIONS MANAGEMENT LLC",
+    "address": "705B SE MELODY LN STE 215 LEES SUMMIT MO 64063-4380",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c3005882",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #225",
+    "address": "1251 NW BARRY RD KANSAS CITY MO 64155-2707",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c3005883",
+    "business_name": "PRAIRIE PETROLEUM INC",
+    "dba_name": "",
+    "address": "6250 NW BARRY RD KANSAS CITY MO 64154-2530",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c3005884",
+    "business_name": "NOVEL BITES",
+    "dba_name": "NOVEL BITES",
+    "address": "10829 FULLER AVE KANSAS CITY MO 64134-2606",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c3005885",
+    "business_name": "ANDY'S FROZEN CUSTARD STORES LLC",
+    "dba_name": "",
+    "address": "650 NW BARRY RD KANSAS CITY MO 64155-2702",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c3005886",
+    "business_name": "R P R ENTERPRISES INC",
+    "dba_name": "TOPSY'S POPCORN",
+    "address": "4706 CENTRAL ST KANSAS CITY MO 64112-1521",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c3005887",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #176",
+    "address": "1201 WESTPORT RD KANSAS CITY MO 64111-4224",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c3005888",
+    "business_name": "VALUE GROCERS LLC",
+    "dba_name": "SAVE A LOT",
+    "address": "3821 E TRUMAN RD KANSAS CITY MO 64127-2231",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c3005889",
+    "business_name": "SCHWANS HOME SERVICE INC",
+    "dba_name": "",
+    "address": "178  PO BOX MARSHALL MN 56258-0178",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c300588a",
+    "business_name": "KC LIONS INC",
+    "dba_name": "",
+    "address": "5425 PROSPECT AVE KANSAS CITY MO 64130-3614",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c300588b",
+    "business_name": "WALGREEN CO",
+    "dba_name": "WALGREENS",
+    "address": "2301 HOLMES ST KANSAS CITY MO 64108-2640",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c817d80d56c300588c",
+    "business_name": "BARAKA MARKET",
+    "dba_name": "",
+    "address": "1447 INDEPENDENCE AVE KANSAS CITY MO 64106-1448",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:52",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c300588d",
+    "business_name": "CLEMONS HELEN",
+    "dba_name": "",
+    "address": "5700 N MAIN ST APT 142 GLADSTONE MO 64118-4293",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c300588e",
+    "business_name": "INDIANA MINI MART LLC",
+    "dba_name": "",
+    "address": "3912 INDIANA AVE KANSAS CITY MO 64130-1440",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c300588f",
+    "business_name": "JAVA GARDEN INC",
+    "dba_name": "MILDRED'S",
+    "address": "5060 MAIN ST KANSAS CITY MO 64112-2755",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c3005890",
+    "business_name": "TREES OF LIFE LLC",
+    "dba_name": "",
+    "address": "11129 N OAK TRFY STE A KANSAS CITY MO 64155-1167",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c3005891",
+    "business_name": "P & R DIVERSIFIED INC",
+    "dba_name": "",
+    "address": "6201 SAINT JOHN AVE KANSAS CITY MO 64123-1963",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c3005892",
+    "business_name": "ALDI INC KANSAS",
+    "dba_name": "ALDI FOODS",
+    "address": "10475 BLUE RIDGE BLVD KANSAS CITY MO 64134-1916",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c3005893",
+    "business_name": "MIDTOWN KAVA LLC",
+    "dba_name": "",
+    "address": "1415 W 39TH ST # D KANSAS CITY MO 64111-4427",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c3005894",
+    "business_name": "ALMEDA LABS LLC",
+    "dba_name": "",
+    "address": "1647 MADISON AVE APT 1 KANSAS CITY MO 64108-1161",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c3005895",
+    "business_name": "MIDWEST GROCERS II LLC",
+    "dba_name": "PARVIN THRIFTWAY",
+    "address": "5004 NE PARVIN RD KANSAS CITY MO 64117-2050",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c3005896",
+    "business_name": "SHIVERS ICE HOUSE LLC",
+    "dba_name": "",
+    "address": "27519 S RAIL RD FREEMAN MO 64746-5136",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c3005897",
+    "business_name": "FOUR B CORP",
+    "dba_name": "PRICE CHOPPER #21",
+    "address": "500 NE BARRY RD KANSAS CITY MO 64155-2879",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c3005898",
+    "business_name": "TEXAS ROADHOUSE HOLDINGS LLC",
+    "dba_name": "",
+    "address": "8051 NW ROANRIDGE RD KANSAS CITY MO 64151-1353",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c3005899",
+    "business_name": "FAT BEE DRINKS DOWNTOWN LLC",
+    "dba_name": "",
+    "address": "1111 MAIN ST STE 165 KANSAS CITY MO 64105-2116",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043c917d80d56c300589a",
+    "business_name": "HIGHLANDS SIPS + EVENTS",
+    "dba_name": "",
+    "address": "3741 N 124TH ST KANSAS CITY KS 66109-4242",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:53",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c300589b",
+    "business_name": "J'S SWEET TEA LLC",
+    "dba_name": "",
+    "address": "424 PINNACLE DR RAYMORE MO 64083-8579",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c300589c",
+    "business_name": "ALRAHMAN MEDITERRANEAN MARKET LLC",
+    "dba_name": "",
+    "address": "2536 INDEPENDENCE AVE KANSAS CITY MO 64124-2402",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c300589d",
+    "business_name": "HULLHOUSE COFFEE LLC",
+    "dba_name": "HULLHOUSE COFFEE",
+    "address": "434 NW LEGACY DR KANSAS CITY MO 64155-2894",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c300589e",
+    "business_name": "AFRIQUE INTERNATIONAL MARKET LLC",
+    "dba_name": "AFRIQUE INTERNATIONAL MARKET",
+    "address": "8141 N OAK TRFY STE A KANSAS CITY MO 64118-1269",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c300589f",
+    "business_name": "LOFFREDO GARDENS INC",
+    "dba_name": "LOFFREDO FRESH PRODUCE CO INC",
+    "address": "750 WYOMING ST KANSAS CITY MO 64101-1140",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c30058a0",
+    "business_name": "ALDI INC KANSAS",
+    "dba_name": "",
+    "address": "6415 TROOST AVE KANSAS CITY MO 64131-1229",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c30058a1",
+    "business_name": "ASHER CONNIE",
+    "dba_name": "",
+    "address": "17460 HILLTOP RIDGE DR EUREKA MO 63025-1035",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c30058a2",
+    "business_name": "DOUGH DROP COOKIES LLC",
+    "dba_name": "DOUGH DROP COOKIES",
+    "address": "8581 N GREEN HILLS RD KANSAS CITY MO 64154-1404",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c30058a3",
+    "business_name": "THE HEATLAND LLC",
+    "dba_name": "",
+    "address": "19 NW 40TH ST KANSAS CITY MO 64116-1706",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c30058a4",
+    "business_name": "JAVA GARDEN INC",
+    "dba_name": "MILDRED'S COFFEEHOUSE",
+    "address": "908 BALTIMORE AVE KANSAS CITY MO 64105-1707",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c30058a5",
+    "business_name": "BROOKSIDE SPECIALTY PARTNERS LLC",
+    "dba_name": "THE ROASTERIE CAFE",
+    "address": "6223 BROOKSIDE BLVD KANSAS CITY MO 64113-1629",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c30058a6",
+    "business_name": "MIDWEST GROCERS LLC",
+    "dba_name": "SAVER FOOD",
+    "address": "1616 E 63RD ST KANSAS CITY MO 64110-3502",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c30058a7",
+    "business_name": "PAROYA PETROLEUM INC",
+    "dba_name": "EXECUTIVE HILLS 66-SHORT STOP LIQUOR",
+    "address": "9700 NW POLO DR KANSAS CITY MO 64153-1392",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c30058a8",
+    "business_name": "DISCOUNT GROCER LLC",
+    "dba_name": "",
+    "address": "7510 E 87TH ST KANSAS CITY MO 64138-3916",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ca17d80d56c30058a9",
+    "business_name": "STATELINE SMOOTHIE LLC",
+    "dba_name": "SMOOTHIE KING",
+    "address": "8825 STATE LINE RD KANSAS CITY MO 64114-2704",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:54",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058aa",
+    "business_name": "GNC HOLDINGS LLC",
+    "dba_name": "",
+    "address": "4025 MILL ST KANSAS CITY MO 64111-3008",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058ab",
+    "business_name": "LW FRAZIER ENTERPRISES LLC",
+    "dba_name": "BC BISTRO",
+    "address": "7747 NW PRAIRIE VIEW RD KANSAS CITY MO 64151-1542",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058ac",
+    "business_name": "CROWS COFFEE LLC",
+    "dba_name": "CROWS COFFEE",
+    "address": "535 E RED BRIDGE RD KANSAS CITY MO 64131-4015",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058ad",
+    "business_name": "CBD AMERICAN SHAMAN LLC",
+    "dba_name": "",
+    "address": "307 NE ENGLEWOOD RD STE A KANSAS CITY MO 64118-4531",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058ae",
+    "business_name": "MADISON FOODS INC",
+    "dba_name": "",
+    "address": "4357 N CHOUTEAU TRFY KANSAS CITY MO 64117-1743",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058af",
+    "business_name": "ONE STOP SHOP LLC",
+    "dba_name": "",
+    "address": "5805 E 17TH ST KANSAS CITY MO 64126-2401",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058b0",
+    "business_name": "FOUR B CORP",
+    "dba_name": "HEN HOUSE #18",
+    "address": "8430 WORNALL RD KANSAS CITY MO 64114-5812",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058b1",
+    "business_name": "ARSLAN PETRO LLC",
+    "dba_name": "KHAN MOHAMMAD M",
+    "address": "8401 N OAK TRFY KANSAS CITY MO 64155-2430",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058b2",
+    "business_name": "SPIN CONCEPTS INC",
+    "dba_name": "SPIN! PIZZA",
+    "address": "6100 NW 63RD TER BLDG 11 KANSAS CITY MO 64151-3330",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058b3",
+    "business_name": "COLE AH'LEISHA",
+    "dba_name": "AH'LEISHA'S COOKIE CO.",
+    "address": "4741 NORTON CIR KANSAS CITY MO 64130-2441",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058b4",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #221",
+    "address": "9600 N OAK TRFY KANSAS CITY MO 64155-2002",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058b5",
+    "business_name": "LAS AMERICAS LLC",
+    "dba_name": "",
+    "address": "5208 E 24TH ST KANSAS CITY MO 64127-4707",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058b6",
+    "business_name": "T2T FOOD SERVICE LLC",
+    "dba_name": "TOAST TO TOAST",
+    "address": "770 ADMIRAL BLVD KANSAS CITY MO 64106-1514",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058b7",
+    "business_name": "ISABA INC",
+    "dba_name": "LOS ALAMOS MARKET AND COCINA",
+    "address": "1667 SUMMIT ST KANSAS CITY MO 64108-1139",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cb17d80d56c30058b8",
+    "business_name": "BHANDAL CORPORATION",
+    "dba_name": "EXPRESS MART",
+    "address": "1331 E BANNISTER RD KANSAS CITY MO 64131-3024",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:55",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058b9",
+    "business_name": "DAWN FOOD PRODUCTS INC",
+    "dba_name": "",
+    "address": "1501 SOUTHERN RD KANSAS CITY MO 64120-1123",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058ba",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #173",
+    "address": "528 NW ENGLEWOOD RD KANSAS CITY MO 64118-3960",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058bb",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #178",
+    "address": "10601 STATE LINE RD KANSAS CITY MO 64114-4804",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058bc",
+    "business_name": "OLIVE CAFE INC",
+    "dba_name": "OLIVE CAFE",
+    "address": "9530 JAMES A REED RD KANSAS CITY MO 64134-1689",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058bd",
+    "business_name": "RASPADOS MORA LLC",
+    "dba_name": "",
+    "address": "6514 E 7TH ST KANSAS CITY MO 64125-1503",
+    "business_type": "Snack and Nonalcoholic Beverage Bars",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058be",
+    "business_name": "CHINATOWN WHOLESALE FOOD MARKET INC",
+    "dba_name": "CHINATOWN FOOD MARKET",
+    "address": "202 GRAND BLVD KANSAS CITY MO 64106-1014",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058bf",
+    "business_name": "GNC HOLDINGS LLC",
+    "dba_name": "",
+    "address": "2682 NE VIVION RD KANSAS CITY MO 64119-2513",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058c0",
+    "business_name": "QUAFF INC",
+    "dba_name": "QUAFF BUFFET",
+    "address": "1010 BROADWAY BLVD KANSAS CITY MO 64105-1511",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058c1",
+    "business_name": "2HOT2HANDLE BBQ KC",
+    "dba_name": "",
+    "address": "1535 N 55TH ST KANSAS CITY KS 66102-1428",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058c2",
+    "business_name": "SFM LLC",
+    "dba_name": "SPROUTS FARMERS MARKET",
+    "address": "6061 NW 64TH ST KANSAS CITY MO 64151-2432",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058c3",
+    "business_name": "TRADER JOES EAST INC",
+    "dba_name": "",
+    "address": "8600 WARD PKWY STE 1020 KANSAS CITY MO 64114-2613",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058c4",
+    "business_name": "MR SMOOTHS SNACKS",
+    "dba_name": "",
+    "address": "9300 STARK AVE KANSAS CITY MO 64138-4814",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058c5",
+    "business_name": "CITY BARREL PIZZA + PATIO LLC",
+    "dba_name": "",
+    "address": "120 E GREGORY BLVD KANSAS CITY MO 64114-1120",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cc17d80d56c30058c6",
+    "business_name": "TRIDEL ENTERPRISES INC",
+    "dba_name": "TRIDEL FOOD MART",
+    "address": "11050 HOLMES RD KANSAS CITY MO 64131-3589",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:56",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058c7",
+    "business_name": "KCFR LLC",
+    "dba_name": "MCDONALDS",
+    "address": "6200 MAIN ST GRANDVIEW MO 64030-2693",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058c8",
+    "business_name": "ARE YOU THIRSTY? LLC",
+    "dba_name": "",
+    "address": "103 NE 110TH TER KANSAS CITY MO 64155-1197",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058c9",
+    "business_name": "KSA 9 COOKIES LLC",
+    "dba_name": "CRUMBL COOKIES - TIFFANY SPRINGS",
+    "address": "9008 N SKYVIEW AVE KANSAS CITY MO 64154-8501",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058ca",
+    "business_name": "DUTCH BROS. LLC",
+    "dba_name": "DUTCH BROS COFFEE",
+    "address": "3331 NE 86TH TERR KANSAS CITY MO 64156-0000",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058cb",
+    "business_name": "OHANAS SHAVE ICE LLC",
+    "dba_name": "OHANA'S SHAVE ICE LLC",
+    "address": "2851 W 131ST ST OLATHE KS 66061-5988",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058cc",
+    "business_name": "COSENTINO ENTERPRISES INC",
+    "dba_name": "COSENTINO'S NEW MARK SUN FRESH #156",
+    "address": "10225 N OAK TRFY KANSAS CITY MO 64155-1715",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058cd",
+    "business_name": "GOURMET GROCERY & DELI INC",
+    "dba_name": "",
+    "address": "9 E 3RD ST KANSAS CITY MO 64106-1004",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058ce",
+    "business_name": "JAD AK LLC",
+    "dba_name": "ASWAQ AL ARABI",
+    "address": "4107 N CHERRY ST STE B KANSAS CITY MO 64116-2600",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058cf",
+    "business_name": "BROWNES MARKET INC",
+    "dba_name": "",
+    "address": "3300 PENNSYLVANIA AVE KANSAS CITY MO 64111-2724",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058d0",
+    "business_name": "BLUEMONT GROUP LLC",
+    "dba_name": "DUNKIN KCI INLINE 363991",
+    "address": "1 INTERNATIONAL SQ KANSAS CITY MO 64153-1106",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058d1",
+    "business_name": "MELLO MALLOW LLC",
+    "dba_name": "MELLO MALLOW",
+    "address": "8581 N GREEN HILLS RD BLDG  KANSAS CITY MO 64154-1404",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058d2",
+    "business_name": "ADD TO THE BEAUTY BAKERY LLC",
+    "dba_name": "",
+    "address": "7424 NW RHODE AVE KANSAS CITY MO 64152-2377",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058d3",
+    "business_name": "MERCADO LLC",
+    "dba_name": "FRESH MARKET",
+    "address": "5117 INDEPENDENCE AVE KANSAS CITY MO 64124-3003",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cd17d80d56c30058d4",
+    "business_name": "MILKWEED CREATIVE LLC",
+    "dba_name": "BACARO PRIMO",
+    "address": "323 E 55TH ST KANSAS CITY MO 64113-1222",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:57",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058d5",
+    "business_name": "NL LLC",
+    "dba_name": "HONG KONG SUPERMARKET",
+    "address": "6421 E TRUMAN RD KANSAS CITY MO 64126-2635",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058d6",
+    "business_name": "VANTEDGE CAKES LLC",
+    "dba_name": "NOTHING BUNDT CAKES",
+    "address": "8930 N SKYVIEW AVE KANSAS CITY MO 64154-8502",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058d7",
+    "business_name": "CASEYS MARKETING COMPANY",
+    "dba_name": "CASEYS GENERAL STORE #3241",
+    "address": "7907 N OAK TRFY KANSAS CITY MO 64118-1428",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058d8",
+    "business_name": "ABOLE BUNA LLC",
+    "dba_name": "",
+    "address": "301 E 9TH ST KANSAS CITY MO 64106-2203",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058d9",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #238",
+    "address": "5025 N ANTIOCH RD KANSAS CITY MO 64119-3404",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058da",
+    "business_name": "LAO ENTERPRISES LLC",
+    "dba_name": "BETTY RAE'S ICE CREAM",
+    "address": "7140 WORNALL RD KANSAS CITY MO 64114-1344",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058db",
+    "business_name": "LILOS'S SHAVED ICE LLC",
+    "dba_name": "",
+    "address": "10420 N CYPRESS AVE KANSAS CITY MO 64156-2921",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058dc",
+    "business_name": "ANDY'S FROZEN CUSTARD STORES LLC",
+    "dba_name": "",
+    "address": "6000 NW 88TH ST KANSAS CITY MO 64154-1613",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058dd",
+    "business_name": "PARIS BROS LLC",
+    "dba_name": "",
+    "address": "30 W PERSHING RD KANSAS CITY MO 64108-2410",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058de",
+    "business_name": "FAMILY GROCERY LLC",
+    "dba_name": "",
+    "address": "4020 SAINT JOHN AVE KANSAS CITY MO 64123-1716",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058df",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #184",
+    "address": "4327 MAIN ST KANSAS CITY MO 64111-1809",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058e0",
+    "business_name": "SHAWNEE FLUFFY DONUTS INC",
+    "dba_name": "",
+    "address": "10123 STATE LINE RD KANSAS CITY MO 64114-4262",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058e1",
+    "business_name": "BETTER CHEDDAR INC THE",
+    "dba_name": "",
+    "address": "604 W 48TH ST KANSAS CITY MO 64112-2001",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058e2",
+    "business_name": "BHMO1 LLC",
+    "dba_name": "NEW YORK BUTCHER SHOPPE AND WINE BAR",
+    "address": "4928 MAIN ST KANSAS CITY MO 64112-2630",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043ce17d80d56c30058e3",
+    "business_name": "PALACANA LLC",
+    "dba_name": "",
+    "address": "830 SOUTHWEST BLVD KANSAS CITY MO 64108-2339",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:58",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058e4",
+    "business_name": "YOGURTINIZONAROSA LLC",
+    "dba_name": "FIFTH & EMERY FROZEN YOGURT & CHOCOLATE - ZONA ROSA",
+    "address": "8671 NW PRAIRIE VIEW RD KANSAS CITY MO 64153-1846",
+    "business_type": "Snack and Nonalcoholic Beverage Bars",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058e5",
+    "business_name": "EJ AFRICAN MARKET LLC",
+    "dba_name": "",
+    "address": "2532 INDEPENDENCE AVE KANSAS CITY MO 64124-2402",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058e6",
+    "business_name": "ROSE ANNE M",
+    "dba_name": "GARDEN AND SEA CHIMES",
+    "address": "4800 S MAYBROOK CT INDEPENDENCE MO 64055-5372",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058e7",
+    "business_name": "HY VEE INC",
+    "dba_name": "HYVEE #3",
+    "address": "5330 NW 64TH ST KANSAS CITY MO 64151-2414",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058e8",
+    "business_name": "THE LITTLEST BAKE SHOP KC LLC",
+    "dba_name": "",
+    "address": "5511 TROOST AVE KANSAS CITY MO 64110-2821",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058e9",
+    "business_name": "JAY'S GROCERY & RESTAURANT LLC",
+    "dba_name": "",
+    "address": "2605 INDEPENDENCE AVE KANSAS CITY MO 64124-2433",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058ea",
+    "business_name": "ANDY'S FROZEN CUSTARD HOLDING",
+    "dba_name": "",
+    "address": "1200 WESTPORT RD KANSAS CITY MO 64111-4225",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058eb",
+    "business_name": "PANADERIA DE LAS AMERICAS LLC",
+    "dba_name": "",
+    "address": "826 SOUTHWEST BLVD KANSAS CITY MO 64108-2339",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058ec",
+    "business_name": "RAINEY ANDREA",
+    "dba_name": "",
+    "address": "217 W 19TH TER KANSAS CITY MO 64108-2027",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058ed",
+    "business_name": "MILLENNIUM OPERATIONS LLC",
+    "dba_name": "WORLDS OF FUN",
+    "address": "4545 WORLDS OF FUN AVENUE KANSAS CITY MO 64161-0000",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058ee",
+    "business_name": "BEHOUNEK INC",
+    "dba_name": "BREWTOP PUB & PATIO THE",
+    "address": "10502 N WILLOW AVE KANSAS CITY MO 64157-7734",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058ef",
+    "business_name": "CASEYS MARKETING COMPANY",
+    "dba_name": "MINIT MART #4354",
+    "address": "7447 STATE LINE RD KANSAS CITY MO 64114-1554",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058f0",
+    "business_name": "CASEYS MARKETING COMPANY",
+    "dba_name": "MINIT MART #3945",
+    "address": "503 NW BARRY RD KANSAS CITY MO 64155-2732",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058f1",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #227",
+    "address": "3101 SOUTHWEST BLVD KANSAS CITY MO 64108",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043cf17d80d56c30058f2",
+    "business_name": "ELEVATED NOSTALGIA BAKESHOP LLC",
+    "dba_name": "",
+    "address": "524 E 123RD TER KANSAS CITY MO 64145-1752",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:55:59",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c30058f3",
+    "business_name": "CAMPOS ROMERO PAOLA M",
+    "dba_name": "CHAMBRE COFFEE",
+    "address": "4010 PENNSYLVANIA AVE BLDG  KANSAS CITY MO 64111-3010",
+    "business_type": "Cafeterias Grill Buffets and Buffets",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c30058f4",
+    "business_name": "GEEHAN DELICACIES",
+    "dba_name": "",
+    "address": "30 W PERSHING RD STE 130 KANSAS CITY MO 64108-2435",
+    "business_type": "Confectionery and Nut Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c30058f5",
+    "business_name": "KC COOKIE DEALER",
+    "dba_name": "",
+    "address": "12505 CHERRY ST KANSAS CITY MO 64145-1153",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c30058f6",
+    "business_name": "LOVING CUP LLC",
+    "dba_name": "SCOOTER'S COFFEE",
+    "address": "8710 E 63RD ST KANSAS CITY MO 64133-4726",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c30058f7",
+    "business_name": "HEIRLOOM BAKERY LLC",
+    "dba_name": "HEIRLOOM BAKERY & HEARTH",
+    "address": "401 E 63RD ST KANSAS CITY MO 64110-3327",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c30058f8",
+    "business_name": "THAI ORCHID 2 LLC",
+    "dba_name": "THAI ORCHID",
+    "address": "460 NW LEGACY DR KANSAS CITY MO 64155-2894",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c30058f9",
+    "business_name": "APPLE AMERICAN GROUP LLC",
+    "dba_name": "",
+    "address": "6200 OAK TREE BLVD STE 250 INDEPENDENCE OH 44131-6943",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c30058fa",
+    "business_name": "P & R DIVERSIFIED INC",
+    "dba_name": "",
+    "address": "4815 INDEPENDENCE AVE KANSAS CITY MO 64124-2901",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c30058fb",
+    "business_name": "ALDI INC KANSAS",
+    "dba_name": "",
+    "address": "7511 WORNALL RD KANSAS CITY MO 64114-1815",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c30058fc",
+    "business_name": "HIMS INC.",
+    "dba_name": "HIMS INC.",
+    "address": "2269 CHESTNUT ST STE 523 SAN FRANCISCO CA 94123-2600",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c30058fd",
+    "business_name": "KCI SMOOTHIE LLC",
+    "dba_name": "SMOOTHIE KING",
+    "address": "1 KANSAS CITY BLVD KANSAS CITY MO 64153-7700",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c30058fe",
+    "business_name": "SANGHA LLC",
+    "dba_name": "",
+    "address": "130 E LINWOOD BLVD KANSAS CITY MO 64111-1118",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c30058ff",
+    "business_name": "BLUE PARKWAY GROCERS LLC",
+    "dba_name": "",
+    "address": "4209 E 50TH TER KANSAS CITY MO 64130-2851",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d017d80d56c3005900",
+    "business_name": "LOUNCE ANGEL A",
+    "dba_name": "L AND J HEALTHCARE LLC",
+    "address": "8231 VIRGINIA AVE APT 1 KANSAS CITY MO 64131-2458",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:00",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c3005901",
+    "business_name": "ALTERNATIVE THINKING LLC",
+    "dba_name": "FAIRWAY CREAMERY",
+    "address": "809 W 17TH ST KANSAS CITY MO 64108-1131",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c3005902",
+    "business_name": "CASEYS MARKETING COMPANY",
+    "dba_name": "MINIT MART #4355",
+    "address": "10245 STATE LINE RD KANSAS CITY MO 64114-4263",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c3005903",
+    "business_name": "SPG 4 LLC",
+    "dba_name": "BLUE VALLEY MARKET",
+    "address": "4300 CLEVELAND AVE KANSAS CITY MO 64130-2038",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c3005904",
+    "business_name": "K C FUDGE INC",
+    "dba_name": "CHIPS CHOCOLATE FACTORY",
+    "address": "2450 GRAND BLVD STE 239 KANSAS CITY MO 64108-2516",
+    "business_type": "Confectionery and Nut Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c3005905",
+    "business_name": "PETRO USA LLC",
+    "dba_name": "WESTPORT BP",
+    "address": "4004 BROADWAY BLVD KANSAS CITY MO 64111-2602",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c3005906",
+    "business_name": "MID AM FOOD ENTERPRISES INC",
+    "dba_name": "WATTS MILL PRICE CHOPPER",
+    "address": "1030 W 103RD ST KANSAS CITY MO 64114-4510",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c3005907",
+    "business_name": "MADE IN KC LLC",
+    "dba_name": "MADE IN KC LLC",
+    "address": "306 W 47TH ST KANSAS CITY MO 64112-1613",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c3005908",
+    "business_name": "SHEKC KITCHEN LLC",
+    "dba_name": "LEAN KITCHEN",
+    "address": "9766 N ASH AVE KANSAS CITY MO 64157-9742",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c3005909",
+    "business_name": "SUGAR MAMA'S MOBILE BAKERY LLC",
+    "dba_name": "",
+    "address": "8581 N GREEN HILLS RD KANSAS CITY MO 64154-1404",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c300590a",
+    "business_name": "FOUR B CORP",
+    "dba_name": "PRICE CHOPPER #11",
+    "address": "207 NE ENGLEWOOD RD KANSAS CITY MO 64118-4586",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c300590b",
+    "business_name": "INNER CITY UNITED OIL COMPANY INC",
+    "dba_name": "",
+    "address": "3816 E 31ST ST KANSAS CITY MO 64128-1704",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c300590c",
+    "business_name": "MANREET INC",
+    "dba_name": "7 ELEVEN STORE NO 18711C",
+    "address": "2636 VAN BRUNT BLVD KANSAS CITY MO 64127-4744",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c300590d",
+    "business_name": "IVOIRE AFRICAN MARKET LLC",
+    "dba_name": "",
+    "address": "8325 WORNALL RD KANSAS CITY MO 64114-5817",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c300590e",
+    "business_name": "YUMMY LICIOUS COOKIE COMPANY LLC",
+    "dba_name": "YUMMY LICIOUS COOKIE COMPANY",
+    "address": "14438 W 100TH ST LENEXA KS 66215-1100",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d117d80d56c300590f",
+    "business_name": "MISSOURI WINGS IX LLC",
+    "dba_name": "WINGSTOP 2534",
+    "address": "3029 PROSPECT AVE KANSAS CITY MO 64128-1530",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:01",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c3005910",
+    "business_name": "ALDI INC KANSAS",
+    "dba_name": "",
+    "address": "1200 N KIRK RD BATAVIA IL 60510-1443",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c3005911",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #159",
+    "address": "10150 NE COOKINGHAM DR KANSAS CITY MO 64157-6220",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c3005912",
+    "business_name": "WALGREEN CO",
+    "dba_name": "WALGREENS",
+    "address": "7500 WORNALL RD KANSAS CITY MO 64114-1816",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c3005913",
+    "business_name": "PASEO PETROLEUM LLC",
+    "dba_name": "PASEO BP",
+    "address": "4632 PASEO BLVD KANSAS CITY MO 64110-1826",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c3005914",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIKTRIP #277",
+    "address": "8601 E 85TH ST RAYTOWN MO 64138-3120",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c3005915",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #204",
+    "address": "6835 E TRUMAN RD KANSAS CITY MO 64126-2603",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c3005916",
+    "business_name": "P AND J DIVERSIFIED INC",
+    "dba_name": "EXPRES STOP",
+    "address": "5712 INDEPENDENCE AVE KANSAS CITY MO 64123-2030",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c3005917",
+    "business_name": "EZJ  LLC",
+    "dba_name": "PUFFIN HEALTH VITAMINS",
+    "address": "1708 W 39TH ST KANSAS CITY MO 64111-4404",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c3005918",
+    "business_name": "ANDY'S FROZEN CUSTARD STORES LLC",
+    "dba_name": "",
+    "address": "7858 WORNALL RD KANSAS CITY MO 64114-1871",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c3005919",
+    "business_name": "GUITAR SUPER MARKET",
+    "dba_name": "",
+    "address": "4033 N CHERRY ST KANSAS CITY MO 64116-2607",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c300591a",
+    "business_name": "CHAN TEAS LLC",
+    "dba_name": "",
+    "address": "8581 N GREEN HILLS RD KANSAS CITY MO 64154-1404",
+    "business_type": "Snack and Nonalcoholic Beverage Bars",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c300591b",
+    "business_name": "SCANDREACCHI SUPERFOODS LLC",
+    "dba_name": "",
+    "address": "112 W 63RD ST KANSAS CITY MO 64113-1616",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c300591c",
+    "business_name": "RUSSELL STOVER CHOCOLATES LLC",
+    "dba_name": "RUSSELL STOVER CHOCOLATES",
+    "address": "4900 OAK ST KANSAS CITY MO 64112-2702",
+    "business_type": "Confectionery and Nut Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d217d80d56c300591d",
+    "business_name": "THE THIRSTY GNOME LLC",
+    "dba_name": "THE THIRSTY GNOME",
+    "address": "5044 NE PARVIN RD KANSAS CITY MO 64117-2050",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:02",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c300591e",
+    "business_name": "ANDY'S FROZEN CUSTARD STORES LLC",
+    "dba_name": "",
+    "address": "10641 STATE LINE RD KANSAS CITY MO 64114-4804",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c300591f",
+    "business_name": "ALDI INC KANSAS",
+    "dba_name": "ALDI #92",
+    "address": "3830 PROSPECT AVE KANSAS CITY MO 64128-2460",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c3005920",
+    "business_name": "CONVENIENCE GROCERY LLC",
+    "dba_name": "",
+    "address": "615 PROSPECT AVE KANSAS CITY MO 64124-2423",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c3005921",
+    "business_name": "COSENTINO GROUP INC",
+    "dba_name": "COSENTINO'S DOWNTOWN MARKET #284",
+    "address": "10 E 13TH ST KANSAS CITY MO 64106-2924",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c3005922",
+    "business_name": "SWEET PLACE LLC",
+    "dba_name": "",
+    "address": "117 S LEXINGTON ST STE 100 HARRISONVILLE MO 64701-2444",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c3005923",
+    "business_name": "BAKED STARBOARD EAST OPERATORS LLC",
+    "dba_name": "",
+    "address": "505 WESTPORT RD KANSAS CITY MO 64111-3011",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c3005924",
+    "business_name": "GOMEZ ANTHONY",
+    "dba_name": "",
+    "address": "7009 E 112TH ST KANSAS CITY MO 64134-3303",
+    "business_type": "Snack and Nonalcoholic Beverage Bars",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c3005925",
+    "business_name": "BOULEVARD BBQ LLC",
+    "dba_name": "DANNY EDWARDS BLVD BBQ",
+    "address": "2900 SOUTHWEST BLVD KANSAS CITY MO 64108-3615",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c3005926",
+    "business_name": "HILAAL HALAL MARKET LLC",
+    "dba_name": "",
+    "address": "2807 INDEPENDENCE AVE KANSAS CITY MO 64124-2533",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c3005927",
+    "business_name": "HIVE AND HARVEST LLC",
+    "dba_name": "HIVE + HARVEST",
+    "address": "8581 N GREEN HILLS RD KANSAS CITY MO 64154-1404",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c3005928",
+    "business_name": "FAIRWAVE HOLDINGS LLC",
+    "dba_name": "",
+    "address": "4771 JEFFERSON ST KANSAS CITY MO 64112-1884",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c3005929",
+    "business_name": "STARBUCKS CORPORATION",
+    "dba_name": "STARBUCKS COFFEE #67289",
+    "address": "8623 NE 85TH ST KANSAS CITY MO 64157-9511",
+    "business_type": "Snack and Nonalcoholic Beverage Bars",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c300592a",
+    "business_name": "GOOD BEER LLC",
+    "dba_name": "",
+    "address": "500 E 18TH ST KANSAS CITY MO 64108-1509",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d317d80d56c300592b",
+    "business_name": "BAKHAI SATYAN",
+    "dba_name": "COLDSTONE CREAMERY",
+    "address": "1833 NE PARK RIDGE CIR LEES SUMMIT MO 64064-1706",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:03",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c300592c",
+    "business_name": "FP & P INC",
+    "dba_name": "LAMAR DONUTS",
+    "address": "3395 MAIN ST KANSAS CITY MO 64111-1904",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c300592d",
+    "business_name": "AVENUE FRESH MARKET LLC",
+    "dba_name": "EL MERCADO FRESCO",
+    "address": "2620 INDEPENDENCE AVE KANSAS CITY MO 64124-2434",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c300592e",
+    "business_name": "SFM LLC",
+    "dba_name": "SPROUTS FARMERS MARKET",
+    "address": "8383 N BOOTH AVE KANSAS CITY MO 64158-1319",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c300592f",
+    "business_name": "PAPA-NKCLLC.",
+    "dba_name": "PAPA MURPHY'S",
+    "address": "4319 N CHOUTEAU TRFY KANSAS CITY MO 64117-1724",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c3005930",
+    "business_name": "DAEHO LLC",
+    "dba_name": "",
+    "address": "5557 NW BARRY RD KANSAS CITY MO 64154-1408",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c3005931",
+    "business_name": "FEEL GOOD NUTRITION LLC",
+    "dba_name": "",
+    "address": "4848 E 9TH ST KANSAS CITY MO 64124-2938",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c3005932",
+    "business_name": "AMERICAN MULTI CINEMA INC",
+    "dba_name": "AMC INC",
+    "address": "8101 NW ROANRIDGE RD KANSAS CITY MO 64151-1356",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c3005933",
+    "business_name": "ANDY'S FROZEN CUSTARD HOLDING",
+    "dba_name": "",
+    "address": "8585 N SHOAL CREEK VALLEY DR KANSAS CITY MO 64158-0000",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c3005934",
+    "business_name": "DOJENTO LLC",
+    "dba_name": "J.R.'S MINI MART",
+    "address": "7344 TROOST AVE KANSAS CITY MO 64131-1746",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c3005935",
+    "business_name": "REBEL FOODS LLC",
+    "dba_name": "",
+    "address": "1607 W 39TH ST 1 EAST KANSAS CITY MO 64111-0000",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c3005936",
+    "business_name": "TEMPLE WELLNESS",
+    "dba_name": "TEMPLE WELLNESS & NUTRITION",
+    "address": "1800 GENESSEE ST STE 214 KANSAS CITY MO 64102-1071",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c3005937",
+    "business_name": "WATERBIRD COFFEE COMPANY LLC",
+    "dba_name": "",
+    "address": "1200 MCGEE ST KANSAS CITY MO 64106-2415",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c3005938",
+    "business_name": "BEKY FOOD LLC",
+    "dba_name": "BEKY FOOD LLC",
+    "address": "7615 N EVERTON AVE PARKVILLE MO 64152-4682",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d417d80d56c3005939",
+    "business_name": "WILES STEPHEN B",
+    "dba_name": "NUTRI-SIGHT LLC",
+    "address": "4221 N HICKORY LN KANSAS CITY MO 64116-1648",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:04",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c300593a",
+    "business_name": "CINEMA OPERATING COMPANY LLC",
+    "dba_name": "B & B THEATRES NORTHLAND 14",
+    "address": "4900 NE 80TH ST KANSAS CITY MO 64119-4381",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c300593b",
+    "business_name": "US FUELS LLC",
+    "dba_name": "FOODMART",
+    "address": "1301 PROSPECT AVE KANSAS CITY MO 64127-2015",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c300593c",
+    "business_name": "NUEVA IMAGEN NUTRICION FAMILIAR",
+    "dba_name": "",
+    "address": "5518 E TRUMAN RD KANSAS CITY MO 64127-2436",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c300593d",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #229",
+    "address": "4705 S 129TH EAST AVE TULSA OK 74134-7005",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c300593e",
+    "business_name": "WALGREEN CO",
+    "dba_name": "WALGREENS",
+    "address": "2501 E LINWOOD BLVD KANSAS CITY MO 64128-1569",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c300593f",
+    "business_name": "THE SWEET GRANADA LLC",
+    "dba_name": "",
+    "address": "553 E RED BRIDGE RD KANSAS CITY MO 64131-4015",
+    "business_type": "Confectionery and Nut Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c3005940",
+    "business_name": "WALGREEN CO",
+    "dba_name": "WALGREENS #04204",
+    "address": "401 NE BARRY RD KANSAS CITY MO 64155-2878",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c3005941",
+    "business_name": "COX SCOTTY",
+    "dba_name": "",
+    "address": "5008 N KENSINGTON AVE KANSAS CITY MO 64119-3605",
+    "business_type": "Snack and Nonalcoholic Beverage Bars",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c3005942",
+    "business_name": "ALDI INC KANSAS",
+    "dba_name": "ALDI FOODS",
+    "address": "6300 INDEPENDENCE AVE KANSAS CITY MO 64125-1543",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c3005943",
+    "business_name": "FARM TO MARKET BREAD CO INC",
+    "dba_name": "FARM TO MARKET BREAD CO",
+    "address": "5350 SPEAKER RD KANSAS CITY KS 66106-1050",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c3005944",
+    "business_name": "WOMAN SEEKING WINE LLC",
+    "dba_name": "THE DUB",
+    "address": "105 W 9TH ST KANSAS CITY MO 64105-1705",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c3005945",
+    "business_name": "RGT ZADEH INC",
+    "dba_name": "TOPSY S POPCORN",
+    "address": "1206 E MEYER BLVD KANSAS CITY MO 64131-1206",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c3005946",
+    "business_name": "MILLENNIUM OPERATIONS LLC",
+    "dba_name": "WORLDS OF FUN",
+    "address": "4545 NE WORLDS OF FUN DR KANSAS CITY MO 64161-9302",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c3005947",
+    "business_name": "COSENTINO GROUP INC",
+    "dba_name": "COSENTINO'S  PRICE CHOPPER #106",
+    "address": "8700 E 63RD ST KANSAS CITY MO 64133-4726",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d517d80d56c3005948",
+    "business_name": "R P R ENTERPRISES INC",
+    "dba_name": "R P R ENTERPRISES INC",
+    "address": "101 W 63RD ST KANSAS CITY MO 64113-1615",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:05",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c3005949",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #197",
+    "address": "13100 HOLMES RD KANSAS CITY MO 64145-1489",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c300594a",
+    "business_name": "HAK INC",
+    "dba_name": "WINDSTAR #5101",
+    "address": "5101 E FRONT ST KANSAS CITY MO 64120-1137",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c300594b",
+    "business_name": "GATES & SONS BARBECUE OF MISSOURI I",
+    "dba_name": "GATES & SONS OF MISSOURI INC.",
+    "address": "1221 BROOKLYN AVE KANSAS CITY MO 64127-1913",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c300594c",
+    "business_name": "FAIRWAVE HOLDINGS LLC",
+    "dba_name": "",
+    "address": "318 W 47TH ST KANSAS CITY MO 64112-1613",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c300594d",
+    "business_name": "COSENTINO GROUP INC",
+    "dba_name": "COSENTINO'S SUN FRESH #448",
+    "address": "4001 MILL ST KANSAS CITY MO 64111-3008",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c300594e",
+    "business_name": "BLUE X LLC",
+    "dba_name": "BLUEX DISCOUNT SMOKE & CONVENIENCE STORE",
+    "address": "8300 WORNALL RD KANSAS CITY MO 64114-5810",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c300594f",
+    "business_name": "FREEDOM ENTERPRISES LLC",
+    "dba_name": "SCOOTERS COFFEE",
+    "address": "5550 N ANTIOCH RD KANSAS CITY MO 64119-2301",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c3005950",
+    "business_name": "GHC CLAYVIEW OPERATOR LLC",
+    "dba_name": "",
+    "address": "7990 N FARLEY AVE KANSAS CITY MO 64158-7627",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c3005951",
+    "business_name": "SYGMA NETWORK INC",
+    "dba_name": "",
+    "address": "11400 N CONGRESS AVE KANSAS CITY MO 64153-1470",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c3005952",
+    "business_name": "LIFTED LLC",
+    "dba_name": "LIFTED NATURALS",
+    "address": "412 W 60TH TER KANSAS CITY MO 64113-1420",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c3005953",
+    "business_name": "ENDLESS LLC",
+    "dba_name": "NEKTER JUICE BAR",
+    "address": "10518 N GARFIELD AVE KANSAS CITY MO 64155-3271",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c3005954",
+    "business_name": "COSENTINO GROUP INC",
+    "dba_name": "CONSENTINO'S PRICE CHOPPER #105",
+    "address": "5800 WILSON AVE KANSAS CITY MO 64123-2045",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c3005955",
+    "business_name": "GENERAL STORE NO TWO INC THE",
+    "dba_name": "MARSHS SUN FRESH",
+    "address": "4001 MILL ST KANSAS CITY MO 64111-3008",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d617d80d56c3005956",
+    "business_name": "GEOS GOURMET SWEETS LLC",
+    "dba_name": "",
+    "address": "3523 E RED BRIDGE RD KANSAS CITY MO 64137-2135",
+    "business_type": "Snack and Nonalcoholic Beverage Bars",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:06",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c3005957",
+    "business_name": "TRIPLEDIP LLC",
+    "dba_name": "SHERIDANS LATTES & FROZEN CUSTARD",
+    "address": "2450 GRAND BLVD STE 119 KANSAS CITY MO 64108-2542",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c3005958",
+    "business_name": "K C FUDGE INC",
+    "dba_name": "CHIPS CANDY FACTORY",
+    "address": "2450 GRAND BLVD KANSAS CITY MO 64108-2535",
+    "business_type": "Confectionery and Nut Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c3005959",
+    "business_name": "MERCADO LLC",
+    "dba_name": "FRESH MARKET",
+    "address": "6859 LONGVIEW RD KANSAS CITY MO 64134-3315",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c300595a",
+    "business_name": "STARBUCKS CORPORATION",
+    "dba_name": "STARBUCKS COFFEE",
+    "address": "6304 BROOKSIDE PLZ KANSAS CITY MO 64113-1709",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c300595b",
+    "business_name": "CHARRITOS RESTAURANT LLC",
+    "dba_name": "",
+    "address": "3831 INDEPENDENCE AVE KANSAS CITY MO 64124-2703",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c300595c",
+    "business_name": "JANSSEN'S HOUSE COFFEE LLC",
+    "dba_name": "",
+    "address": "4041 BROADWAY BLVD KANSAS CITY MO 64111-2601",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c300595d",
+    "business_name": "STARBUCKS CORPORATION",
+    "dba_name": "STARBUCKS COFFEE #63261",
+    "address": "6860 NW 83RD TER KANSAS CITY MO 64152-2040",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c300595e",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP # 222",
+    "address": "8011 STATE LINE RD KANSAS CITY MO 64114-2016",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c300595f",
+    "business_name": "PELLAGE ROMANA",
+    "dba_name": "",
+    "address": "3017 INDEPENDENCE AVE KANSAS CITY MO 64124-2500",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c3005960",
+    "business_name": "ARIZMENDI ELVIRA",
+    "dba_name": "ELVIRA S CAKES",
+    "address": "3838 INDEPENDENCE AVE KANSAS CITY MO 64124-2704",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c3005961",
+    "business_name": "HOMEGROWN CATERING CO. LLC",
+    "dba_name": "COMMON ROOTS KITCHEN",
+    "address": "11111 N OAK TRFY KANSAS CITY MO 64155-1167",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c3005962",
+    "business_name": "AMACPC LLC",
+    "dba_name": "JOHNS BIG DECK",
+    "address": "928 WYANDOTTE ST KANSAS CITY MO 64105-0000",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c3005963",
+    "business_name": "FAST N FRIENDLY LLC",
+    "dba_name": "",
+    "address": "1100 W 135TH TER KANSAS CITY MO 64145-0000",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d717d80d56c3005964",
+    "business_name": "STATION COFFEE LLC",
+    "dba_name": "",
+    "address": "1010 WESTPORT RD STE B KANSAS CITY MO 64111-4749",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:07",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c3005965",
+    "business_name": "BELLA NAPOLI LLC",
+    "dba_name": "BELLA NAPOLI LLC",
+    "address": "6229 BROOKSIDE BLVD KANSAS CITY MO 64113-1629",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c3005966",
+    "business_name": "OLEO COFFEE LLC",
+    "dba_name": "TAKE CARE BY OLEO",
+    "address": "419 E 18TH ST KANSAS CITY MO 64108-1409",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c3005967",
+    "business_name": "ODDLY CORRECT LLC",
+    "dba_name": "",
+    "address": "4141 TROOST AVE KANSAS CITY MO 64110-1235",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c3005968",
+    "business_name": "E & I FOODMART LLC",
+    "dba_name": "HALAL MARKET",
+    "address": "9520 JAMES A REED RD STE C KANSAS CITY MO 64134-1666",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c3005969",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #193",
+    "address": "600 NW 68TH ST KANSAS CITY MO 64118-2402",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c300596a",
+    "business_name": "ALDI INC KANSAS",
+    "dba_name": "",
+    "address": "721 PASEO BLVD # 31 KANSAS CITY MO 64106-1708",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c300596b",
+    "business_name": "COUGHENNOWER CATHERINE E",
+    "dba_name": "FROSTED BY CATHERINE LLC",
+    "address": "115 MAIN ST UNIT B PARKVILLE MO 64152-3742",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c300596c",
+    "business_name": "WALGREEN CO",
+    "dba_name": "WALGREENS",
+    "address": "5400 INDEPENDENCE AVE KANSAS CITY MO 64123-2027",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c300596d",
+    "business_name": "RAVELLA RAVI CHANDRA",
+    "dba_name": "AMARAVATI TIFFINS",
+    "address": "130 E LINWOOD BLVD TRLR  KANSAS CITY MO 64111-1118",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c300596e",
+    "business_name": "CASEYS MARKETING COMPANY",
+    "dba_name": "MINIT MART #4339",
+    "address": "4111 BLUE RIDGE CUT OFF KANSAS CITY MO 64133-1419",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c300596f",
+    "business_name": "LORETTO EVENTS LLC",
+    "dba_name": "LORETTO EVENTS",
+    "address": "1111 W 39TH ST OFC  KANSAS CITY MO 64111-4752",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c3005970",
+    "business_name": "BIBIBOP LLC",
+    "dba_name": "BIBIBOP ASIAN GRILL",
+    "address": "505 W 75TH ST KANSAS CITY MO 64114-1512",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c3005971",
+    "business_name": "TASTY POPS LLC",
+    "dba_name": "",
+    "address": "5212 NW WALDEN DR KANSAS CITY MO 64151-2648",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c3005972",
+    "business_name": "ALDI INC KANSAS",
+    "dba_name": "",
+    "address": "4851 N OAK TRFY KANSAS CITY MO 64118-4618",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d817d80d56c3005973",
+    "business_name": "AL-HALLAL LLC",
+    "dba_name": "AL-HALLAL GROCERY STORE",
+    "address": "3009 1/2 INDEPENDENCE AVE KANSAS CITY MO 64124-2537",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:08",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c3005974",
+    "business_name": "HY VEE INC",
+    "dba_name": "HYVEE #1",
+    "address": "8301 N SAINT CLAIR AVE KANSAS CITY MO 64151-5101",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c3005975",
+    "business_name": "JADED DREAMS LLC",
+    "dba_name": "TRAVELIN' TOM'S COFFEE",
+    "address": "19805 NE 129TH ST KEARNEY MO 64060-7958",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c3005976",
+    "business_name": "ASHLEIGHS BAKESHOP LLC",
+    "dba_name": "ASHLEIGHS BAKESHOP",
+    "address": "115 WESTPORT RD KANSAS CITY MO 64111-2226",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c3005977",
+    "business_name": "COFFEE PARLOR LLC",
+    "dba_name": "",
+    "address": "8708 N OAK TRFY KANSAS CITY MO 64155-2437",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c3005978",
+    "business_name": "PNG GROUPS",
+    "dba_name": "FAT BEE CAFE",
+    "address": "4307 N CHOUTEAU TRFY KANSAS CITY MO 64117-1724",
+    "business_type": "Snack and Nonalcoholic Beverage Bars",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c3005979",
+    "business_name": "AL SHIMARY JAMAL A",
+    "dba_name": "HUDA FOOD AND BAKERY",
+    "address": "3239 INDEPENDENCE AVE KANSAS CITY MO 64124-2636",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c300597a",
+    "business_name": "WHOLE FOODS MARKET ROCKY MOUNTAIN/SOUTHWEST LP",
+    "dba_name": "WHOLE FOODS MARKET",
+    "address": "301 E 51ST ST KANSAS CITY MO 64112-2765",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c300597b",
+    "business_name": "ALDI INC KANSAS",
+    "dba_name": "",
+    "address": "6238 N CHATHAM AVE KANSAS CITY MO 64151-2472",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c300597c",
+    "business_name": "VANTEDGE CAKES LLC",
+    "dba_name": "NOTHING BUNDT CAKES",
+    "address": "332 W 63RD ST KANSAS CITY MO 64113-1604",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c300597d",
+    "business_name": "AKOYA GROUP LLC",
+    "dba_name": "AKOYA OMAKASE",
+    "address": "106 W 12TH ST KANSAS CITY MO 64105-1902",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c300597e",
+    "business_name": "DUTCH BROS. LLC",
+    "dba_name": "DUTCH BROS COFFEE",
+    "address": "350 NW BARRY RD KANSAS CITY MO 64155-0000",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c300597f",
+    "business_name": "FAREWAY STORES INC.",
+    "dba_name": "FAREWAY MEAT MARKET AND MCGONIGLE'S KITCHEN + CATERING BBQ",
+    "address": "8606 NE 85TH ST KANSAS CITY MO 64157-9511",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c3005980",
+    "business_name": "HAWAIIAN ICE LLC",
+    "dba_name": "HAWAIIAN ICE",
+    "address": "6300 N REVERE DR KANSAS CITY MO 64151-3922",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c3005981",
+    "business_name": "GATES & SONS BARBECUE OF MISSOURI I",
+    "dba_name": "GATES & SONS OF MISSOURI INC.",
+    "address": "3205 MAIN ST KANSAS CITY MO 64111-1902",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043d917d80d56c3005982",
+    "business_name": "LA BODEGUITA LLC",
+    "dba_name": "",
+    "address": "3805 N OAK TFWY FL F2 KANSAS CITY MO 64116-0000",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:09",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c3005983",
+    "business_name": "JAVA INVESTMENTS LLC",
+    "dba_name": "SCOOTER'S COFFEE",
+    "address": "8248 N FLINTLOCK RD BLDG  KANSAS CITY MO 64158-1420",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c3005984",
+    "business_name": "PIZZA TRAILER LLC",
+    "dba_name": "PIZZA TRAILER",
+    "address": "14530 SE STATE ROUTE CC FAUCETT MO 64448-8155",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c3005985",
+    "business_name": "SANS RETAILER INC",
+    "dba_name": "POPS QUIK SHOP",
+    "address": "3402 E 9TH ST KANSAS CITY MO 64124-2619",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c3005986",
+    "business_name": "LEWIS ADRIAN M",
+    "dba_name": "",
+    "address": "11320 SYCAMORE TER KANSAS CITY MO 64134-3569",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c3005987",
+    "business_name": "HT MIDWEST SALES INC",
+    "dba_name": "",
+    "address": "3825 INDEPENDENCE AVE KANSAS CITY MO 64124-2703",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c3005988",
+    "business_name": "CASEYS MARKETING COMPANY",
+    "dba_name": "CASEY'S MARKETING COMPANY (JOPLIN DC)",
+    "address": "2902 S JAGUAR RD JOPLIN MO 64804-8197",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c3005989",
+    "business_name": "RAMOUN LLC",
+    "dba_name": "COLD STONE CREAMERY PLAZA",
+    "address": "114 W 47TH ST KANSAS CITY MO 64112-1601",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c300598a",
+    "business_name": "KC SODA 5",
+    "dba_name": "SWIG",
+    "address": "9705 N ASH AVE KANSAS CITY MO 64157-9678",
+    "business_type": "Snack and Nonalcoholic Beverage Bars",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c300598b",
+    "business_name": "ZAYTOONA LLC",
+    "dba_name": "",
+    "address": "8015 E BANNISTER RD KANSAS CITY MO 64134-0000",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c300598c",
+    "business_name": "MIDTOWN GROCERS LLC",
+    "dba_name": "KC SUN FRESH AT LINWOOD",
+    "address": "3110 PROSPECT AVE KANSAS CITY MO 64128-1559",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c300598d",
+    "business_name": "KNUDSON CONFECTIONS",
+    "dba_name": "",
+    "address": "3532 N WABASH AVE KANSAS CITY MO 64116-2861",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c300598e",
+    "business_name": "THE BOROUGH LLC",
+    "dba_name": "THE BOROUGH",
+    "address": "8026 PASEO BLVD KANSAS CITY MO 64131-2322",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c300598f",
+    "business_name": "SUNGLOLLC",
+    "dba_name": "",
+    "address": "13 MYERS TER PLATTE CITY MO 64079-9310",
+    "business_type": "Snack and Nonalcoholic Beverage Bars",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043da17d80d56c3005990",
+    "business_name": "LAO ENTERPRISES LLC",
+    "dba_name": "BETTY RAE'S ICE CREAM",
+    "address": "412 DELAWARE ST STE D KANSAS CITY MO 64105-1251",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:10",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c3005991",
+    "business_name": "MIDWEST FOOD LLC",
+    "dba_name": "HAPPY FOODS",
+    "address": "4021 STERLING AVE KANSAS CITY MO 64133-1309",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c3005992",
+    "business_name": "PETERS PHILLIP L",
+    "dba_name": "ROWDY ROOTS BBQ",
+    "address": "100 S JAMES ST KANSAS CITY KS 66118-1125",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c3005993",
+    "business_name": "CASEYS MARKETING COMPANY",
+    "dba_name": "MINIT MART #3483",
+    "address": "10751 N OAK TRFY KANSAS CITY MO 64155-1669",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c3005994",
+    "business_name": "ANTOJITOS CALENTANOS HERNANDEZ LLC",
+    "dba_name": "",
+    "address": "1214 MONROE AVE KANSAS CITY MO 64127-1547",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c3005995",
+    "business_name": "ROSS SAUCE PRODUCTS LLC",
+    "dba_name": "",
+    "address": "1625 E 75TH TER KANSAS CITY MO 64131-1910",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c3005996",
+    "business_name": "JA-DEL INC",
+    "dba_name": "JA DEL INC",
+    "address": "9000 W 137TH ST OVERLAND PARK KS 66221-2042",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c3005997",
+    "business_name": "MORRISON MANAGEMENT SPECIALISTS INC",
+    "dba_name": "",
+    "address": "2316 E MEYER BLVD KANSAS CITY MO 64132-1136",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c3005998",
+    "business_name": "REDWETHER KC LLC",
+    "dba_name": "PARLOR",
+    "address": "1707 LOCUST ST KANSAS CITY MO 64108-1401",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c3005999",
+    "business_name": "IMPERFECT FOODS INC.",
+    "dba_name": "IMPERFECT PRODUCE",
+    "address": "6107 E CONNECTICUT AVE KANSAS CITY MO 64120-1346",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c300599a",
+    "business_name": "CLAW AND HAMMER INVESTMENTS INC.",
+    "dba_name": "CUPCAKE A LA MODE",
+    "address": "333 SE ALEXANDRIA DR LEES SUMMIT MO 64063-3644",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c300599b",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #234",
+    "address": "6400 E 87TH ST KANSAS CITY MO 64138-2729",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c300599c",
+    "business_name": "DOUGHNUTS DOUGHNUTS LLC",
+    "dba_name": "",
+    "address": "1004 PARK AVE KANSAS CITY MO 64127-1233",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c300599d",
+    "business_name": "ST JOSEPH PRETZELS LLC",
+    "dba_name": "",
+    "address": "1 KANSAS CITY BLVD KANSAS CITY MO 64153-7700",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c300599e",
+    "business_name": "HARBINGER LLC",
+    "dba_name": "BREWERY EMPERIAL",
+    "address": "1829 OAK ST KANSAS CITY MO 64108-1820",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043db17d80d56c300599f",
+    "business_name": "VALUE GROCERS LLC",
+    "dba_name": "SAVE A LOT",
+    "address": "3410 TROOST AVE KANSAS CITY MO 64109-2915",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:11",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059a0",
+    "business_name": "WALGREEN CO",
+    "dba_name": "WALGREENS",
+    "address": "3845 BROADWAY BLVD # 5278 KANSAS CITY MO 64111-2507",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059a1",
+    "business_name": "MCLAINS MARKETS INC",
+    "dba_name": "MCLAINS BAKERY",
+    "address": "201 E GREGORY BLVD KANSAS CITY MO 64114-1121",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059a2",
+    "business_name": "PURA VIDA KC LLC",
+    "dba_name": "",
+    "address": "5901 NW 63RD ST APT 6400 KANSAS CITY MO 64151-3436",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059a3",
+    "business_name": "EL PUEBLITO CORPORATION",
+    "dba_name": "",
+    "address": "810 SOUTHWEST BLVD KANSAS CITY MO 64108-2339",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059a4",
+    "business_name": "ALLIANCE PETROLEUM LLC",
+    "dba_name": "FLEMING #26",
+    "address": "12325 STATE LINE RD KANSAS CITY MO 64145-1148",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059a5",
+    "business_name": "LA JAROCHITA EXPRESS LLC",
+    "dba_name": "LA JAROCHITA",
+    "address": "109 HARDESTY AVE KANSAS CITY MO 64123-1808",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059a6",
+    "business_name": "TRAN DUONG V",
+    "dba_name": "HUNG VUONG MARKET",
+    "address": "303 GRAND BLVD KANSAS CITY MO 64106-1106",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059a7",
+    "business_name": "FORTUNE BOUND LLC",
+    "dba_name": "FORTUNE BOUND",
+    "address": "5329 AMINDA ST SHAWNEE KS 66226-2628",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059a8",
+    "business_name": "JONNY BAKES LLC",
+    "dba_name": "",
+    "address": "604 E 34TH ST KANSAS CITY MO 64109-1730",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059a9",
+    "business_name": "CBD AMERICAN SHAMAN LLC",
+    "dba_name": "",
+    "address": "500 NE BARRY RD KANSAS CITY MO 64155-2879",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059aa",
+    "business_name": "CASEYS MARKETING COMPANY",
+    "dba_name": "MINIT MART #4352",
+    "address": "4400 N ANTIOCH RD KANSAS CITY MO 64117-1143",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059ab",
+    "business_name": "MERCADO AVE LLC",
+    "dba_name": "FRESH MARKET 5",
+    "address": "5901 INDEPENDENCE AVE KANSAS CITY MO 64125-1616",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059ac",
+    "business_name": "GATES & SONS BARBECUE OF MISSOURI I",
+    "dba_name": "GATES & SONS OF MISSOURI INC.",
+    "address": "1325 EMANUEL CLEAVER II BLVD KANSAS CITY MO 64110-1880",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dc17d80d56c30059ad",
+    "business_name": "FREEDOM ENTERPRISES LLC",
+    "dba_name": "SCOOTERS COFFEE",
+    "address": "5166 N OAK TRFY KANSAS CITY MO 64118-4621",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:12",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059ae",
+    "business_name": "MID27 CONVENIENCE LLC",
+    "dba_name": "KHALID JAVED",
+    "address": "901 E 27TH ST KANSAS CITY MO 64108-4716",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059af",
+    "business_name": "AMERICAN MULTI CINEMA INC",
+    "dba_name": "AMC INC",
+    "address": "8600 WARD PKWY STE 2005 KANSAS CITY MO 64114-2603",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059b0",
+    "business_name": "SOAR RESTAURANTS II LLC",
+    "dba_name": "SONIC DRIVE-IN #3708",
+    "address": "8227 WORNALL RD KANSAS CITY MO 64114-5807",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059b1",
+    "business_name": "COSENTINO GROUP INC",
+    "dba_name": "COSENTINO'S PRICE CHOPPER #154",
+    "address": "6327 BROOKSIDE PLZ KANSAS CITY MO 64113-1708",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059b2",
+    "business_name": "KAY BEES 4 LLC",
+    "dba_name": "",
+    "address": "11304 BLUE RIDGE BLVD KANSAS CITY MO 64134-3203",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059b3",
+    "business_name": "R P R ENTERPRISES INC",
+    "dba_name": "TOPSY'S POPCORN",
+    "address": "7261 NW 86TH PL KANSAS CITY MO 64153-1944",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059b4",
+    "business_name": "COSENTINO ENTERPRISES INC",
+    "dba_name": "CONSENTINO'S APPLE MARKET #70",
+    "address": "4300 BLUE RIDGE BLVD KANSAS CITY MO 64133-2027",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059b5",
+    "business_name": "SHES KC VEGAN",
+    "dba_name": "",
+    "address": "4000 VINEYARD DR KANSAS CITY MO 64130-1628",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059b6",
+    "business_name": "AFGHAN INTERNATIONAL MARKET LLC",
+    "dba_name": "",
+    "address": "4422 SAINT JOHN AVE KANSAS CITY MO 64123-1738",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059b7",
+    "business_name": "COSENTINO GROUP INC",
+    "dba_name": "COSENTINO'S PRICE CHOPPER #288",
+    "address": "9717 N ASH AVE KANSAS CITY MO 64157-9678",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059b8",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #169",
+    "address": "5108 NE VIVION RD KANSAS CITY MO 64119-2939",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059b9",
+    "business_name": "OMORUYI ENTERPRISE LLC",
+    "dba_name": "MY PLAY CAFE - NORTHLAND KC",
+    "address": "6529 N COSBY AVE KANSAS CITY MO 64151-2380",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059ba",
+    "business_name": "SWEET TOOTH BAKERY",
+    "dba_name": "",
+    "address": "10405 E 42ND ST APT E KANSAS CITY MO 64133-1550",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059bb",
+    "business_name": "BARFIELD SAVANA D",
+    "dba_name": "MAGNOLIA GRAZING COMPANY",
+    "address": "8581 N GREEN HILLS RD KANSAS CITY MO 64154-1404",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043dd17d80d56c30059bc",
+    "business_name": "BROWNSTONE NATURAL HEALING LLC",
+    "dba_name": "",
+    "address": "8123 PENNSYLVANIA LN KANSAS CITY MO 64114-2240",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:13",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059bd",
+    "business_name": "BERRY SMOOTHIE",
+    "dba_name": "",
+    "address": "7121 NW BARRY RD KANSAS CITY MO 64153-1719",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059be",
+    "business_name": "HOLLER JAMES",
+    "dba_name": "",
+    "address": "808 ROMANY RD KANSAS CITY MO 64113-2013",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059bf",
+    "business_name": "DNSR LLC",
+    "dba_name": "DNSR",
+    "address": "346 N DENVER AVE KANSAS CITY MO 64123-1336",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059c0",
+    "business_name": "ZIEGFIELDS INC",
+    "dba_name": "",
+    "address": "1517 GRAND BLVD KANSAS CITY MO 64108-1403",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059c1",
+    "business_name": "CARIBOU COFFEE OPERATING COMPANY INC.",
+    "dba_name": "CARIBOU COFFEE #1244",
+    "address": "6370 N LUCERNE AVE KANSAS CITY MO 64151-3199",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059c2",
+    "business_name": "SAPATSRING INC",
+    "dba_name": "SWAGAT",
+    "address": "7407A NW 87TH ST KANSAS CITY MO 64153-1948",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059c3",
+    "business_name": "ANCHOR ISLAND COFFEE LLC",
+    "dba_name": "ANCHOR ISLAND COFFEE",
+    "address": "4101 TROOST AVE KANSAS CITY MO 64110-1235",
+    "business_type": "Snack and Nonalcoholic Beverage Bars",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059c4",
+    "business_name": "GEEHAN SMOOTHIE CO LLC",
+    "dba_name": "TROPICAL SMOOTHIE CAFE",
+    "address": "203 NE ENGLEWOOD RD STE H KANSAS CITY MO 64118-4586",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059c5",
+    "business_name": "ORIGIN CAFE LLC",
+    "dba_name": "",
+    "address": "7711 N OAK TRFY STE A KANSAS CITY MO 64118-1763",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059c6",
+    "business_name": "MAMA DOES ICE CREAM LLC",
+    "dba_name": "",
+    "address": "9219 N JARBOE ST KANSAS CITY MO 64155-1280",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059c7",
+    "business_name": "DASHING SOUL LLC",
+    "dba_name": "",
+    "address": "7909 E 87TH ST RAYTOWN MO 64138-4047",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059c8",
+    "business_name": "MELT BOX KC LLC",
+    "dba_name": "MELT BOX ICE CREAM",
+    "address": "9813 E 66TH ST RAYTOWN MO 64133-5802",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059c9",
+    "business_name": "S & B FAMILY LLC",
+    "dba_name": "QUICK SHOP #6",
+    "address": "4047 TROOST AVE KANSAS CITY MO 64110-1233",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043de17d80d56c30059ca",
+    "business_name": "POP A SNACK LLC",
+    "dba_name": "",
+    "address": "10232 MARION ST LENEXA KS 66220-3736",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:14",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059cb",
+    "business_name": "MEISO KC LLC",
+    "dba_name": "",
+    "address": "8165 N LAWN AVE KANSAS CITY MO 64119-1049",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059cc",
+    "business_name": "COFFEE HOUSE ENTERPRISES INC",
+    "dba_name": "",
+    "address": "4012 WASHINGTON ST KANSAS CITY MO 64111-2607",
+    "business_type": "Food (Health) Supplement Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059cd",
+    "business_name": "ANGELS TASTY TREATS LLC",
+    "dba_name": "",
+    "address": "8581 N GREEN HILLS RD KANSAS CITY MO 64154-1404",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059ce",
+    "business_name": "CURTIS INDUSTRIES LLC",
+    "dba_name": "CRUMBLE COOKIES GLADSTONE",
+    "address": "5247 N ANTIOCH RD KANSAS CITY MO 64119-2646",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059cf",
+    "business_name": "FOUR B CORP",
+    "dba_name": "PRICE CHOPPER #17",
+    "address": "5665 E BANNISTER RD KANSAS CITY MO 64137-1205",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059d0",
+    "business_name": "NGUYEN TIEN C",
+    "dba_name": "HUONG QUE MARKET",
+    "address": "424 LOCUST LN KANSAS CITY MO 64106-1110",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059d1",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIKTRIP #190",
+    "address": "344 W 72ND ST KANSAS CITY MO 64114-5744",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059d2",
+    "business_name": "JAVA GARAGE LLC",
+    "dba_name": "JAVA GARAGE",
+    "address": "1323 W 13TH ST KANSAS CITY MO 64102-1021",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059d3",
+    "business_name": "PLANTERS SEED CO THE",
+    "dba_name": "",
+    "address": "513 WALNUT ST KANSAS CITY MO 64106-1210",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059d4",
+    "business_name": "BREMS CO LLC",
+    "dba_name": "FOO'S FABULOUS FROZEN CUSTARD",
+    "address": "6235 BROOKSIDE PLZ KANSAS CITY MO 64113-1607",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059d5",
+    "business_name": "VOTTERO AND CO LLC",
+    "dba_name": "",
+    "address": "3247 GILLHAM PLZ KANSAS CITY MO 64109-1743",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059d6",
+    "business_name": "ALDI INC KANSAS",
+    "dba_name": "",
+    "address": "8251 N OXFORD ST # 32 KANSAS CITY MO 64158-1600",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059d7",
+    "business_name": "KINCAID TALIA",
+    "dba_name": "NATIS LEMONADE SHOP",
+    "address": "3120 SPRUCE AVE KANSAS CITY MO 64128-1761",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059d8",
+    "business_name": "BAKHAI SATYAN",
+    "dba_name": "COLDSTONE CREAMERY",
+    "address": "9300 NE 83RD TER STE 102 KANSAS CITY MO 64158-1314",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043df17d80d56c30059d9",
+    "business_name": "BAKED KANSAS CITY MO OPERATORS LLC",
+    "dba_name": "INSOMNIACOOKIES",
+    "address": "54 E 14TH ST KANSAS CITY MO 64106-2906",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:15",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059da",
+    "business_name": "DUTCH BROS. LLC",
+    "dba_name": "DUTCH BROS COFFEE",
+    "address": "16400  E US HWY 40 KANSAS CITY MO 64136-0000",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059db",
+    "business_name": "MANG MAUNG NAING",
+    "dba_name": "ASIAN GROCERY STORE",
+    "address": "3535 INDEPENDENCE AVE KANSAS CITY MO 64124-2640",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059dc",
+    "business_name": "STARBUCKS CORPORATION",
+    "dba_name": "STARBUCKS COFFEE #67095",
+    "address": "8430 N INDIANA AVE KANSAS CITY MO 64156-0000",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059dd",
+    "business_name": "TASTE OF ALOHA LLC",
+    "dba_name": "TASTE OF ALOHA",
+    "address": "15396 E US HIGHWAY 24 INDEPENDENCE MO 64050-2216",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059de",
+    "business_name": "WEI SALES LLC",
+    "dba_name": "",
+    "address": "1 BLUE BUNNY DR SW LE MARS IA 51031-2207",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059df",
+    "business_name": "FRC BALANCE LLC",
+    "dba_name": "TRUE FOOD KITCHEN",
+    "address": "4749 PENNSYLVANIA AVE KANSAS CITY MO 64112-2004",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059e0",
+    "business_name": "CARACO LLC",
+    "dba_name": "SUMMER SNO CO",
+    "address": "10225 N OAK TRFY KANSAS CITY MO 64155-1715",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059e1",
+    "business_name": "STARBUCKS CORPORATION",
+    "dba_name": "STARBUCKS COFFEE #57462",
+    "address": "909 NW 84TH TERR KANSAS CITY MO 64114-2143",
+    "business_type": "All Other Specialty Food Retailers",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059e2",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #168",
+    "address": "10232 WORNALL RD KANSAS CITY MO 64114-4403",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059e3",
+    "business_name": "OWKCI LLC",
+    "dba_name": "ORANGEWOOD INN & SUITES",
+    "address": "11828 NW PLAZA CIR KANSAS CITY MO 64153-1110",
+    "business_type": "Full-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059e4",
+    "business_name": "LUNCH BOX KC LLC",
+    "dba_name": "THE LUNCH BOX",
+    "address": "1701 W 9TH ST KANSAS CITY MO 64101-1111",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059e5",
+    "business_name": "LEWIS ADRIAN",
+    "dba_name": "KC CREAM TEAM",
+    "address": "11320 SYCAMORE TER KANSAS CITY MO 64134-3569",
+    "business_type": "Mobile Food Services",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059e6",
+    "business_name": "BAKHAI SATYAN",
+    "dba_name": "COLDSTONE CREAMERY",
+    "address": "8600 WARD PKWY KANSAS CITY MO 64114-2614",
+    "business_type": "Limited-Service Restaurants",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e017d80d56c30059e7",
+    "business_name": "QUIKTRIP CORPORATION",
+    "dba_name": "QUIK TRIP #223",
+    "address": "4380 NW 90TH ST KANSAS CITY MO 64154-0000",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:16",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e117d80d56c30059e8",
+    "business_name": "ANNA ENTERPRISES INC",
+    "dba_name": "7-ELEVEN STORE# 16106E",
+    "address": "1701 INDEPENDENCE AVE KANSAS CITY MO 64106-1454",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:17",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e117d80d56c30059e9",
+    "business_name": "WATERMAN BYANKA",
+    "dba_name": "BAKED BY B",
+    "address": "8581 N GREEN HILLS RD KANSAS CITY MO 64154-1404",
+    "business_type": "Retail Bakeries",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:17",
+    "deleted": false
+  },
+  {
+    "_id": "68b043e117d80d56c30059ea",
+    "business_name": "COSENTINO GROUP INC",
+    "dba_name": "COSENTINO'S MARKET AT BROOKSIDE #144",
+    "address": "13180 METCALF AVE STE 100 OVERLAND PARK KS 66213-2810",
+    "business_type": "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
+    "valid_license_for": "2025",
+    "insert_date": "2025-08-28 06:56:17",
+    "deleted": false
+  }
+]

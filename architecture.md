@@ -17,18 +17,26 @@ Automated Kansas City food business license tracking system with Google Places A
 
 ### 2. Database Schema (MongoDB)
 
-#### Current Schema (`kansas_city.food_businesses`)
+#### Current Production Schema (`kansas_city.food_businesses`)
+**Status**: ✅ **379 active documents** | **No Google Places data** | **Ready for migration**
+
 ```json
 {
-  "business_name": "String - Official business name",
+  "_id": "ObjectId - MongoDB document ID",
+  "business_name": "String - Official business name (indexed)",
   "dba_name": "String - 'Doing Business As' name", 
-  "address": "String - Full business address",
-  "business_type": "String - Type from FOOD_BUSINESS_TYPES",
-  "valid_license_for": "String - License year (e.g., '2024')",
-  "insert_date": "String - ISO timestamp when added to DB",
+  "address": "String - Full business address (indexed)",
+  "business_type": "String - Type from FOOD_BUSINESS_TYPES (indexed)",
+  "valid_license_for": "String - License year (e.g., '2025')",
+  "insert_date": "String - ISO timestamp when added to DB (indexed)",
   "deleted": "Boolean - Soft delete flag (always False currently)"
 }
 ```
+
+**Current Indexes**:
+- `_id_` (default MongoDB index)
+- `insert_date_1` (query optimization for recent records)
+- `business_name_1_address_1_business_type_1` (compound unique index for duplicates)
 
 #### Enhanced Schema (Post-Google Places Integration)
 ```json

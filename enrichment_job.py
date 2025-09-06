@@ -113,7 +113,8 @@ class EnrichmentJobRunner:
         try:
             self.google_client = GooglePlacesClient( 
                 rate_limit_per_second=self.rate_limit_rps,
-                enable_sentiment_analysis=True
+                enable_sentiment_analysis=True,
+                mongodb_collection=self.collection
             );
             self.logger.info( f"Google Places client initialized with {self.rate_limit_rps} req/s rate limit" );
             return True;
@@ -159,7 +160,7 @@ class EnrichmentJobRunner:
         # Basic Google Places data
         if place_data.place_id: data[ 'google_place_id' ] = place_data.place_id;
         if place_data.rating: data[ 'google_rating' ] = place_data.rating;
-        if place_data.review_count: data[ 'google_review_count' ] = place_data.review_count;
+        if place_data.user_ratings_total: data[ 'google_review_count' ] = place_data.user_ratings_total;
         if place_data.price_level is not None: data[ 'price_level' ] = place_data.price_level;
         if place_data.latitude: data[ 'latitude' ] = place_data.latitude;
         if place_data.longitude: data[ 'longitude' ] = place_data.longitude;

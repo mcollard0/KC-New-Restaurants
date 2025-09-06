@@ -91,7 +91,11 @@ class KCRestaurant:
         # Initialize Google Places client if available and enabled
         self.google_places_client = None;
         if GOOGLE_PLACES_AVAILABLE and self.enable_enrichment:
-            logger.info( "Google Places enrichment will be enabled after MongoDB setup" );
+            try:
+                self.google_places_client = GooglePlacesClient();
+                logger.info( "Google Places enrichment enabled" );
+            except Exception as e:
+                logger.warning( f"Could not initialize Google Places client: {e}" );
         elif not self.enable_enrichment:
             logger.info( "Google Places enrichment disabled" );
         else:
@@ -156,17 +160,6 @@ class KCRestaurant:
                 self.collection.create_index( [ ( "insert_date", 1 ) ], background=True );
 
             logger.info( f"Setup database: {self.database_name}, collection: {self.collection_name}" );
-            
-            # Initialize Google Places client after MongoDB setup
-            if GOOGLE_PLACES_AVAILABLE and self.enable_enrichment and not self.google_places_client:
-                try:
-                    self.google_places_client = GooglePlacesClient(
-                        mongodb_collection=self.collection
-                    );
-                    logger.info( "Google Places enrichment enabled with AI predictions" );
-                except Exception as e:
-                    logger.warning( f"Could not initialize Google Places client: {e}" );
-            
             return True;
 
         except Exception as e:

@@ -1,0 +1,225 @@
+2025-09-06 16:23:44,653 - INFO - __main__ - ============================================================
+2025-09-06 16:23:44,653 - INFO - __main__ - Starting Google Places Enrichment Job
+2025-09-06 16:23:44,653 - INFO - __main__ - ============================================================
+2025-09-06 16:23:45,048 - INFO - EnrichmentJobRunner - Connected to MongoDB: kansas_city.food_businesses
+2025-09-06 16:23:45,048 - INFO - services.sentiment_analyzer - Sentiment analyzer initialized with method: textblob
+2025-09-06 16:23:45,048 - INFO - services.google_places_client - Sentiment analyzer initialized for review analysis
+2025-09-06 16:23:45,048 - INFO - services.google_places_client - Google Places client initialized (region: us, rate_limit: 8.0 req/s)
+2025-09-06 16:23:45,049 - INFO - EnrichmentJobRunner - Google Places client initialized with 8.0 req/s rate limit
+2025-09-06 16:23:45,049 - INFO - EnrichmentJobRunner - Starting Google Places enrichment job
+2025-09-06 16:23:45,049 - INFO - EnrichmentJobRunner - Configuration: batch_size=5, rate_limit=8.0 req/s, dry_run=True
+2025-09-06 16:23:45,147 - INFO - EnrichmentJobRunner - Database status:
+2025-09-06 16:23:45,147 - INFO - EnrichmentJobRunner -   Total restaurants: 379
+2025-09-06 16:23:45,147 - INFO - EnrichmentJobRunner -   Need enrichment: 379
+2025-09-06 16:23:45,147 - INFO - EnrichmentJobRunner -   Current batch: 5 restaurants
+2025-09-06 16:23:45,147 - INFO - EnrichmentJobRunner - Processing 5 restaurants...
+2025-09-06 16:23:45,147 - INFO - EnrichmentJobRunner - Progress: 1/5 (20.0%)
+2025-09-06 16:23:45,147 - INFO - EnrichmentJobRunner - Enriching: CUPCAKIN LLC at 2450 GRAND BLVD STE 126 KANSAS CITY MO 64108-2552
+2025-09-06 16:23:45,147 - INFO - services.google_places_client - Enriching data for restaurant: CUPCAKIN LLC at 2450 GRAND BLVD STE 126 KANSAS CITY MO 64108-2552
+2025-09-06 16:23:45,372 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:23:45,430 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:23:45,430 - INFO - services.google_places_client - Generated mock data for mock_4d42a71c47fdb2b4
+2025-09-06 16:23:45,431 - INFO - services.google_places_client - Successfully enriched data for CUPCAKIN LLC
+2025-09-06 16:23:45,431 - ERROR - utils.retry_utils - EnrichmentJob error in enrich(CUPCAKIN LLC): AttributeError: 'PlaceData' object has no attribute 'review_count' (category: unknown)
+2025-09-06 16:23:45,431 - ERROR - EnrichmentJobRunner - Failed to enrich CUPCAKIN LLC: unknown error
+2025-09-06 16:23:45,431 - INFO - EnrichmentJobRunner - Progress: 2/5 (40.0%)
+2025-09-06 16:23:45,431 - INFO - EnrichmentJobRunner - Enriching: CARNICERIA EL TORITO III LLC at 6200 INDEPENDENCE AVE KANSAS CITY MO 64125-1621
+2025-09-06 16:23:45,431 - INFO - services.google_places_client - Enriching data for restaurant: CARNICERIA EL TORITO III LLC at 6200 INDEPENDENCE AVE KANSAS CITY MO 64125-1621
+2025-09-06 16:23:45,542 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:23:45,599 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:23:45,599 - INFO - services.google_places_client - Generated mock data for mock_70bb4e730b729d27
+2025-09-06 16:23:45,599 - INFO - services.google_places_client - Successfully enriched data for CARNICERIA EL TORITO III LLC
+2025-09-06 16:23:45,599 - ERROR - utils.retry_utils - EnrichmentJob error in enrich(CARNICERIA EL TORITO III LLC): AttributeError: 'PlaceData' object has no attribute 'review_count' (category: unknown)
+2025-09-06 16:23:45,599 - ERROR - EnrichmentJobRunner - Failed to enrich CARNICERIA EL TORITO III LLC: unknown error
+2025-09-06 16:23:45,599 - INFO - EnrichmentJobRunner - Progress: 3/5 (60.0%)
+2025-09-06 16:23:45,599 - INFO - EnrichmentJobRunner - Enriching: SMOOTHIE KING at 6368 N COSBY AVE KANSAS CITY MO 64151-2344
+2025-09-06 16:23:45,599 - INFO - services.google_places_client - Enriching data for restaurant: SMOOTHIE KING at 6368 N COSBY AVE KANSAS CITY MO 64151-2344
+2025-09-06 16:23:45,691 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:23:45,745 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:23:45,745 - INFO - services.google_places_client - Generated mock data for mock_00de839a72b362e4
+2025-09-06 16:23:45,745 - INFO - services.google_places_client - Successfully enriched data for SMOOTHIE KING
+2025-09-06 16:23:45,745 - ERROR - utils.retry_utils - EnrichmentJob error in enrich(SMOOTHIE KING): AttributeError: 'PlaceData' object has no attribute 'review_count' (category: unknown)
+2025-09-06 16:23:45,745 - ERROR - EnrichmentJobRunner - Failed to enrich SMOOTHIE KING: unknown error
+2025-09-06 16:23:45,745 - INFO - EnrichmentJobRunner - Progress: 4/5 (80.0%)
+2025-09-06 16:23:45,745 - INFO - EnrichmentJobRunner - Enriching: DAY28 WELLNESS CO LLC at 12005 E 47TH ST KANSAS CITY MO 64133-2517
+2025-09-06 16:23:45,745 - INFO - services.google_places_client - Enriching data for restaurant: DAY28 WELLNESS CO LLC at 12005 E 47TH ST KANSAS CITY MO 64133-2517
+2025-09-06 16:23:45,802 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:23:45,872 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:23:45,872 - INFO - services.google_places_client - Generated mock data for mock_046a5bcb8721a742
+2025-09-06 16:23:45,872 - INFO - services.google_places_client - Successfully enriched data for DAY28 WELLNESS CO LLC
+2025-09-06 16:23:45,872 - ERROR - utils.retry_utils - EnrichmentJob error in enrich(DAY28 WELLNESS CO LLC): AttributeError: 'PlaceData' object has no attribute 'review_count' (category: unknown)
+2025-09-06 16:23:45,872 - ERROR - EnrichmentJobRunner - Failed to enrich DAY28 WELLNESS CO LLC: unknown error
+2025-09-06 16:23:45,872 - INFO - EnrichmentJobRunner - Progress: 5/5 (100.0%)
+2025-09-06 16:23:45,872 - INFO - EnrichmentJobRunner - Enriching: BARNYARD LIQUOR at 9510 BLUE RIDGE BLVD KANSAS CITY MO 64134-1338
+2025-09-06 16:23:45,872 - INFO - services.google_places_client - Enriching data for restaurant: BARNYARD LIQUOR at 9510 BLUE RIDGE BLVD KANSAS CITY MO 64134-1338
+2025-09-06 16:23:45,923 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:23:46,000 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:23:46,000 - INFO - services.google_places_client - Generated mock data for mock_2ed4098c31b998fc
+2025-09-06 16:23:46,000 - INFO - services.google_places_client - Successfully enriched data for BARNYARD LIQUOR
+2025-09-06 16:23:46,000 - ERROR - utils.retry_utils - EnrichmentJob error in enrich(BARNYARD LIQUOR): AttributeError: 'PlaceData' object has no attribute 'review_count' (category: unknown)
+2025-09-06 16:23:46,000 - ERROR - EnrichmentJobRunner - Failed to enrich BARNYARD LIQUOR: unknown error
+2025-09-06 16:23:46,000 - INFO - services.google_places_client - Google Places API Usage Summary:
+2025-09-06 16:23:46,000 - INFO - services.google_places_client -   Total calls: 0
+2025-09-06 16:23:46,000 - INFO - services.google_places_client -   Text search: 0
+2025-09-06 16:23:46,000 - INFO - services.google_places_client -   Place details: 0
+2025-09-06 16:23:46,000 - INFO - services.google_places_client -   Estimated cost: $0.0000
+2025-09-06 16:23:46,000 - INFO - services.google_places_client -   Errors by category: {}
+2025-09-06 16:23:46,000 - INFO - __main__ - ✅ Enrichment job completed successfully
+2025-09-06 16:23:46,034 - INFO - EnrichmentJobRunner - Database connection closed
+2025-09-06 16:24:46,529 - INFO - __main__ - ============================================================
+2025-09-06 16:24:46,529 - INFO - __main__ - Starting Google Places Enrichment Job
+2025-09-06 16:24:46,529 - INFO - __main__ - ============================================================
+2025-09-06 16:24:47,004 - INFO - EnrichmentJobRunner - Connected to MongoDB: kansas_city.food_businesses
+2025-09-06 16:24:47,005 - INFO - services.sentiment_analyzer - Sentiment analyzer initialized with method: textblob
+2025-09-06 16:24:47,005 - INFO - services.google_places_client - Sentiment analyzer initialized for review analysis
+2025-09-06 16:24:47,005 - INFO - services.google_places_client - Google Places client initialized (region: us, rate_limit: 8.0 req/s)
+2025-09-06 16:24:47,005 - INFO - EnrichmentJobRunner - Google Places client initialized with 8.0 req/s rate limit
+2025-09-06 16:24:47,005 - INFO - EnrichmentJobRunner - Starting Google Places enrichment job
+2025-09-06 16:24:47,005 - INFO - EnrichmentJobRunner - Configuration: batch_size=5, rate_limit=8.0 req/s, dry_run=True
+2025-09-06 16:24:47,105 - INFO - EnrichmentJobRunner - Database status:
+2025-09-06 16:24:47,105 - INFO - EnrichmentJobRunner -   Total restaurants: 379
+2025-09-06 16:24:47,105 - INFO - EnrichmentJobRunner -   Need enrichment: 379
+2025-09-06 16:24:47,105 - INFO - EnrichmentJobRunner -   Current batch: 5 restaurants
+2025-09-06 16:24:47,105 - INFO - EnrichmentJobRunner - Processing 5 restaurants...
+2025-09-06 16:24:47,105 - INFO - EnrichmentJobRunner - Progress: 1/5 (20.0%)
+2025-09-06 16:24:47,105 - INFO - EnrichmentJobRunner - Enriching: CUPCAKIN LLC at 2450 GRAND BLVD STE 126 KANSAS CITY MO 64108-2552
+2025-09-06 16:24:47,105 - INFO - services.google_places_client - Enriching data for restaurant: CUPCAKIN LLC at 2450 GRAND BLVD STE 126 KANSAS CITY MO 64108-2552
+2025-09-06 16:24:47,313 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:24:47,368 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:24:47,368 - INFO - services.google_places_client - Generated mock data for mock_4d42a71c47fdb2b4
+2025-09-06 16:24:47,368 - INFO - services.google_places_client - Successfully enriched data for CUPCAKIN LLC
+2025-09-06 16:24:47,368 - INFO - EnrichmentJobRunner - [DRY-RUN] Would update CUPCAKIN LLC with fields: ['google_place_id', 'google_rating', 'google_review_count', 'price_level', 'latitude', 'longitude', 'cuisine_type', 'takeout_available', 'wheelchair_accessible', 'good_for_children', 'serves_alcohol', 'business_hours', 'review_summary', 'sentiment_distribution', 'review_keywords', 'sentiment_summary', 'places_last_updated', 'api_fields_retrieved']
+2025-09-06 16:24:47,368 - INFO - EnrichmentJobRunner - Progress: 2/5 (40.0%)
+2025-09-06 16:24:47,368 - INFO - EnrichmentJobRunner - Enriching: CARNICERIA EL TORITO III LLC at 6200 INDEPENDENCE AVE KANSAS CITY MO 64125-1621
+2025-09-06 16:24:47,369 - INFO - services.google_places_client - Enriching data for restaurant: CARNICERIA EL TORITO III LLC at 6200 INDEPENDENCE AVE KANSAS CITY MO 64125-1621
+2025-09-06 16:24:47,460 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:24:47,534 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:24:47,534 - INFO - services.google_places_client - Generated mock data for mock_70bb4e730b729d27
+2025-09-06 16:24:47,534 - INFO - services.google_places_client - Successfully enriched data for CARNICERIA EL TORITO III LLC
+2025-09-06 16:24:47,534 - INFO - EnrichmentJobRunner - [DRY-RUN] Would update CARNICERIA EL TORITO III LLC with fields: ['google_place_id', 'google_rating', 'google_review_count', 'price_level', 'latitude', 'longitude', 'cuisine_type', 'delivery_available', 'wheelchair_accessible', 'good_for_children', 'serves_alcohol', 'business_hours', 'review_summary', 'sentiment_distribution', 'review_keywords', 'sentiment_summary', 'places_last_updated', 'api_fields_retrieved']
+2025-09-06 16:24:47,534 - INFO - EnrichmentJobRunner - Progress: 3/5 (60.0%)
+2025-09-06 16:24:47,534 - INFO - EnrichmentJobRunner - Enriching: SMOOTHIE KING at 6368 N COSBY AVE KANSAS CITY MO 64151-2344
+2025-09-06 16:24:47,534 - INFO - services.google_places_client - Enriching data for restaurant: SMOOTHIE KING at 6368 N COSBY AVE KANSAS CITY MO 64151-2344
+2025-09-06 16:24:47,606 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:24:47,667 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:24:47,667 - INFO - services.google_places_client - Generated mock data for mock_00de839a72b362e4
+2025-09-06 16:24:47,667 - INFO - services.google_places_client - Successfully enriched data for SMOOTHIE KING
+2025-09-06 16:24:47,667 - INFO - EnrichmentJobRunner - [DRY-RUN] Would update SMOOTHIE KING with fields: ['google_place_id', 'google_rating', 'google_review_count', 'price_level', 'latitude', 'longitude', 'cuisine_type', 'takeout_available', 'delivery_available', 'good_for_children', 'serves_alcohol', 'business_hours', 'review_summary', 'sentiment_distribution', 'review_keywords', 'sentiment_summary', 'places_last_updated', 'api_fields_retrieved']
+2025-09-06 16:24:47,667 - INFO - EnrichmentJobRunner - Progress: 4/5 (80.0%)
+2025-09-06 16:24:47,667 - INFO - EnrichmentJobRunner - Enriching: DAY28 WELLNESS CO LLC at 12005 E 47TH ST KANSAS CITY MO 64133-2517
+2025-09-06 16:24:47,667 - INFO - services.google_places_client - Enriching data for restaurant: DAY28 WELLNESS CO LLC at 12005 E 47TH ST KANSAS CITY MO 64133-2517
+2025-09-06 16:24:47,721 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:24:47,784 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:24:47,784 - INFO - services.google_places_client - Generated mock data for mock_046a5bcb8721a742
+2025-09-06 16:24:47,784 - INFO - services.google_places_client - Successfully enriched data for DAY28 WELLNESS CO LLC
+2025-09-06 16:24:47,784 - INFO - EnrichmentJobRunner - [DRY-RUN] Would update DAY28 WELLNESS CO LLC with fields: ['google_place_id', 'google_rating', 'google_review_count', 'price_level', 'latitude', 'longitude', 'cuisine_type', 'takeout_available', 'delivery_available', 'wheelchair_accessible', 'good_for_children', 'business_hours', 'review_summary', 'sentiment_distribution', 'review_keywords', 'sentiment_summary', 'places_last_updated', 'api_fields_retrieved']
+2025-09-06 16:24:47,784 - INFO - EnrichmentJobRunner - Progress: 5/5 (100.0%)
+2025-09-06 16:24:47,785 - INFO - EnrichmentJobRunner - Enriching: BARNYARD LIQUOR at 9510 BLUE RIDGE BLVD KANSAS CITY MO 64134-1338
+2025-09-06 16:24:47,785 - INFO - services.google_places_client - Enriching data for restaurant: BARNYARD LIQUOR at 9510 BLUE RIDGE BLVD KANSAS CITY MO 64134-1338
+2025-09-06 16:24:47,845 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:24:47,905 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:24:47,905 - INFO - services.google_places_client - Generated mock data for mock_2ed4098c31b998fc
+2025-09-06 16:24:47,905 - INFO - services.google_places_client - Successfully enriched data for BARNYARD LIQUOR
+2025-09-06 16:24:47,905 - INFO - EnrichmentJobRunner - [DRY-RUN] Would update BARNYARD LIQUOR with fields: ['google_place_id', 'google_rating', 'google_review_count', 'price_level', 'latitude', 'longitude', 'cuisine_type', 'takeout_available', 'delivery_available', 'wheelchair_accessible', 'good_for_children', 'business_hours', 'review_summary', 'sentiment_distribution', 'review_keywords', 'sentiment_summary', 'places_last_updated', 'api_fields_retrieved']
+2025-09-06 16:24:47,905 - INFO - services.google_places_client - Google Places API Usage Summary:
+2025-09-06 16:24:47,905 - INFO - services.google_places_client -   Total calls: 0
+2025-09-06 16:24:47,905 - INFO - services.google_places_client -   Text search: 0
+2025-09-06 16:24:47,905 - INFO - services.google_places_client -   Place details: 0
+2025-09-06 16:24:47,905 - INFO - services.google_places_client -   Estimated cost: $0.0000
+2025-09-06 16:24:47,905 - INFO - services.google_places_client -   Errors by category: {}
+2025-09-06 16:24:47,905 - INFO - __main__ - ✅ Enrichment job completed successfully
+2025-09-06 16:24:47,938 - INFO - EnrichmentJobRunner - Database connection closed
+2025-09-06 16:24:58,797 - INFO - __main__ - ============================================================
+2025-09-06 16:24:58,797 - INFO - __main__ - Starting Google Places Enrichment Job
+2025-09-06 16:24:58,797 - INFO - __main__ - ============================================================
+2025-09-06 16:24:59,180 - INFO - EnrichmentJobRunner - Connected to MongoDB: kansas_city.food_businesses
+2025-09-06 16:24:59,180 - INFO - services.sentiment_analyzer - Sentiment analyzer initialized with method: textblob
+2025-09-06 16:24:59,180 - INFO - services.google_places_client - Sentiment analyzer initialized for review analysis
+2025-09-06 16:24:59,180 - INFO - services.google_places_client - Google Places client initialized (region: us, rate_limit: 8.0 req/s)
+2025-09-06 16:24:59,180 - INFO - EnrichmentJobRunner - Google Places client initialized with 8.0 req/s rate limit
+2025-09-06 16:24:59,180 - INFO - EnrichmentJobRunner - Starting Google Places enrichment job
+2025-09-06 16:24:59,180 - INFO - EnrichmentJobRunner - Configuration: batch_size=3, rate_limit=8.0 req/s, dry_run=False
+2025-09-06 16:24:59,276 - INFO - EnrichmentJobRunner - Database status:
+2025-09-06 16:24:59,276 - INFO - EnrichmentJobRunner -   Total restaurants: 379
+2025-09-06 16:24:59,276 - INFO - EnrichmentJobRunner -   Need enrichment: 379
+2025-09-06 16:24:59,276 - INFO - EnrichmentJobRunner -   Current batch: 3 restaurants
+2025-09-06 16:24:59,276 - INFO - EnrichmentJobRunner - Processing 3 restaurants...
+2025-09-06 16:24:59,276 - INFO - EnrichmentJobRunner - Progress: 1/3 (33.3%)
+2025-09-06 16:24:59,276 - INFO - EnrichmentJobRunner - Enriching: CUPCAKIN LLC at 2450 GRAND BLVD STE 126 KANSAS CITY MO 64108-2552
+2025-09-06 16:24:59,276 - INFO - services.google_places_client - Enriching data for restaurant: CUPCAKIN LLC at 2450 GRAND BLVD STE 126 KANSAS CITY MO 64108-2552
+2025-09-06 16:24:59,483 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:24:59,538 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:24:59,538 - INFO - services.google_places_client - Generated mock data for mock_4d42a71c47fdb2b4
+2025-09-06 16:24:59,538 - INFO - services.google_places_client - Successfully enriched data for CUPCAKIN LLC
+2025-09-06 16:24:59,591 - INFO - EnrichmentJobRunner - ✅ Successfully enriched: CUPCAKIN LLC
+2025-09-06 16:24:59,591 - INFO - EnrichmentJobRunner - Progress: 2/3 (66.7%)
+2025-09-06 16:24:59,591 - INFO - EnrichmentJobRunner - Enriching: CARNICERIA EL TORITO III LLC at 6200 INDEPENDENCE AVE KANSAS CITY MO 64125-1621
+2025-09-06 16:24:59,591 - INFO - services.google_places_client - Enriching data for restaurant: CARNICERIA EL TORITO III LLC at 6200 INDEPENDENCE AVE KANSAS CITY MO 64125-1621
+2025-09-06 16:24:59,653 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:24:59,741 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:24:59,742 - INFO - services.google_places_client - Generated mock data for mock_70bb4e730b729d27
+2025-09-06 16:24:59,742 - INFO - services.google_places_client - Successfully enriched data for CARNICERIA EL TORITO III LLC
+2025-09-06 16:24:59,774 - INFO - EnrichmentJobRunner - ✅ Successfully enriched: CARNICERIA EL TORITO III LLC
+2025-09-06 16:24:59,774 - INFO - EnrichmentJobRunner - Progress: 3/3 (100.0%)
+2025-09-06 16:24:59,774 - INFO - EnrichmentJobRunner - Enriching: SMOOTHIE KING at 6368 N COSBY AVE KANSAS CITY MO 64151-2344
+2025-09-06 16:24:59,774 - INFO - services.google_places_client - Enriching data for restaurant: SMOOTHIE KING at 6368 N COSBY AVE KANSAS CITY MO 64151-2344
+2025-09-06 16:24:59,835 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:24:59,925 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:24:59,925 - INFO - services.google_places_client - Generated mock data for mock_00de839a72b362e4
+2025-09-06 16:24:59,925 - INFO - services.google_places_client - Successfully enriched data for SMOOTHIE KING
+2025-09-06 16:24:59,958 - INFO - EnrichmentJobRunner - ✅ Successfully enriched: SMOOTHIE KING
+2025-09-06 16:24:59,958 - INFO - services.google_places_client - Google Places API Usage Summary:
+2025-09-06 16:24:59,958 - INFO - services.google_places_client -   Total calls: 0
+2025-09-06 16:24:59,958 - INFO - services.google_places_client -   Text search: 0
+2025-09-06 16:24:59,958 - INFO - services.google_places_client -   Place details: 0
+2025-09-06 16:24:59,958 - INFO - services.google_places_client -   Estimated cost: $0.0000
+2025-09-06 16:24:59,958 - INFO - services.google_places_client -   Errors by category: {}
+2025-09-06 16:24:59,958 - INFO - __main__ - ✅ Enrichment job completed successfully
+2025-09-06 16:24:59,992 - INFO - EnrichmentJobRunner - Database connection closed
+2025-09-06 16:50:38,644 - INFO - __main__ - ============================================================
+2025-09-06 16:50:38,644 - INFO - __main__ - Starting Google Places Enrichment Job
+2025-09-06 16:50:38,644 - INFO - __main__ - ============================================================
+2025-09-06 16:50:39,065 - INFO - EnrichmentJobRunner - Connected to MongoDB: kansas_city.food_businesses
+2025-09-06 16:50:39,065 - INFO - services.sentiment_analyzer - Sentiment analyzer initialized with method: textblob
+2025-09-06 16:50:39,066 - INFO - services.google_places_client - Sentiment analyzer initialized for review analysis
+2025-09-06 16:50:39,066 - INFO - services.google_places_client - Google Places client initialized (region: us, rate_limit: 8.0 req/s)
+2025-09-06 16:50:39,066 - INFO - EnrichmentJobRunner - Google Places client initialized with 8.0 req/s rate limit
+2025-09-06 16:50:39,066 - INFO - EnrichmentJobRunner - Starting Google Places enrichment job
+2025-09-06 16:50:39,066 - INFO - EnrichmentJobRunner - Configuration: batch_size=3, rate_limit=8.0 req/s, dry_run=True
+2025-09-06 16:50:39,162 - INFO - EnrichmentJobRunner - Database status:
+2025-09-06 16:50:39,162 - INFO - EnrichmentJobRunner -   Total restaurants: 379
+2025-09-06 16:50:39,162 - INFO - EnrichmentJobRunner -   Need enrichment: 324
+2025-09-06 16:50:39,162 - INFO - EnrichmentJobRunner -   Current batch: 3 restaurants
+2025-09-06 16:50:39,162 - INFO - EnrichmentJobRunner - Processing 3 restaurants...
+2025-09-06 16:50:39,162 - INFO - EnrichmentJobRunner - Progress: 1/3 (33.3%)
+2025-09-06 16:50:39,162 - INFO - EnrichmentJobRunner - Enriching: CUPCAKIN LLC at 2450 GRAND BLVD STE 126 KANSAS CITY MO 64108-2552
+2025-09-06 16:50:39,162 - INFO - services.google_places_client - Enriching data for restaurant: CUPCAKIN LLC at 2450 GRAND BLVD STE 126 KANSAS CITY MO 64108-2552
+2025-09-06 16:50:39,372 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:50:39,429 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:50:39,430 - INFO - services.google_places_client - Generated mock data for mock_4d42a71c47fdb2b4
+2025-09-06 16:50:39,430 - INFO - services.google_places_client - Successfully enriched data for CUPCAKIN LLC
+2025-09-06 16:50:39,430 - INFO - EnrichmentJobRunner - [DRY-RUN] Would update CUPCAKIN LLC with fields: ['google_place_id', 'google_rating', 'google_review_count', 'price_level', 'latitude', 'longitude', 'cuisine_type', 'takeout_available', 'delivery_available', 'good_for_children', 'serves_alcohol', 'business_hours', 'review_summary', 'sentiment_distribution', 'review_keywords', 'sentiment_summary', 'places_last_updated', 'api_fields_retrieved']
+2025-09-06 16:50:39,430 - INFO - EnrichmentJobRunner - Progress: 2/3 (66.7%)
+2025-09-06 16:50:39,430 - INFO - EnrichmentJobRunner - Enriching: CARNICERIA EL TORITO III LLC at 6200 INDEPENDENCE AVE KANSAS CITY MO 64125-1621
+2025-09-06 16:50:39,430 - INFO - services.google_places_client - Enriching data for restaurant: CARNICERIA EL TORITO III LLC at 6200 INDEPENDENCE AVE KANSAS CITY MO 64125-1621
+2025-09-06 16:50:39,524 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:50:39,582 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:50:39,582 - INFO - services.google_places_client - Generated mock data for mock_70bb4e730b729d27
+2025-09-06 16:50:39,582 - INFO - services.google_places_client - Successfully enriched data for CARNICERIA EL TORITO III LLC
+2025-09-06 16:50:39,583 - INFO - EnrichmentJobRunner - [DRY-RUN] Would update CARNICERIA EL TORITO III LLC with fields: ['google_place_id', 'google_rating', 'google_review_count', 'price_level', 'latitude', 'longitude', 'cuisine_type', 'takeout_available', 'wheelchair_accessible', 'good_for_children', 'serves_alcohol', 'business_hours', 'review_summary', 'sentiment_distribution', 'review_keywords', 'sentiment_summary', 'places_last_updated', 'api_fields_retrieved']
+2025-09-06 16:50:39,583 - INFO - EnrichmentJobRunner - Progress: 3/3 (100.0%)
+2025-09-06 16:50:39,583 - INFO - EnrichmentJobRunner - Enriching: SMOOTHIE KING at 6368 N COSBY AVE KANSAS CITY MO 64151-2344
+2025-09-06 16:50:39,583 - INFO - services.google_places_client - Enriching data for restaurant: SMOOTHIE KING at 6368 N COSBY AVE KANSAS CITY MO 64151-2344
+2025-09-06 16:50:39,650 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview
+2025-09-06 16:50:39,700 - WARNING - services.google_places_client - Places API (New) not enabled. Using mock data for testing.
+2025-09-06 16:50:39,700 - INFO - services.google_places_client - Generated mock data for mock_00de839a72b362e4
+2025-09-06 16:50:39,700 - INFO - services.google_places_client - Successfully enriched data for SMOOTHIE KING
+2025-09-06 16:50:39,700 - INFO - EnrichmentJobRunner - [DRY-RUN] Would update SMOOTHIE KING with fields: ['google_place_id', 'google_rating', 'google_review_count', 'price_level', 'latitude', 'longitude', 'cuisine_type', 'takeout_available', 'delivery_available', 'good_for_children', 'serves_alcohol', 'business_hours', 'review_summary', 'sentiment_distribution', 'review_keywords', 'sentiment_summary', 'places_last_updated', 'api_fields_retrieved']
+2025-09-06 16:50:39,700 - INFO - services.google_places_client - Google Places API Usage Summary:
+2025-09-06 16:50:39,700 - INFO - services.google_places_client -   Total calls: 0
+2025-09-06 16:50:39,700 - INFO - services.google_places_client -   Text search: 0
+2025-09-06 16:50:39,700 - INFO - services.google_places_client -   Place details: 0
+2025-09-06 16:50:39,700 - INFO - services.google_places_client -   Estimated cost: $0.0000
+2025-09-06 16:50:39,700 - INFO - services.google_places_client -   Errors by category: {}
+2025-09-06 16:50:39,700 - INFO - __main__ - ✅ Enrichment job completed successfully
+2025-09-06 16:50:39,732 - INFO - EnrichmentJobRunner - Database connection closed

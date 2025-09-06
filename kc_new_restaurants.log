@@ -28,3 +28,30 @@ Processing business license data...
 Processed 30174 total records, found 474 food businesses in 12.62 seconds
 Connecting to SMTP server smtp.gmail.com:587
 Email sent to mc******@gmail.com
+DRY-RUN MODE ENABLED - No database modifications will be performed
+Skipping random delay due to --nodelay option
+Google Places enrichment disabled
+Starting KC New Restaurants processing
+Downloading KC business license data...
+  Getting initial search form...
+  Submitting search form...
+  Looking for CSV export button...
+  Found export button: ctl00$MainContent$exportBtn
+  Submitting export form...
+Response content type: application/octet-stream
+Response status: 200
+First 500 chars of response: Business Name,DBA Name,Address,Business Type,Valid License For
+"TOWNE PARK LLC"," ","1111 GRAND BLVD KANSAS CITY MO 64106-2404","Parking Lots and Garages","2024"
+"CHEUNG LAWRENCE"," ","8305 NW 76TH TER KANSAS CITY MO 64152-4676","All Other Professional Scientific and Technical Services","2025"
+"PAPE LLC"," ","5214 STANTON DR KANSAS CITY MO 64133-2673","All Other Miscellaneous Retailers","2023"
+"EVERETT FINANCIAL INC.","SUPREME LENDING","9582 N MCGEE ST OFC 1 KANSAS CITY MO 64155-8100","Mortg
+Number of lines in response: 30175
+First row (header): ['Business Name', 'DBA Name', 'Address', 'Business Type', 'Valid License For']
+Second row (sample): ['TOWNE PARK LLC', ' ', '1111 GRAND BLVD KANSAS CITY MO 64106-2404', 'Parking Lots and Garages', '2024']
+Downloaded 30174 records from KC Business License data in 2.17 seconds
+Processing business license data...
+ Processing 30,174 records...
+MongoDB collection not initialized - running in no-persistence mode
+Processed 30174 total records, found 474 food businesses in 0.01 seconds
+Connecting to SMTP server smtp.gmail.com:587
+Email sent to mc******@gmail.com

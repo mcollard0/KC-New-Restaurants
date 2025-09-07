@@ -35,6 +35,14 @@ except ImportError:
     print( "pymongo is not installed. Please install it using 'pip install pymongo' or 'apt install python3-pymongo'." );
     MONGODB_AVAILABLE = False;
 
+# Import dual database manager
+try:
+    from services.database_manager import DatabaseManager;
+    DATABASE_MANAGER_AVAILABLE = True;
+except ImportError as e:
+    logger.warning( f"Database manager not available: {e}" );
+    DATABASE_MANAGER_AVAILABLE = False;
+
 # Initialize logger first
 logging.basicConfig( level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s' );
 handlers = [ logging.FileHandler( "kc_new_restaurants.log" ), logging.StreamHandler() ];
@@ -82,6 +90,9 @@ class KCRestaurant:
         self.dry_run = dry_run;
         self.enable_enrichment = enable_enrichment;
         self.session = self.db = self.collection = self.client = None;
+        
+        # Initialize dual database manager
+        self.db_manager = None;
 
         self.stats = { 'total_records': 0, 'food_businesses': 0, 'current_year_food': 0, 'new_businesses':0,
     'existing_businesses':0, 'download_time':0, 'processing_time':0, 'enrichment_success': 0, 'enrichment_failed': 0 };
@@ -128,36 +139,51 @@ class KCRestaurant:
 
     def setup_mongodb( self ) -> bool:
         try:
-            self.client = MongoClient( self.mongodb_uri, serverSelectionTimeoutMS=2500 );
-            self.client.admin.command( 'ping' );
-            self.client.admin.command( 'ismaster' );
-            # Sanitize URI for logging (remove credentials if present)
-            sanitized_uri = self._sanitize_uri_for_logging(self.mongodb_uri)
-            logger.info( f"Connected to MongoDB: {sanitized_uri}" );
-            self.db = self.client[ self.database_name ];
-            self.collection = self.db[ self.collection_name ];
+            # Initialize dual database manager (MongoDB + SQLite)
+            if DATABASE_MANAGER_AVAILABLE:
+                self.db_manager = DatabaseManager(mongodb_uri=self.mongodb_uri);
+                status = self.db_manager.get_status();
+                logger.info( f"Database Manager Status: MongoDB {'✅' if status['mongodb']['available'] else '❌'}, SQLite {'✅' if status['sqlite']['available'] else '❌'}" );
+                
+                # Get collection for compatibility with existing code
+                self.collection = self.db_manager.get_collection();
+                
+                if not status['mongodb']['available'] and not status['sqlite']['available']:
+                    logger.error( "Neither MongoDB nor SQLite is available" );
+                    return False;
+                    
+            else:
+                # Fallback to direct MongoDB connection
+                self.client = MongoClient( self.mongodb_uri, serverSelectionTimeoutMS=2500 );
+                self.client.admin.command( 'ping' );
+                self.client.admin.command( 'ismaster' );
+                # Sanitize URI for logging (remove credentials if present)
+                sanitized_uri = self._sanitize_uri_for_logging(self.mongodb_uri)
+                logger.info( f"Connected to MongoDB: {sanitized_uri}" );
+                self.db = self.client[ self.database_name ];
+                self.collection = self.db[ self.collection_name ];
 
-            # Drop old indexes if they exist to prevent conflicts
-            if self.dry_run:
-                logger.info( "[DRY-RUN] Skipping drop_index operation for business_name_1" );
-            else:
-                try:
-                    self.collection.drop_index( "business_name_1" );
-                    logger.info( "Dropped old business_name_1 index" );
-                except:
-                    pass;  # Index may not exist
-            
-            # Create a compound unique index on business_name + address + business_type for franchise support
-            if self.dry_run:
-                logger.info( "[DRY-RUN] Skipping index creation for compound business fields" );
-                logger.info( "[DRY-RUN] Skipping index creation for insert_date" );
-            else:
-                self.collection.create_index( [ ( "business_name", 1 ), ( "address", 1 ), ( "business_type", 1 ) ], unique=True, background=True );
-                self.collection.create_index( [ ( "insert_date", 1 ) ], background=True );
+                # Drop old indexes if they exist to prevent conflicts
+                if self.dry_run:
+                    logger.info( "[DRY-RUN] Skipping drop_index operation for business_name_1" );
+                else:
+                    try:
+                        self.collection.drop_index( "business_name_1" );
+                        logger.info( "Dropped old business_name_1 index" );
+                    except:
+                        pass;  # Index may not exist
+                
+                # Create a compound unique index on business_name + address + business_type for franchise support
+                if self.dry_run:
+                    logger.info( "[DRY-RUN] Skipping index creation for compound business fields" );
+                    logger.info( "[DRY-RUN] Skipping index creation for insert_date" );
+                else:
+                    self.collection.create_index( [ ( "business_name", 1 ), ( "address", 1 ), ( "business_type", 1 ) ], unique=True, background=True );
+                    self.collection.create_index( [ ( "insert_date", 1 ) ], background=True );
 
             logger.info( f"Setup database: {self.database_name}, collection: {self.collection_name}" );
             
-            # Initialize Google Places client after MongoDB setup
+            # Initialize Google Places client after database setup
             if GOOGLE_PLACES_AVAILABLE and self.enable_enrichment and not self.google_places_client:
                 try:
                     self.google_places_client = GooglePlacesClient(
@@ -170,7 +196,7 @@ class KCRestaurant:
             return True;
 
         except Exception as e:
-            logging.error( f"Error setting up MongoDB: {e}" );
+            logging.error( f"Error setting up database: {e}" );
             return False;
     
     def flush_database( self ) -> bool:
@@ -504,18 +530,28 @@ class KCRestaurant:
                 logger.warning( f"Enrichment failed for {business_name}, proceeding with basic data: {e}" );
                 enriched_document = document.copy();
             
-            if self.collection is not None:
+            # Insert into database (dual storage: MongoDB + SQLite)
+            if self.db_manager or self.collection is not None:
                 if self.dry_run:
-                    logger.info( f"[DRY-RUN] Skipping insert_one for new business: {business_name}, {address}, {business_type}" );
+                    logger.info( f"[DRY-RUN] Skipping database insert for new business: {business_name}, {address}, {business_type}" );
                 else:
                     try:
-                        self.collection.insert_one( enriched_document.copy() );
-                        logger.debug( f"Inserted new business: {business_name}, {address}, {business_type}" );
+                        if self.db_manager:
+                            # Use dual database manager (preferred)
+                            success = self.db_manager.insert_document( enriched_document.copy() );
+                            if success:
+                                logger.debug( f"Inserted new business into dual database: {business_name}, {address}, {business_type}" );
+                            else:
+                                logger.error( f"Failed to insert new business into database: {business_name}" );
+                        else:
+                            # Fallback to direct MongoDB insertion
+                            self.collection.insert_one( enriched_document.copy() );
+                            logger.debug( f"Inserted new business into MongoDB: {business_name}, {address}, {business_type}" );
                     except Exception as e:
-                        logger.error( f"Error inserting new business into DB: {e}" );
+                        logger.error( f"Error inserting new business into database: {e}" );
             else:
                 if not mongodb_not_initialized_warned:
-                    logger.warning( "MongoDB collection not initialized - running in no-persistence mode" );
+                    logger.warning( "Database not initialized - running in no-persistence mode" );
                     mongodb_not_initialized_warned = True;
 
             self.stats[ 'new_businesses' ] += 1;

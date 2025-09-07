@@ -77,6 +77,8 @@ class PlaceData:
     ai_predicted_rating: Optional[float] = None;
     ai_predicted_grade: Optional[str] = None;
     ai_prediction_confidence: Optional[str] = None;
+    ai_confidence_percentage: Optional[int] = None;
+    ai_confidence_level: Optional[str] = None;
     ai_similar_restaurants_count: Optional[int] = None;
     ai_prediction_explanation: Optional[str] = None;
     
@@ -311,6 +313,37 @@ class GooglePlacesClient:
             self._handle_api_error( e, f"get_place_details({place_id})" );
             return None;
 
+    def _convert_price_level( self, price_level ) -> Optional[int]:
+        """Convert Google Places API price level to integer.
+        
+        Handles both old numeric format and new string constants.
+        
+        Args:
+            price_level: Either integer (1-4) or string constant (PRICE_LEVEL_INEXPENSIVE, etc.)
+            
+        Returns:
+            Integer price level (1-4) or None if invalid
+        """
+        if price_level is None:
+            return None;
+            
+        # Handle integer format (backward compatibility)
+        if isinstance( price_level, int ):
+            return price_level if 1 <= price_level <= 4 else None;
+            
+        # Handle string constants from new API
+        if isinstance( price_level, str ):
+            price_level_mapping = {
+                'PRICE_LEVEL_FREE': 0,
+                'PRICE_LEVEL_INEXPENSIVE': 1,
+                'PRICE_LEVEL_MODERATE': 2,
+                'PRICE_LEVEL_EXPENSIVE': 3,
+                'PRICE_LEVEL_VERY_EXPENSIVE': 4
+            };
+            return price_level_mapping.get( price_level );
+            
+        return None;
+        
     def _parse_place_details( self, place_result: Dict ) -> PlaceData:
         """Parse Google Places API result into structured PlaceData."""
         data = PlaceData();
@@ -323,7 +356,7 @@ class GooglePlacesClient:
         # Rating and reviews
         data.rating = place_result.get( 'rating' );
         data.user_ratings_total = place_result.get( 'userRatingCount' );
-        data.price_level = place_result.get( 'priceLevel' );
+        data.price_level = self._convert_price_level( place_result.get( 'priceLevel' ) );
         
         # Location (new API format)
         location = place_result.get( 'location', {} );
@@ -640,14 +673,26 @@ class GooglePlacesClient:
             );
             
             # Get AI prediction
-            predicted_rating, confidence, similar_restaurants = self.ai_predictor.predict_rating( features );
+            predicted_rating, confidence_data, similar_restaurants = self.ai_predictor.predict_rating( features );
             
-            # Store prediction metadata for debugging
-            data.ai_prediction_confidence = confidence;
+            # Handle both old string format and new dict format for backward compatibility
+            if isinstance( confidence_data, dict ):
+                # New format with percentage
+                data.ai_prediction_confidence = confidence_data['full_text'];
+                data.ai_confidence_percentage = confidence_data['percentage'];
+                data.ai_confidence_level = confidence_data['level'];
+            else:
+                # Old string format for backward compatibility
+                data.ai_prediction_confidence = confidence_data;
+                data.ai_confidence_percentage = None;
+                data.ai_confidence_level = None;
+            
             data.ai_similar_restaurants_count = len( similar_restaurants );
             data.ai_prediction_explanation = self.ai_predictor.get_prediction_explanation( features, similar_restaurants );
             
-            logger.debug( f"AI predicted rating: {predicted_rating:.2f} ({confidence})" );
+            # Get confidence text for logging
+            confidence_text = confidence_data['full_text'] if isinstance( confidence_data, dict ) else confidence_data;
+            logger.debug( f"AI predicted rating: {predicted_rating:.2f} ({confidence_text})" );
             return predicted_rating;
             
         except Exception as e:
@@ -664,7 +709,7 @@ class GooglePlacesClient:
         predicted = 3.7;  # Slightly above average
         
         # Adjust based on price level
-        if data.price_level:
+        if data.price_level is not None and isinstance( data.price_level, int ):
             if data.price_level >= 3:  # High-end restaurants
                 predicted += 0.3;
             elif data.price_level == 1:  # Budget restaurants

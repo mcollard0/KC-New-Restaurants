@@ -134,6 +134,8 @@ class DatabaseManager:
                 ai_predicted_rating REAL,
                 ai_predicted_grade TEXT,
                 ai_prediction_confidence TEXT,
+                ai_confidence_percentage INTEGER,
+                ai_confidence_level TEXT,
                 ai_similar_restaurants_count INTEGER,
                 ai_prediction_explanation TEXT,
                 
@@ -257,6 +259,8 @@ class DatabaseManager:
             'ai_predicted_rating': 'ai_predicted_rating',
             'ai_predicted_grade': 'ai_predicted_grade',
             'ai_prediction_confidence': 'ai_prediction_confidence',
+            'ai_confidence_percentage': 'ai_confidence_percentage',
+            'ai_confidence_level': 'ai_confidence_level',
             'ai_similar_restaurants_count': 'ai_similar_restaurants_count',
             'ai_prediction_explanation': 'ai_prediction_explanation',
             'enriched_date': 'enriched_date',

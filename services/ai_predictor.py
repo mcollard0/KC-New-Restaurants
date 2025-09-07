@@ -214,9 +214,14 @@ class RestaurantAIPredictor:
         if len( similar_restaurants ) < self.min_similar_restaurants:
             # Not enough data for prediction, return default
             default_rating = 3.7;  # Slightly above average
-            confidence = "Low - insufficient nearby data";
+            confidence_with_percentage = {
+                'level': 'Low',
+                'percentage': 15,  # Very low confidence
+                'description': 'insufficient nearby data',
+                'full_text': 'Low - insufficient nearby data'
+            };
             self.logger.debug( f"Insufficient similar restaurants ({len( similar_restaurants )}) for prediction, using default rating" );
-            return default_rating, confidence, similar_restaurants;
+            return default_rating, confidence_with_percentage, similar_restaurants;
         
         # Calculate weighted average rating
         total_weighted_rating = 0.0;
@@ -238,22 +243,62 @@ class RestaurantAIPredictor:
         else:
             predicted_rating = total_weighted_rating / total_weight;
         
-        # Determine confidence level
-        if cuisine_matches >= 3 and proximity_matches >= 2:
-            confidence = "High - strong cuisine and proximity matches";
-        elif cuisine_matches >= 2 or proximity_matches >= 3:
-            confidence = "Medium - good local or cuisine data";
-        elif len( similar_restaurants ) >= 5:
-            confidence = "Medium - sufficient nearby data";
+        # Calculate confidence percentage based on data quality factors
+        confidence_score = 0.0;
+        
+        # Factor 1: Number of similar restaurants (0-40 points)
+        restaurant_count_score = min( 40, len( similar_restaurants ) * 4 );
+        confidence_score += restaurant_count_score;
+        
+        # Factor 2: Cuisine matches (0-30 points)
+        cuisine_score = min( 30, cuisine_matches * 10 );
+        confidence_score += cuisine_score;
+        
+        # Factor 3: Proximity matches (0-20 points)
+        proximity_score = min( 20, proximity_matches * 5 );
+        confidence_score += proximity_score;
+        
+        # Factor 4: Average review count of similar restaurants (0-10 points)
+        avg_reviews = sum( r.review_count for r in similar_restaurants ) / len( similar_restaurants ) if similar_restaurants else 0;
+        review_score = min( 10, avg_reviews / 10 );  # 1 point per 10 reviews, capped at 10
+        confidence_score += review_score;
+        
+        # Convert to percentage (0-100)
+        confidence_percentage = min( 100, int( confidence_score ) );
+        
+        # Determine confidence level and create descriptive string
+        if confidence_percentage >= 85:
+            confidence_level = "High";
+            confidence_description = "strong cuisine and proximity matches";
+        elif confidence_percentage >= 65:
+            confidence_level = "Medium-High";
+            confidence_description = "good local and cuisine data";
+        elif confidence_percentage >= 45:
+            confidence_level = "Medium";
+            confidence_description = "sufficient nearby data";
+        elif confidence_percentage >= 25:
+            confidence_level = "Low-Medium";
+            confidence_description = "limited comparison data";
         else:
-            confidence = "Low - limited comparison data";
+            confidence_level = "Low";
+            confidence_description = "very limited data available";
+        
+        confidence = f"{confidence_level} - {confidence_description}";
+        
+        # Store confidence percentage for UI display
+        confidence_with_percentage = {
+            'level': confidence_level,
+            'percentage': confidence_percentage,
+            'description': confidence_description,
+            'full_text': confidence
+        };
         
         # Clamp rating to reasonable bounds
         predicted_rating = max( 1.0, min( 5.0, predicted_rating ) );
         
         self.logger.info( f"Predicted rating: {predicted_rating:.2f} ({confidence}) based on {len( similar_restaurants )} similar restaurants" );
         
-        return predicted_rating, confidence, similar_restaurants;
+        return predicted_rating, confidence_with_percentage, similar_restaurants;
     
     def predict_grade( self, rating: float ) -> str:
         """Convert predicted rating to letter grade"""

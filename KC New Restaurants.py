@@ -25,7 +25,7 @@ import tempfile;
 from datetime import datetime;
 from email.mime.text import MIMEText;
 from email.mime.multipart import MIMEMultipart;
-from typing import List, Dict, Tuple;
+from typing import List, Dict, Tuple, Optional;
 
 try:
     from pymongo import MongoClient;
@@ -570,6 +570,38 @@ class KCRestaurant:
         logger.info( f"Processed {self.stats['total_records']} total records, found {self.stats['food_businesses']} food businesses in {self.stats['processing_time']:.2f} seconds" );
 
         return True;
+    
+    def _convert_price_level_for_display( self, price_level ) -> Optional[int]:
+        """Convert price level to integer for display purposes.
+        
+        Handles both string constants and integers for backward compatibility.
+        
+        Args:
+            price_level: Either integer (0-4) or string constant (PRICE_LEVEL_INEXPENSIVE, etc.)
+            
+        Returns:
+            Integer price level (1-4) for display or None if invalid
+        """
+        if price_level is None:
+            return None;
+            
+        # Handle integer format (existing data)
+        if isinstance( price_level, int ):
+            return price_level if 1 <= price_level <= 4 else None;
+            
+        # Handle string constants from Google Places API
+        if isinstance( price_level, str ):
+            price_level_mapping = {
+                'PRICE_LEVEL_FREE': None,  # Don't show price level for free
+                'PRICE_LEVEL_INEXPENSIVE': 1,
+                'PRICE_LEVEL_MODERATE': 2,
+                'PRICE_LEVEL_EXPENSIVE': 3,
+                'PRICE_LEVEL_VERY_EXPENSIVE': 4
+            };
+            return price_level_mapping.get( price_level );
+            
+        return None;
+        
     def generate_email_html( self ) -> str:
         if not self.new_businesses:
             return "<p>No new food businesses found this run.</p>";
@@ -606,6 +638,7 @@ class KCRestaurant:
                 .keyword-tag {{ display: inline-block; background-color: #f3e5f5; color: #7b1fa2; padding: 2px 6px; border-radius: 8px; font-size: 11px; margin: 1px; }}
                 .ai-rating {{ font-size: 48px; font-weight: bold; color: #2e7d32; margin: 0; line-height: 1; }}
                 .ai-grade {{ font-size: 36px; font-weight: bold; margin: 5px 0; line-height: 1; }}
+                .ai-confidence {{ font-size: 10px; color: #888; margin: 2px 0; font-weight: normal; }}
                 .ai-label {{ font-size: 12px; color: #666; margin-top: 8px; }}
                 .grade-a {{ color: #00a86b; }}
                 .grade-b {{ color: #32cd32; }}
@@ -656,6 +689,8 @@ class KCRestaurant:
             # Extract AI predictions if available
             ai_rating = food.get( 'ai_predicted_rating' );
             ai_grade = food.get( 'ai_predicted_grade', '' );
+            ai_confidence_pct = food.get( 'ai_confidence_percentage' );
+            ai_confidence_level = food.get( 'ai_confidence_level' );
             
             # Extract sentiment analysis data if available
             sentiment_distribution = food.get( 'sentiment_distribution', {} );
@@ -675,8 +710,9 @@ class KCRestaurant:
             
             # Format price level
             price_display = '';
-            if price_level is not None:
-                dollar_signs = '$' * max( 1, int( price_level ) );
+            converted_price_level = self._convert_price_level_for_display( price_level );
+            if converted_price_level is not None:
+                dollar_signs = '$' * max( 1, converted_price_level );
                 price_display = f'<span class="price-level">{dollar_signs}</span>';
             
             # Determine grade color class
@@ -731,9 +767,15 @@ class KCRestaurant:
             """;
             
             if ai_rating and ai_grade:
+                # Build confidence display
+                confidence_html = '';
+                if ai_confidence_pct is not None:
+                    confidence_html = f'<div class="ai-confidence">{ai_confidence_pct}% confidence</div>';
+                
                 html += f"""
                             <div class="ai-rating">{ai_rating:.1f}</div>
                             <div class="ai-grade {grade_class}">{ai_grade}</div>
+                            {confidence_html}
                             <div class="ai-label">AI Predicted</div>
                 """;
             else:

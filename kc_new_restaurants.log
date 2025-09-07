@@ -7367,3 +7367,258 @@ Error analyzing reviews: 'dict' object has no attribute 'strip'
 Predicted rating: 4.00 (Medium - good local or cuisine data) based on 11 similar restaurants
 Successfully enriched data for ONE STOP SHOP LLC
 Enriching data for restaurant: HEN HOUSE #18 at 8430 WORNALL RD KANSAS CITY MO 64114-5812
+Interactive execution detected - no delay applied
+Google Places enrichment will be enabled after MongoDB setup
+Connected to MongoDB: mongodb+srv://[credentials_removed]@cluster0.6ucxlv7.mongodb.net/
+Setup database: kansas_city, collection: food_businesses
+Sentiment analyzer initialized with method: textblob
+Sentiment analyzer initialized for review analysis
+AI predictor initialized for rating predictions
+Google Places client initialized (region: us, rate_limit: 8.0 req/s)
+Google Places enrichment enabled with AI predictions
+Starting KC New Restaurants processing
+Downloading KC business license data...
+  Getting initial search form...
+  Submitting search form...
+  Looking for CSV export button...
+  Found export button: ctl00$MainContent$exportBtn
+  Submitting export form...
+Response content type: application/octet-stream
+Response status: 200
+First 500 chars of response: Business Name,DBA Name,Address,Business Type,Valid License For
+"TOWNE PARK LLC"," ","1111 GRAND BLVD KANSAS CITY MO 64106-2404","Parking Lots and Garages","2024"
+"CHEUNG LAWRENCE"," ","8305 NW 76TH TER KANSAS CITY MO 64152-4676","All Other Professional Scientific and Technical Services","2025"
+"PAPE LLC"," ","5214 STANTON DR KANSAS CITY MO 64133-2673","All Other Miscellaneous Retailers","2023"
+"EVERETT FINANCIAL INC.","SUPREME LENDING","9582 N MCGEE ST OFC 1 KANSAS CITY MO 64155-8100","Mortg
+Number of lines in response: 30175
+First row (header): ['Business Name', 'DBA Name', 'Address', 'Business Type', 'Valid License For']
+Second row (sample): ['TOWNE PARK LLC', ' ', '1111 GRAND BLVD KANSAS CITY MO 64106-2404', 'Parking Lots and Garages', '2024']
+Downloaded 30174 records from KC Business License data in 2.30 seconds
+Processing business license data...
+ Processing 30,174 records...
+Enriching data for restaurant: HEN HOUSE #18 at 8430 WORNALL RD KANSAS CITY MO 64114-5812
+Predicted rating: 3.99 (Medium - good local or cuisine data) based on 9 similar restaurants
+Successfully enriched data for HEN HOUSE #18
+Enriching data for restaurant: KHAN MOHAMMAD M at 8401 N OAK TRFY KANSAS CITY MO 64155-2430
+Predicted rating: 4.27 (Medium - good local or cuisine data) based on 13 similar restaurants
+Successfully enriched data for KHAN MOHAMMAD M
+Enriching data for restaurant: MADISON FOODS INC at 4357 N CHOUTEAU TRFY KANSAS CITY MO 64117-1743
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 3.77 (Medium - good local or cuisine data) based on 9 similar restaurants
+Successfully enriched data for MADISON FOODS INC
+Enriching data for restaurant: SPIN! PIZZA at 6100 NW 63RD TER BLDG 11 KANSAS CITY MO 64151-3330
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.38 (Medium - good local or cuisine data) based on 14 similar restaurants
+Successfully enriched data for SPIN! PIZZA
+Enriching data for restaurant: AH'LEISHA'S COOKIE CO. at 4741 NORTON CIR KANSAS CITY MO 64130-2441
+No results found for query: AH'LEISHA'S COOKIE CO. 4741 NORTON CIR KANSAS CITY MO 64130-2441
+No place found for AH'LEISHA'S COOKIE CO.
+Enriching data for restaurant: QUIK TRIP #221 at 9600 N OAK TRFY KANSAS CITY MO 64155-2002
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.23 (High - strong cuisine and proximity matches) based on 13 similar restaurants
+Successfully enriched data for QUIK TRIP #221
+Enriching data for restaurant: LAS AMERICAS LLC at 5208 E 24TH ST KANSAS CITY MO 64127-4707
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.33 (High - strong cuisine and proximity matches) based on 20 similar restaurants
+Successfully enriched data for LAS AMERICAS LLC
+Enriching data for restaurant: TOAST TO TOAST at 770 ADMIRAL BLVD KANSAS CITY MO 64106-1514
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.49 (High - strong cuisine and proximity matches) based on 22 similar restaurants
+Successfully enriched data for TOAST TO TOAST
+Enriching data for restaurant: EXPRESS MART at 1331 E BANNISTER RD KANSAS CITY MO 64131-3024
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 3.90 (Medium - good local or cuisine data) based on 8 similar restaurants
+Successfully enriched data for EXPRESS MART
+Enriching data for restaurant: LOS ALAMOS MARKET AND COCINA at 1667 SUMMIT ST KANSAS CITY MO 64108-1139
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.64 (Medium - good local or cuisine data) based on 23 similar restaurants
+Successfully enriched data for LOS ALAMOS MARKET AND COCINA
+Enriching data for restaurant: DAWN FOOD PRODUCTS INC at 1501 SOUTHERN RD KANSAS CITY MO 64120-1123
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.18 (Medium - good local or cuisine data) based on 16 similar restaurants
+Successfully enriched data for DAWN FOOD PRODUCTS INC
+Enriching data for restaurant: OLIVE CAFE at 9530 JAMES A REED RD KANSAS CITY MO 64134-1689
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 3.85 (Medium - good local or cuisine data) based on 5 similar restaurants
+Successfully enriched data for OLIVE CAFE
+Enriching data for restaurant: QUIK TRIP #173 at 528 NW ENGLEWOOD RD KANSAS CITY MO 64118-3960
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.26 (High - strong cuisine and proximity matches) based on 20 similar restaurants
+Successfully enriched data for QUIK TRIP #173
+Enriching data for restaurant: QUIK TRIP #178 at 10601 STATE LINE RD KANSAS CITY MO 64114-4804
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 3.29 (Medium - good local or cuisine data) based on 8 similar restaurants
+Successfully enriched data for QUIK TRIP #178
+Enriching data for restaurant: RASPADOS MORA LLC at 6514 E 7TH ST KANSAS CITY MO 64125-1503
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.29 (Medium - good local or cuisine data) based on 17 similar restaurants
+Successfully enriched data for RASPADOS MORA LLC
+Enriching data for restaurant: GNC HOLDINGS LLC at 2682 NE VIVION RD KANSAS CITY MO 64119-2513
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.00 (Medium - good local or cuisine data) based on 13 similar restaurants
+Successfully enriched data for GNC HOLDINGS LLC
+Enriching data for restaurant: 2HOT2HANDLE BBQ KC at 1535 N 55TH ST KANSAS CITY KS 66102-1428
+No results found for query: 2HOT2HANDLE BBQ KC 1535 N 55TH ST KANSAS CITY KS 66102-1428
+No place found for 2HOT2HANDLE BBQ KC
+Enriching data for restaurant: SPROUTS FARMERS MARKET at 6061 NW 64TH ST KANSAS CITY MO 64151-2432
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.43 (Medium - good local or cuisine data) based on 16 similar restaurants
+Successfully enriched data for SPROUTS FARMERS MARKET
+Enriching data for restaurant: CHINATOWN FOOD MARKET at 202 GRAND BLVD KANSAS CITY MO 64106-1014
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.55 (Medium - good local or cuisine data) based on 25 similar restaurants
+Successfully enriched data for CHINATOWN FOOD MARKET
+Enriching data for restaurant: QUAFF BUFFET at 1010 BROADWAY BLVD KANSAS CITY MO 64105-1511
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.51 (Medium - good local or cuisine data) based on 27 similar restaurants
+Successfully enriched data for QUAFF BUFFET
+Enriching data for restaurant: MR SMOOTHS SNACKS at 9300 STARK AVE KANSAS CITY MO 64138-4814
+Predicted rating: 4.11 (Medium - good local or cuisine data) based on 5 similar restaurants
+Successfully enriched data for MR SMOOTHS SNACKS
+Enriching data for restaurant: TRADER JOES EAST INC at 8600 WARD PKWY STE 1020 KANSAS CITY MO 64114-2613
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 3.94 (Medium - good local or cuisine data) based on 10 similar restaurants
+Successfully enriched data for TRADER JOES EAST INC
+Enriching data for restaurant: TRIDEL FOOD MART at 11050 HOLMES RD KANSAS CITY MO 64131-3589
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 3.90 (Medium - good local or cuisine data) based on 14 similar restaurants
+Successfully enriched data for TRIDEL FOOD MART
+Enriching data for restaurant: CITY BARREL PIZZA + PATIO LLC at 120 E GREGORY BLVD KANSAS CITY MO 64114-1120
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.12 (Medium - good local or cuisine data) based on 16 similar restaurants
+Successfully enriched data for CITY BARREL PIZZA + PATIO LLC
+Enriching data for restaurant: CRUMBL COOKIES - TIFFANY SPRINGS at 9008 N SKYVIEW AVE KANSAS CITY MO 64154-8501
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.26 (Medium - good local or cuisine data) based on 16 similar restaurants
+Successfully enriched data for CRUMBL COOKIES - TIFFANY SPRINGS
+Enriching data for restaurant: MCDONALDS at 6200 MAIN ST GRANDVIEW MO 64030-2693
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 3.81 (Medium - good local or cuisine data) based on 11 similar restaurants
+Successfully enriched data for MCDONALDS
+Enriching data for restaurant: ARE YOU THIRSTY? LLC at 103 NE 110TH TER KANSAS CITY MO 64155-1197
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.36 (Medium - good local or cuisine data) based on 18 similar restaurants
+Successfully enriched data for ARE YOU THIRSTY? LLC
+Enriching data for restaurant: DUTCH BROS COFFEE at 3331 NE 86TH TERR KANSAS CITY MO 64156-0000
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.26 (Medium - good local or cuisine data) based on 10 similar restaurants
+Successfully enriched data for DUTCH BROS COFFEE
+Enriching data for restaurant: ASWAQ AL ARABI at 4107 N CHERRY ST STE B KANSAS CITY MO 64116-2600
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.12 (Medium - good local or cuisine data) based on 22 similar restaurants
+Successfully enriched data for ASWAQ AL ARABI
+Enriching data for restaurant: OHANA'S SHAVE ICE LLC at 2851 W 131ST ST OLATHE KS 66061-5988
+No results found for query: OHANA'S SHAVE ICE LLC 2851 W 131ST ST OLATHE KS 66061-5988
+No place found for OHANA'S SHAVE ICE LLC
+Enriching data for restaurant: BROWNES MARKET INC at 3300 PENNSYLVANIA AVE KANSAS CITY MO 64111-2724
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.34 (High - strong cuisine and proximity matches) based on 28 similar restaurants
+Successfully enriched data for BROWNES MARKET INC
+Enriching data for restaurant: COSENTINO'S NEW MARK SUN FRESH #156 at 10225 N OAK TRFY KANSAS CITY MO 64155-1715
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.29 (High - strong cuisine and proximity matches) based on 11 similar restaurants
+Successfully enriched data for COSENTINO'S NEW MARK SUN FRESH #156
+Enriching data for restaurant: GOURMET GROCERY & DELI INC at 9 E 3RD ST KANSAS CITY MO 64106-1004
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.48 (High - strong cuisine and proximity matches) based on 30 similar restaurants
+Successfully enriched data for GOURMET GROCERY & DELI INC
+Enriching data for restaurant: DUNKIN KCI INLINE 363991 at 1 INTERNATIONAL SQ KANSAS CITY MO 64153-1106
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 2.00 (Medium - good local or cuisine data) based on 7 similar restaurants
+Successfully enriched data for DUNKIN KCI INLINE 363991
+Enriching data for restaurant: FRESH MARKET at 5117 INDEPENDENCE AVE KANSAS CITY MO 64124-3003
+Predicted rating: 4.37 (Medium - good local or cuisine data) based on 26 similar restaurants
+Successfully enriched data for FRESH MARKET
+Enriching data for restaurant: MELLO MALLOW at 8581 N GREEN HILLS RD BLDG  KANSAS CITY MO 64154-1404
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.37 (Medium - good local or cuisine data) based on 21 similar restaurants
+Successfully enriched data for MELLO MALLOW
+Enriching data for restaurant: ADD TO THE BEAUTY BAKERY LLC at 7424 NW RHODE AVE KANSAS CITY MO 64152-2377
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.43 (High - strong cuisine and proximity matches) based on 18 similar restaurants
+Successfully enriched data for ADD TO THE BEAUTY BAKERY LLC
+Enriching data for restaurant: BACARO PRIMO at 323 E 55TH ST KANSAS CITY MO 64113-1222
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.31 (High - strong cuisine and proximity matches) based on 26 similar restaurants
+Successfully enriched data for BACARO PRIMO
+Enriching data for restaurant: NOTHING BUNDT CAKES at 8930 N SKYVIEW AVE KANSAS CITY MO 64154-8502
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.60 (High - strong cuisine and proximity matches) based on 23 similar restaurants
+Successfully enriched data for NOTHING BUNDT CAKES
+Enriching data for restaurant: HONG KONG SUPERMARKET at 6421 E TRUMAN RD KANSAS CITY MO 64126-2635
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.41 (Medium - good local or cuisine data) based on 22 similar restaurants
+Successfully enriched data for HONG KONG SUPERMARKET
+Enriching data for restaurant: ABOLE BUNA LLC at 301 E 9TH ST KANSAS CITY MO 64106-2203
+Predicted rating: 4.49 (Medium - good local or cuisine data) based on 33 similar restaurants
+Successfully enriched data for ABOLE BUNA LLC
+Enriching data for restaurant: CASEYS GENERAL STORE #3241 at 7907 N OAK TRFY KANSAS CITY MO 64118-1428
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.28 (Medium - good local or cuisine data) based on 28 similar restaurants
+Successfully enriched data for CASEYS GENERAL STORE #3241
+Enriching data for restaurant: QUIK TRIP #238 at 5025 N ANTIOCH RD KANSAS CITY MO 64119-3404
+No results found for query: QUIK TRIP #238 5025 N ANTIOCH RD KANSAS CITY MO 64119-3404
+No place found for QUIK TRIP #238
+Enriching data for restaurant: ANDY'S FROZEN CUSTARD STORES LLC at 6000 NW 88TH ST KANSAS CITY MO 64154-1613
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.44 (Medium - good local or cuisine data) based on 24 similar restaurants
+Successfully enriched data for ANDY'S FROZEN CUSTARD STORES LLC
+Enriching data for restaurant: FAMILY GROCERY LLC at 4020 SAINT JOHN AVE KANSAS CITY MO 64123-1716
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.39 (Medium - good local or cuisine data) based on 30 similar restaurants
+Successfully enriched data for FAMILY GROCERY LLC
+Enriching data for restaurant: BETTY RAE'S ICE CREAM at 7140 WORNALL RD KANSAS CITY MO 64114-1344
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.37 (Medium - good local or cuisine data) based on 19 similar restaurants
+Successfully enriched data for BETTY RAE'S ICE CREAM
+Enriching data for restaurant: LILOS'S SHAVED ICE LLC at 10420 N CYPRESS AVE KANSAS CITY MO 64156-2921
+No results found for query: LILOS'S SHAVED ICE LLC 10420 N CYPRESS AVE KANSAS CITY MO 64156-2921
+No place found for LILOS'S SHAVED ICE LLC
+Enriching data for restaurant: NEW YORK BUTCHER SHOPPE AND WINE BAR at 4928 MAIN ST KANSAS CITY MO 64112-2630
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.49 (Medium - good local or cuisine data) based on 33 similar restaurants
+Successfully enriched data for NEW YORK BUTCHER SHOPPE AND WINE BAR
+Enriching data for restaurant: QUIK TRIP #184 at 4327 MAIN ST KANSAS CITY MO 64111-1809
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.36 (High - strong cuisine and proximity matches) based on 34 similar restaurants
+Successfully enriched data for QUIK TRIP #184
+Enriching data for restaurant: PARIS BROS LLC at 30 W PERSHING RD KANSAS CITY MO 64108-2410
+Predicted rating: 4.39 (Medium - good local or cuisine data) based on 37 similar restaurants
+Successfully enriched data for PARIS BROS LLC
+Enriching data for restaurant: EJ AFRICAN MARKET LLC at 2532 INDEPENDENCE AVE KANSAS CITY MO 64124-2402
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.56 (Medium - good local or cuisine data) based on 36 similar restaurants
+Successfully enriched data for EJ AFRICAN MARKET LLC
+Enriching data for restaurant: HYVEE #3 at 5330 NW 64TH ST KANSAS CITY MO 64151-2414
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.43 (High - strong cuisine and proximity matches) based on 27 similar restaurants
+Successfully enriched data for HYVEE #3
+Enriching data for restaurant: SHAWNEE FLUFFY DONUTS INC at 10123 STATE LINE RD KANSAS CITY MO 64114-4262
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 3.34 (Medium - good local or cuisine data) based on 13 similar restaurants
+Successfully enriched data for SHAWNEE FLUFFY DONUTS INC
+Enriching data for restaurant: BETTER CHEDDAR INC THE at 604 W 48TH ST KANSAS CITY MO 64112-2001
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.37 (Medium - good local or cuisine data) based on 36 similar restaurants
+Successfully enriched data for BETTER CHEDDAR INC THE
+Enriching data for restaurant: THE LITTLEST BAKE SHOP KC LLC at 5511 TROOST AVE KANSAS CITY MO 64110-2821
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.34 (High - strong cuisine and proximity matches) based on 29 similar restaurants
+Successfully enriched data for THE LITTLEST BAKE SHOP KC LLC
+Enriching data for restaurant: PALACANA LLC at 830 SOUTHWEST BLVD KANSAS CITY MO 64108-2339
+No results found for query: PALACANA LLC 830 SOUTHWEST BLVD KANSAS CITY MO 64108-2339
+No place found for PALACANA LLC
+Enriching data for restaurant: FIFTH & EMERY FROZEN YOGURT & CHOCOLATE - ZONA ROSA at 8671 NW PRAIRIE VIEW RD KANSAS CITY MO 64153-1846
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.28 (High - strong cuisine and proximity matches) based on 25 similar restaurants
+Successfully enriched data for FIFTH & EMERY FROZEN YOGURT & CHOCOLATE - ZONA ROSA
+Enriching data for restaurant: GARDEN AND SEA CHIMES at 4800 S MAYBROOK CT INDEPENDENCE MO 64055-5372
+Successfully enriched data for GARDEN AND SEA CHIMES
+Enriching data for restaurant: RAINEY ANDREA at 217 W 19TH TER KANSAS CITY MO 64108-2027
+Predicted rating: 4.49 (Medium - good local or cuisine data) based on 39 similar restaurants
+Successfully enriched data for RAINEY ANDREA
+Enriching data for restaurant: JAY'S GROCERY & RESTAURANT LLC at 2605 INDEPENDENCE AVE KANSAS CITY MO 64124-2433
+Error analyzing reviews: slice(None, 200, None)
+Predicted rating: 4.63 (Medium - good local or cuisine data) based on 37 similar restaurants
+Successfully enriched data for JAY'S GROCERY & RESTAURANT LLC
+Enriching data for restaurant: ANDY'S FROZEN CUSTARD HOLDING at 1200 WESTPORT RD KANSAS CITY MO 64111-4225

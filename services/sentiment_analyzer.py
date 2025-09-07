@@ -262,11 +262,21 @@ class SentimentAnalyzer:
             author = review.get( 'author_name', f'User {i+1}' );
             time_desc = review.get( 'relative_time_description', 'recently' );
             
+            # Ensure text is properly formatted
+            if isinstance( text, dict ):
+                text = text.get( 'text', text.get( 'content', text.get( 'review', '' ) ) );
+            if not isinstance( text, str ):
+                text = str( text ) if text else "";
+            
             # Perform sentiment analysis
             sentiment_score, sentiment_label = self.analyze_text( text );
             
             # Extract keywords
             keywords = self.extract_keywords( text, max_keywords=3 );
+            
+            # Ensure author is a string
+            if not isinstance( author, str ):
+                author = str( author ) if author else f'User {i+1}';
             
             # Store analyzed review
             analyzed_review = {

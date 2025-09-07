@@ -102,7 +102,7 @@ class RestaurantAIPredictor:
     
     def find_similar_restaurants( self, features: PredictionFeatures ) -> List[SimilarRestaurant]:
         """Find similar restaurants based on proximity, cuisine, and amenities"""
-        if not self.collection:
+        if self.collection is None:
             self.logger.warning( "No MongoDB collection provided, cannot find similar restaurants" );
             return [];
         

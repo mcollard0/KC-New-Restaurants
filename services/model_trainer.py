@@ -88,7 +88,7 @@ class ModelTrainer:
         Returns:
             Analysis report with recommendations
         """
-        if not self.collection:
+        if self.collection is None:
             return { 'status': 'no_database_connection' };
             
         try:

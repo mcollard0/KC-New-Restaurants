@@ -7112,3 +7112,258 @@ Retrying search_place in 3.65 seconds...
 GooglePlacesClient error in search_place(CARNICERIA EL TORITO III LLC): HTTPError: 403 Client Error: Forbidden for url: https://places.googleapis.com/v1/places:searchText (category: network)
 search_place failed on attempt 4/5: HTTPError: 403 Client Error: Forbidden for url: https://places.googleapis.com/v1/places:searchText (category: network)
 Retrying search_place in 8.70 seconds...
+Detected cron execution - applying random delay of 4 minutes (240 seconds)
+   This helps distribute server load. Use --nodelay to skip this delay.
+Delay completed, proceeding with execution
+Google Places enrichment will be enabled after MongoDB setup
+Connected to MongoDB: mongodb+srv://[credentials_removed]@cluster0.6ucxlv7.mongodb.net/
+Setup database: kansas_city, collection: food_businesses
+Sentiment analyzer initialized with method: textblob
+Sentiment analyzer initialized for review analysis
+AI predictor initialized for rating predictions
+Google Places client initialized (region: us, rate_limit: 8.0 req/s)
+Google Places enrichment enabled with AI predictions
+Starting KC New Restaurants processing
+Downloading KC business license data...
+  Getting initial search form...
+  Submitting search form...
+  Looking for CSV export button...
+  Found export button: ctl00$MainContent$exportBtn
+  Submitting export form...
+Response content type: application/octet-stream
+Response status: 200
+First 500 chars of response: Business Name,DBA Name,Address,Business Type,Valid License For
+"TOWNE PARK LLC"," ","1111 GRAND BLVD KANSAS CITY MO 64106-2404","Parking Lots and Garages","2024"
+"CHEUNG LAWRENCE"," ","8305 NW 76TH TER KANSAS CITY MO 64152-4676","All Other Professional Scientific and Technical Services","2025"
+"PAPE LLC"," ","5214 STANTON DR KANSAS CITY MO 64133-2673","All Other Miscellaneous Retailers","2023"
+"EVERETT FINANCIAL INC.","SUPREME LENDING","9582 N MCGEE ST OFC 1 KANSAS CITY MO 64155-8100","Mortg
+Number of lines in response: 30175
+First row (header): ['Business Name', 'DBA Name', 'Address', 'Business Type', 'Valid License For']
+Second row (sample): ['TOWNE PARK LLC', ' ', '1111 GRAND BLVD KANSAS CITY MO 64106-2404', 'Parking Lots and Garages', '2024']
+Downloaded 30174 records from KC Business License data in 2.26 seconds
+Processing business license data...
+ Processing 30,174 records...
+Enriching data for restaurant: CUPCAKIN LLC at 2450 GRAND BLVD STE 126 KANSAS CITY MO 64108-2552
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for CUPCAKIN LLC
+Enriching data for restaurant: CARNICERIA EL TORITO III LLC at 6200 INDEPENDENCE AVE KANSAS CITY MO 64125-1621
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for CARNICERIA EL TORITO III LLC
+Enriching data for restaurant: SMOOTHIE KING at 6368 N COSBY AVE KANSAS CITY MO 64151-2344
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for SMOOTHIE KING
+Enriching data for restaurant: DAY28 WELLNESS CO LLC at 12005 E 47TH ST KANSAS CITY MO 64133-2517
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for DAY28 WELLNESS CO LLC
+Enriching data for restaurant: BARNYARD LIQUOR at 9510 BLUE RIDGE BLVD KANSAS CITY MO 64134-1338
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for BARNYARD LIQUOR
+Enriching data for restaurant: WINGSTOP 2571 at 1120 W 103RD ST STE 300 KANSAS CITY MO 64114-4511
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for WINGSTOP 2571
+Enriching data for restaurant: CASEY'S #5082 at 13831 MADISON AVE KANSAS CITY MO 64145-1609
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for CASEY'S #5082
+Enriching data for restaurant: XO at 709 W 17TH ST KANSAS CITY MO 64108-1129
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for XO
+Enriching data for restaurant: GROCERIES 4 LESS LLC at 4305 N ANTIOCH RD KANSAS CITY MO 64117-1611
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for GROCERIES 4 LESS LLC
+Enriching data for restaurant: 18TH & VINE PARTNERS JV LLC at 1 INTERNATIONAL SQ KANSAS CITY MO 64153-1106
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for 18TH & VINE PARTNERS JV LLC
+Enriching data for restaurant: PERCUP COFFEES at 14 E 57TH ST KANSAS CITY MO 64113-2105
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.51 (Medium - good local or cuisine data) based on 3 similar restaurants
+Successfully enriched data for PERCUP COFFEES
+Enriching data for restaurant: MIDTOWN MARKET at 3967 MAIN ST KANSAS CITY MO 64111-1916
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.59 (Medium - good local or cuisine data) based on 3 similar restaurants
+Successfully enriched data for MIDTOWN MARKET
+Enriching data for restaurant: YUMMY'S DONUT PALACE at 3120 STADIUM DR KANSAS CITY MO 64128-2244
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.40 (Medium - good local or cuisine data) based on 6 similar restaurants
+Successfully enriched data for YUMMY'S DONUT PALACE
+Enriching data for restaurant: HEREFORD HOUSE ZONA ROSA LLC at 8661 N STODDARD KANSAS CITY MO 64153-0000
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for HEREFORD HOUSE ZONA ROSA LLC
+Enriching data for restaurant: YOUR DESSERT DIVA at 9601 N EVANSTON AVE KANSAS CITY MO 64157-8705
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for YOUR DESSERT DIVA
+Enriching data for restaurant: QUIK TRIP #218 at 7133 NW BARRY RD KANSAS CITY MO 64153-1719
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.16 (Medium - good local or cuisine data) based on 3 similar restaurants
+Successfully enriched data for QUIK TRIP #218
+Enriching data for restaurant: PRECISE OPERATIONS MANAGEMENT LLC at 705B SE MELODY LN STE 215 LEES SUMMIT MO 64063-4380
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for PRECISE OPERATIONS MANAGEMENT LLC
+Enriching data for restaurant: ANDY'S FROZEN CUSTARD STORES LLC at 650 NW BARRY RD KANSAS CITY MO 64155-2702
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.31 (Medium - good local or cuisine data) based on 4 similar restaurants
+Successfully enriched data for ANDY'S FROZEN CUSTARD STORES LLC
+Enriching data for restaurant: CASEYS MARKETING COMPANY (ANKENY DC) at 1 SE CONVENIENCE BLVD ANKENY IA 50021-9672
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for CASEYS MARKETING COMPANY (ANKENY DC)
+Enriching data for restaurant: SAVE A LOT at 3821 E TRUMAN RD KANSAS CITY MO 64127-2231
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.48 (Medium - good local or cuisine data) based on 6 similar restaurants
+Successfully enriched data for SAVE A LOT
+Enriching data for restaurant: QUIK TRIP #225 at 1251 NW BARRY RD KANSAS CITY MO 64155-2707
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.14 (Medium - good local or cuisine data) based on 5 similar restaurants
+Successfully enriched data for QUIK TRIP #225
+Enriching data for restaurant: PRAIRIE PETROLEUM INC at 6250 NW BARRY RD KANSAS CITY MO 64154-2530
+Predicted rating: 3.96 (Medium - good local or cuisine data) based on 6 similar restaurants
+Successfully enriched data for PRAIRIE PETROLEUM INC
+Enriching data for restaurant: NOVEL BITES at 10829 FULLER AVE KANSAS CITY MO 64134-2606
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.46 (Medium - good local or cuisine data) based on 7 similar restaurants
+Successfully enriched data for NOVEL BITES
+Enriching data for restaurant: TOPSY'S POPCORN at 4706 CENTRAL ST KANSAS CITY MO 64112-1521
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.34 (Medium - good local or cuisine data) based on 7 similar restaurants
+Successfully enriched data for TOPSY'S POPCORN
+Enriching data for restaurant: QUIK TRIP #176 at 1201 WESTPORT RD KANSAS CITY MO 64111-4224
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.37 (High - strong cuisine and proximity matches) based on 8 similar restaurants
+Successfully enriched data for QUIK TRIP #176
+Enriching data for restaurant: CLEMONS HELEN at 5700 N MAIN ST APT 142 GLADSTONE MO 64118-4293
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.03 (Medium - good local or cuisine data) based on 5 similar restaurants
+Successfully enriched data for CLEMONS HELEN
+Enriching data for restaurant: SCHWANS HOME SERVICE INC at 178  PO BOX MARSHALL MN 56258-0178
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for SCHWANS HOME SERVICE INC
+Enriching data for restaurant: MILDRED'S at 5060 MAIN ST KANSAS CITY MO 64112-2755
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.27 (Medium - good local or cuisine data) based on 9 similar restaurants
+Successfully enriched data for MILDRED'S
+Enriching data for restaurant: KC LIONS INC at 5425 PROSPECT AVE KANSAS CITY MO 64130-3614
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.34 (Medium - good local or cuisine data) based on 9 similar restaurants
+Successfully enriched data for KC LIONS INC
+Enriching data for restaurant: WALGREENS at 2301 HOLMES ST KANSAS CITY MO 64108-2640
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.40 (Medium - good local or cuisine data) based on 12 similar restaurants
+Successfully enriched data for WALGREENS
+Enriching data for restaurant: BARAKA MARKET at 1447 INDEPENDENCE AVE KANSAS CITY MO 64106-1448
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.38 (Medium - good local or cuisine data) based on 12 similar restaurants
+Successfully enriched data for BARAKA MARKET
+Enriching data for restaurant: TREES OF LIFE LLC at 11129 N OAK TRFY STE A KANSAS CITY MO 64155-1167
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.25 (Medium - good local or cuisine data) based on 8 similar restaurants
+Successfully enriched data for TREES OF LIFE LLC
+Enriching data for restaurant: INDIANA MINI MART LLC at 3912 INDIANA AVE KANSAS CITY MO 64130-1440
+Predicted rating: 4.28 (Medium - good local or cuisine data) based on 14 similar restaurants
+Successfully enriched data for INDIANA MINI MART LLC
+Enriching data for restaurant: MIDTOWN KAVA LLC at 1415 W 39TH ST # D KANSAS CITY MO 64111-4427
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.16 (Medium - good local or cuisine data) based on 14 similar restaurants
+Successfully enriched data for MIDTOWN KAVA LLC
+Enriching data for restaurant: ALMEDA LABS LLC at 1647 MADISON AVE APT 1 KANSAS CITY MO 64108-1161
+No results found for query: ALMEDA LABS LLC 1647 MADISON AVE APT 1 KANSAS CITY MO 64108-1161
+No place found for ALMEDA LABS LLC
+Enriching data for restaurant: P & R DIVERSIFIED INC at 6201 SAINT JOHN AVE KANSAS CITY MO 64123-1963
+Predicted rating: 4.28 (Medium - good local or cuisine data) based on 10 similar restaurants
+Successfully enriched data for P & R DIVERSIFIED INC
+Enriching data for restaurant: ALDI FOODS at 10475 BLUE RIDGE BLVD KANSAS CITY MO 64134-1916
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for ALDI FOODS
+Enriching data for restaurant: PARVIN THRIFTWAY at 5004 NE PARVIN RD KANSAS CITY MO 64117-2050
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 3.71 (Medium - good local or cuisine data) based on 5 similar restaurants
+Successfully enriched data for PARVIN THRIFTWAY
+Enriching data for restaurant: PRICE CHOPPER #21 at 500 NE BARRY RD KANSAS CITY MO 64155-2879
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.10 (Medium - good local or cuisine data) based on 8 similar restaurants
+Successfully enriched data for PRICE CHOPPER #21
+Enriching data for restaurant: FAT BEE DRINKS DOWNTOWN LLC at 1111 MAIN ST STE 165 KANSAS CITY MO 64105-2116
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.63 (High - strong cuisine and proximity matches) based on 15 similar restaurants
+Successfully enriched data for FAT BEE DRINKS DOWNTOWN LLC
+Enriching data for restaurant: J'S SWEET TEA LLC at 424 PINNACLE DR RAYMORE MO 64083-8579
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for J'S SWEET TEA LLC
+Enriching data for restaurant: SHIVERS ICE HOUSE LLC at 27519 S RAIL RD FREEMAN MO 64746-5136
+No results found for query: SHIVERS ICE HOUSE LLC 27519 S RAIL RD FREEMAN MO 64746-5136
+No place found for SHIVERS ICE HOUSE LLC
+Enriching data for restaurant: TEXAS ROADHOUSE HOLDINGS LLC at 8051 NW ROANRIDGE RD KANSAS CITY MO 64151-1353
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.19 (High - strong cuisine and proximity matches) based on 7 similar restaurants
+Successfully enriched data for TEXAS ROADHOUSE HOLDINGS LLC
+Enriching data for restaurant: HIGHLANDS SIPS + EVENTS at 3741 N 124TH ST KANSAS CITY KS 66109-4242
+No results found for query: HIGHLANDS SIPS + EVENTS 3741 N 124TH ST KANSAS CITY KS 66109-4242
+No place found for HIGHLANDS SIPS + EVENTS
+Enriching data for restaurant: HULLHOUSE COFFEE at 434 NW LEGACY DR KANSAS CITY MO 64155-2894
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.07 (Medium - good local or cuisine data) based on 10 similar restaurants
+Successfully enriched data for HULLHOUSE COFFEE
+Enriching data for restaurant: ALRAHMAN MEDITERRANEAN MARKET LLC at 2536 INDEPENDENCE AVE KANSAS CITY MO 64124-2402
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.34 (Medium - good local or cuisine data) based on 16 similar restaurants
+Successfully enriched data for ALRAHMAN MEDITERRANEAN MARKET LLC
+Enriching data for restaurant: ASHER CONNIE at 17460 HILLTOP RIDGE DR EUREKA MO 63025-1035
+Successfully enriched data for ASHER CONNIE
+Enriching data for restaurant: THE HEATLAND LLC at 19 NW 40TH ST KANSAS CITY MO 64116-1706
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for THE HEATLAND LLC
+Enriching data for restaurant: LOFFREDO FRESH PRODUCE CO INC at 750 WYOMING ST KANSAS CITY MO 64101-1140
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.41 (Medium - good local or cuisine data) based on 14 similar restaurants
+Successfully enriched data for LOFFREDO FRESH PRODUCE CO INC
+Enriching data for restaurant: AFRIQUE INTERNATIONAL MARKET at 8141 N OAK TRFY STE A KANSAS CITY MO 64118-1269
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.21 (Medium - good local or cuisine data) based on 11 similar restaurants
+Successfully enriched data for AFRIQUE INTERNATIONAL MARKET
+Enriching data for restaurant: DOUGH DROP COOKIES at 8581 N GREEN HILLS RD KANSAS CITY MO 64154-1404
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 2.56 (Medium - good local or cuisine data) based on 3 similar restaurants
+Successfully enriched data for DOUGH DROP COOKIES
+Enriching data for restaurant: ALDI INC KANSAS at 6415 TROOST AVE KANSAS CITY MO 64131-1229
+No results found for query: ALDI INC KANSAS 6415 TROOST AVE KANSAS CITY MO 64131-1229
+No place found for ALDI INC KANSAS
+Enriching data for restaurant: MILDRED'S COFFEEHOUSE at 908 BALTIMORE AVE KANSAS CITY MO 64105-1707
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.44 (High - strong cuisine and proximity matches) based on 18 similar restaurants
+Successfully enriched data for MILDRED'S COFFEEHOUSE
+Enriching data for restaurant: EXECUTIVE HILLS 66-SHORT STOP LIQUOR at 9700 NW POLO DR KANSAS CITY MO 64153-1392
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.11 (Medium - good local or cuisine data) based on 9 similar restaurants
+Successfully enriched data for EXECUTIVE HILLS 66-SHORT STOP LIQUOR
+Enriching data for restaurant: THE ROASTERIE CAFE at 6223 BROOKSIDE BLVD KANSAS CITY MO 64113-1629
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.35 (High - strong cuisine and proximity matches) based on 12 similar restaurants
+Successfully enriched data for THE ROASTERIE CAFE
+Enriching data for restaurant: GNC HOLDINGS LLC at 4025 MILL ST KANSAS CITY MO 64111-3008
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.28 (Medium - good local or cuisine data) based on 20 similar restaurants
+Successfully enriched data for GNC HOLDINGS LLC
+Enriching data for restaurant: SAVER FOOD at 1616 E 63RD ST KANSAS CITY MO 64110-3502
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.26 (Medium - good local or cuisine data) based on 12 similar restaurants
+Successfully enriched data for SAVER FOOD
+Enriching data for restaurant: DISCOUNT GROCER LLC at 7510 E 87TH ST KANSAS CITY MO 64138-3916
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Successfully enriched data for DISCOUNT GROCER LLC
+Enriching data for restaurant: SMOOTHIE KING at 8825 STATE LINE RD KANSAS CITY MO 64114-2704
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 3.56 (Medium - good local or cuisine data) based on 5 similar restaurants
+Successfully enriched data for SMOOTHIE KING
+Enriching data for restaurant: CROWS COFFEE at 535 E RED BRIDGE RD KANSAS CITY MO 64131-4015
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 3.45 (Medium - good local or cuisine data) based on 8 similar restaurants
+Successfully enriched data for CROWS COFFEE
+Enriching data for restaurant: CBD AMERICAN SHAMAN LLC at 307 NE ENGLEWOOD RD STE A KANSAS CITY MO 64118-4531
+No results found for query: CBD AMERICAN SHAMAN LLC 307 NE ENGLEWOOD RD STE A KANSAS CITY MO 64118-4531
+No place found for CBD AMERICAN SHAMAN LLC
+Enriching data for restaurant: BC BISTRO at 7747 NW PRAIRIE VIEW RD KANSAS CITY MO 64151-1542
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.29 (High - strong cuisine and proximity matches) based on 12 similar restaurants
+Successfully enriched data for BC BISTRO
+Enriching data for restaurant: ONE STOP SHOP LLC at 5805 E 17TH ST KANSAS CITY MO 64126-2401
+Error analyzing reviews: 'dict' object has no attribute 'strip'
+Predicted rating: 4.00 (Medium - good local or cuisine data) based on 11 similar restaurants
+Successfully enriched data for ONE STOP SHOP LLC
+Enriching data for restaurant: HEN HOUSE #18 at 8430 WORNALL RD KANSAS CITY MO 64114-5812

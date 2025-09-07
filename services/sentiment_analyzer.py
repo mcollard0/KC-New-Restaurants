@@ -91,18 +91,26 @@ class SentimentAnalyzer:
             logger.info( "Downloading NLTK stopwords..." );
             nltk.download( 'stopwords', quiet=True );
             
-    def analyze_text(self, text: str) -> Tuple[float, str]:
+    def analyze_text(self, text) -> Tuple[float, str]:
         """
         Analyze sentiment of a single text.
         
         Args:
-            text: Text to analyze
+            text: Text to analyze (can be string or dict with text field)
             
         Returns:
             Tuple of (sentiment_score, sentiment_label)
             sentiment_score: -1.0 (very negative) to 1.0 (very positive)
             sentiment_label: 'positive', 'negative', or 'neutral'
         """
+        # Handle case where text might be a dict
+        if isinstance( text, dict ):
+            text = text.get( 'text', text.get( 'content', text.get( 'review', '' ) ) );
+            
+        # Ensure text is a string
+        if not isinstance( text, str ):
+            text = str( text ) if text else "";
+            
         if not text or not text.strip():
             return 0.0, 'neutral';
             
@@ -128,10 +136,19 @@ class SentimentAnalyzer:
             logger.warning( f"Error analyzing text sentiment: {e}" );
             return 0.0, 'neutral';
             
-    def _clean_text(self, text: str) -> str:
+    def _clean_text(self, text) -> str:
         """Clean and preprocess text for analysis."""
         if not text:
             return "";
+            
+        # Handle case where text might be a dict (from API response)
+        if isinstance( text, dict ):
+            # Try to extract text from common review dict fields
+            text = text.get( 'text', text.get( 'content', text.get( 'review', '' ) ) );
+            
+        # Ensure text is a string
+        if not isinstance( text, str ):
+            text = str( text ) if text else "";
             
         # Remove extra whitespace and newlines
         text = re.sub( r'\s+', ' ', text ).strip();
@@ -148,17 +165,25 @@ class SentimentAnalyzer:
         
         return text;
         
-    def extract_keywords(self, text: str, max_keywords: int = 5) -> List[str]:
+    def extract_keywords(self, text, max_keywords: int = 5) -> List[str]:
         """
         Extract important keywords from review text.
         
         Args:
-            text: Review text
+            text: Review text (can be string or dict with text field)
             max_keywords: Maximum number of keywords to return
             
         Returns:
             List of important keywords/phrases
         """
+        # Handle case where text might be a dict
+        if isinstance( text, dict ):
+            text = text.get( 'text', text.get( 'content', text.get( 'review', '' ) ) );
+            
+        # Ensure text is a string
+        if not isinstance( text, str ):
+            text = str( text ) if text else "";
+            
         if not text or not text.strip():
             return [];
             

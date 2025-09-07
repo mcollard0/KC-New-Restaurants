@@ -426,6 +426,14 @@ class KCRestaurant:
                     'sentiment_avg': place_data.sentiment_avg,
                     'review_keywords': place_data.review_keywords,
                     'review_summary': place_data.review_summary,
+                    # Add AI prediction fields
+                    'ai_predicted_rating': place_data.ai_predicted_rating,
+                    'ai_predicted_grade': place_data.ai_predicted_grade,
+                    'ai_prediction_confidence': place_data.ai_prediction_confidence,
+                    'ai_confidence_percentage': place_data.ai_confidence_percentage,
+                    'ai_confidence_level': place_data.ai_confidence_level,
+                    'ai_similar_restaurants_count': place_data.ai_similar_restaurants_count,
+                    'ai_prediction_explanation': place_data.ai_prediction_explanation,
                     'enriched_date': time.strftime( "%Y-%m-%d %H:%M:%S", time.localtime() ),
                     'api_fields_retrieved': place_data.api_fields_retrieved,
                     'last_updated': place_data.last_updated

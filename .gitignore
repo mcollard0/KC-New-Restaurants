@@ -1,0 +1,44 @@
+# Log files
+*.log
+logs/
+log/
+
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environment variables and config
+.env
+*.env
+config.ini
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Database backups (keep structure but not data)
+backups/mongodb_backup_*/
+
+# Temporary files
+*.tmp
+*.temp
+temp/
+tmp/
+
+# Output files
+output/
+reports/

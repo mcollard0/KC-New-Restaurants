@@ -17,110 +17,15 @@ import csv;
 import time;
 import smtplib;
 import os;
-import sys;
+import logging;
 import urllib.parse;
 import argparse;
 import random;
 import tempfile;
-import faulthandler;
 from datetime import datetime;
 from email.mime.text import MIMEText;
 from email.mime.multipart import MIMEMultipart;
-from typing import List, Dict, Tuple, Optional, Union, Any;
-
-# Enable faulthandler for crash diagnostics
-faulthandler.enable();
-
-# Import enhanced logging configuration
-try:
-    from logging_config import get_logger;
-    logger = get_logger("kc_restaurants");
-    logger.info("Using enhanced logging system");
-    enhanced_logging = True;
-except ImportError as e:
-    import logging;
-    logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s');
-    handlers = [logging.FileHandler("kc_new_restaurants.log"), logging.StreamHandler()];
-    logging.getLogger().handlers = handlers;
-    logger = logging.getLogger(__name__);
-    logger.warning(f"Enhanced logging not available: {e}");
-    enhanced_logging = False;
-    
-# Import safe access utilities
-try:
-    from utils.safe_access import safe_get, safe_list_access, safe_dict_access, safe_csv_row_access, safe_string_operations;
-    logger.info("Using safe access utilities");
-    safe_access = True;
-except ImportError as e:
-    logger.warning(f"Safe access utilities not available: {e}");
-    safe_access = False;
-    
-    # Fallback implementations for safe access if utils module not available
-    def safe_get(mapping, key, default=None, log_errors=True):
-        try:
-            if mapping is None:
-                return default;
-            if isinstance(mapping, dict):
-                return mapping.get(key, default);
-            return mapping[key] if 0 <= key < len(mapping) else default;
-        except Exception as e:
-            if log_errors:
-                logger.error(f"safe_get error: {e}");
-            return default;
-            
-    def safe_list_access(lst, index, default=None, log_errors=True):
-        try:
-            if lst is None or index >= len(lst):
-                return default;
-            return lst[index];
-        except Exception as e:
-            if log_errors:
-                logger.error(f"safe_list_access error: {e}");
-            return default;
-            
-    def safe_dict_access(dct, key, default=None, log_errors=True):
-        try:
-            if dct is None:
-                return default;
-            return dct.get(key, default);
-        except Exception as e:
-            if log_errors:
-                logger.error(f"safe_dict_access error: {e}");
-            return default;
-    
-    def safe_csv_row_access(row, expected_columns, log_errors=True):
-        result = {};
-        try:
-            if row is None:
-                return {col: None for col in expected_columns};
-            for i, column_name in enumerate(expected_columns):
-                value = safe_list_access(row, i, None, log_errors=False);
-                if value is not None:
-                    value = str(value).strip().strip('"');
-                    if value == '':
-                        value = None;
-                result[column_name] = value;
-            return result;
-        except Exception as e:
-            if log_errors:
-                logger.error(f"safe_csv_row_access error: {e}");
-            return {col: None for col in expected_columns};
-    
-    def safe_string_operations(value, operations, default="", log_errors=True):
-        try:
-            if value is None:
-                return default;
-            result = str(value);
-            for operation in operations:
-                if hasattr(result, operation):
-                    method = getattr(result, operation);
-                    if callable(method):
-                        result = method();
-            return result;
-        except Exception as e:
-            if log_errors:
-                logger.error(f"safe_string_operations error: {e}");
-            return default;
+from typing import List, Dict, Tuple, Optional;
 
 try:
     from pymongo import MongoClient;
@@ -138,7 +43,11 @@ except ImportError as e:
     logger.warning( f"Database manager not available: {e}" );
     DATABASE_MANAGER_AVAILABLE = False;
 
-# Logger is already initialized at the top of the file
+# Initialize logger first
+logging.basicConfig( level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s' );
+handlers = [ logging.FileHandler( "kc_new_restaurants.log" ), logging.StreamHandler() ];
+logging.getLogger().handlers = handlers;
+logger = logging.getLogger( __name__ );
 
 # Import Google Places client for real-time enrichment
 try:
@@ -329,37 +238,24 @@ class KCRestaurant:
             # Use the same approach as the working script
             url = "https://city.kcmo.org/kc/BusinessLicenseSearch/";
             
-            # Set request context in enhanced logging
-            if enhanced_logging:
-                logger.log_request_context(url=url, method="GET");
-                
             logger.info( "  Getting initial search form..." );
             response = self.session.get( url );
             response.raise_for_status();
             
-            # Extract form fields safely with explicit try/except
-            try:
-                viewstate_match = re.search( r'__VIEWSTATE.*?value="([^"]*)"', response.text );
-                generator_match = re.search( r'__VIEWSTATEGENERATOR.*?value="([^"]*)"', response.text );
-                validation_match = re.search( r'__EVENTVALIDATION.*?value="([^"]*)"', response.text );
-                
-                if not all( [ viewstate_match, generator_match, validation_match ] ):
-                    logger.error( "Failed to extract necessary form fields from the initial page" );
-                    return [ ];
-                    
-                # Safely extract values from regex matches
-                viewstate = viewstate_match.group(1) if viewstate_match else "";
-                generator = generator_match.group(1) if generator_match else "";
-                validation = validation_match.group(1) if validation_match else "";
-            except Exception as e:
-                logger.error(f"Error extracting form fields: {e}");
-                return [];
+            # Extract form fields
+            viewstate_match = re.search( r'__VIEWSTATE.*?value="([^"]*)"', response.text );
+            generator_match = re.search( r'__VIEWSTATEGENERATOR.*?value="([^"]*)"', response.text );
+            validation_match = re.search( r'__EVENTVALIDATION.*?value="([^"]*)"', response.text );
+            
+            if not all( [ viewstate_match, generator_match, validation_match ] ):
+                logger.error( "Failed to extract necessary form fields from the initial page" );
+                return [ ];
             
             logger.info( "  Submitting search form..." );
             form_data = {
-                '__VIEWSTATE': viewstate,
-                '__VIEWSTATEGENERATOR': generator,
-                '__EVENTVALIDATION': validation,
+                '__VIEWSTATE': viewstate_match.group( 1 ),
+                '__VIEWSTATEGENERATOR': generator_match.group( 1 ),
+                '__EVENTVALIDATION': validation_match.group( 1 ),
                 'ctl00$MainContent$businessName': '',
                 'ctl00$MainContent$dbaName': '',
                 'ctl00$MainContent$address': '',
@@ -367,10 +263,6 @@ class KCRestaurant:
                 'ctl00$MainContent$expirationDate': '',
                 'ctl00$MainContent$searchBtn': 'Begin Search'
             };
-            
-            # Log request context for form submission
-            if enhanced_logging:
-                logger.log_request_context(url=url, method="POST", payload_size=len(str(form_data)));
             
             response = self.session.post( url, data=form_data );
             response.raise_for_status();
@@ -456,25 +348,9 @@ class KCRestaurant:
 
             #parsing
             csv_text = response.text;
-            
-            # Safely process CSV content
-            try:
-                csv_lines = csv_text.splitlines();
-                reader = csv.reader( csv_lines );
-                rows = list( reader );
-            except Exception as e:
-                logger.error(f"Error processing CSV content: {e}");
-                # Try a more defensive approach for CSV parsing
-                rows = [];
-                csv_lines = csv_text.splitlines();
-                for line in csv_lines:
-                    # Handle potential CSV parsing errors manually
-                    try:
-                        # Simple CSV parsing fallback when reader fails
-                        parsed_row = line.split(',');
-                        rows.append([cell.strip('"') for cell in parsed_row]);
-                    except Exception as csv_err:
-                        logger.error(f"Error parsing CSV line: {csv_err}");
+            csv_lines = csv_text.splitlines();
+            reader = csv.reader( csv_lines );
+            rows = list( reader );
             
             self.stats[ 'download_time' ] = time.perf_counter() - download_start;
 
@@ -588,11 +464,11 @@ class KCRestaurant:
         };
 
         try: 
-            logger.debug( f"Checking if exists: {business_name} at {address} ({business_type})" );
+            logging.debug( f"Checking if exists: {business_name} at {address} ({business_type})" );
             existing_count = self.collection.count_documents( query_filter, limit=1 );
             return existing_count > 0;
         except Exception as e:
-            logger.error( f"Error checking restaurant in DB: {e}" );
+            logging.error( f"Error checking restaurant in DB: {e}" );
             return False;
 
     def process( self, csv_rows: List[ List[ str ] ] ) -> bool: 
@@ -602,9 +478,7 @@ class KCRestaurant:
 
         processing_start = time.perf_counter();
         current_year = time.localtime().tm_year;
-        
-        # Safely access header row
-        header = safe_list_access(csv_rows, 0, []);
+        header = csv_rows[ 0 ];
         expected_header = [ 'Business Name', 'DBA Name', 'Address', 'Business Type', 'Valid License For' ];
         
         if header != expected_header:
@@ -616,37 +490,16 @@ class KCRestaurant:
         
         mongodb_not_initialized_warned = False;
         
-        for row_index, row in enumerate(csv_rows[1:], 1):
-            # Set CSV context for enhanced logging
-            if enhanced_logging:
-                logger.log_csv_context(row_number=row_index, row_data=row);
-                
-            if len(row) < 5:
-                logger.warning(f"Skipping malformed row: {row}");
+        for row in csv_rows[ 1: ]:
+            if len( row ) < 5:
+                logger.warning( f"Skipping malformed row: {row}" );
                 continue;
-                
-            # Use safe access pattern to avoid PyObject_getItem crashes
-            if safe_access:
-                # Parse CSV row safely into a dictionary
-                csv_data = safe_csv_row_access(row, [
-                    "business_name", "dba_name", "address", "business_type", "valid_license_for"
-                ]);
-                business_name = csv_data["business_name"] or "";
-                dba_name = csv_data["dba_name"] or "";
-                address = csv_data["address"] or "";
-                business_type = csv_data["business_type"] or "";
-                valid_license_for = csv_data["valid_license_for"] or "";
-            else:
-                # Fallback method with explicit try/except for each access
-                try:
-                    business_name = safe_string_operations(safe_list_access(row, 0, ""), ["strip"]);
-                    dba_name = safe_string_operations(safe_list_access(row, 1, ""), ["strip"]);
-                    address = safe_string_operations(safe_list_access(row, 2, ""), ["strip"]);
-                    business_type = safe_string_operations(safe_list_access(row, 3, ""), ["strip"]);
-                    valid_license_for = safe_string_operations(safe_list_access(row, 4, ""), ["strip"]);
-                except Exception as e:
-                    logger.error(f"Error accessing row data: {e}");
-                    continue;
+
+            business_name = row[ 0 ].strip().strip( '"' );
+            dba_name = row[ 1 ].strip().strip( '"' );
+            address = row[ 2 ].strip().strip( '"' );
+            business_type = row[ 3 ].strip().strip( '"' );
+            valid_license_for = row[ 4 ].strip().strip( '"' );  # This is the year
 
             if not self.is_food_business( business_type ): 
                 continue;
@@ -1078,172 +931,121 @@ def apply_random_delay( skip_delay=False ):
         logger.info( "Interactive execution detected - no delay applied" );
 
 def main():
-    try:
-        parser = argparse.ArgumentParser(
-            description='KC New Restaurants Monitor - Download and track Kansas City food business licenses'
-        );
-        parser.add_argument(
-            '--ephemeral', '-e',
-            action='store_true',
-            help='Run in ephemeral mode without MongoDB (for testing/debugging)'
-        );
-        parser.add_argument(
-            '--flush', '-f',
-            action='store_true',
-            help='Flush (truncate) the database collection before processing to start fresh'
-        );
-        parser.add_argument(
-            '--nodelay',
-            action='store_true',
-            help='Skip the random delay even when running under cron (use with caution)'
-        );
-        parser.add_argument(
-            '--dry-run', '--dryrun', '-d',
-            action='store_true',
-            dest='dry_run',
-            help='Run in dry-run mode - no database modifications will be performed (safe testing mode)'
-        );
-        parser.add_argument(
-            '--no-enrichment',
-            action='store_true',
-            help='Disable Google Places enrichment (faster processing, basic data only)'
-        );
-        
-        # Add options for enhanced crash handling
-        parser.add_argument(
-            '--enable-faulthandler',
-            action='store_true',
-            help='Explicitly enable Python faulthandler for crash diagnostics'
-        );
-        parser.add_argument(
-            '--safe-access',
-            action='store_true',
-            help='Use extra-safe dictionary and list access methods to prevent crashes'
-        );
-        
-        args = parser.parse_args();
-        
-        # Display dry-run banner if enabled
-        if args.dry_run:
-            print( "\n" + "="*70 );
-            print( "*** DRY-RUN MODE: NO DATA WILL BE MODIFIED ***" );
-            print( "  - All database operations will be simulated only" );
-            print( "  - No actual INSERT, UPDATE, or DELETE operations will occur" );
-            print( "  - This is safe for testing and validation" );
-            print( "="*70 + "\n" );
-            logger.info( "DRY-RUN MODE ENABLED - No database modifications will be performed" );
-        
-        apply_random_delay( skip_delay=args.nodelay );
+    parser = argparse.ArgumentParser(
+        description='KC New Restaurants Monitor - Download and track Kansas City food business licenses'
+    );
+    parser.add_argument(
+        '--ephemeral', '-e',
+        action='store_true',
+        help='Run in ephemeral mode without MongoDB (for testing/debugging)'
+    );
+    parser.add_argument(
+        '--flush', '-f',
+        action='store_true',
+        help='Flush (truncate) the database collection before processing to start fresh'
+    );
+    parser.add_argument(
+        '--nodelay',
+        action='store_true',
+        help='Skip the random delay even when running under cron (use with caution)'
+    );
+    parser.add_argument(
+        '--dry-run', '--dryrun', '-d',
+        action='store_true',
+        dest='dry_run',
+        help='Run in dry-run mode - no database modifications will be performed (safe testing mode)'
+    );
+    parser.add_argument(
+        '--no-enrichment',
+        action='store_true',
+        help='Disable Google Places enrichment (faster processing, basic data only)'
+    );
+    
+    args = parser.parse_args();
+    
+    # Display dry-run banner if enabled
+    if args.dry_run:
+        print( "\n" + "="*70 );
+        print( "*** DRY-RUN MODE: NO DATA WILL BE MODIFIED ***" );
+        print( "  - All database operations will be simulated only" );
+        print( "  - No actual INSERT, UPDATE, or DELETE operations will occur" );
+        print( "  - This is safe for testing and validation" );
+        print( "="*70 + "\n" );
+        logger.info( "DRY-RUN MODE ENABLED - No database modifications will be performed" );
+    
+    apply_random_delay( skip_delay=args.nodelay );
 
-        CONFIG = {
-            'mongodb_uri': os.getenv( "mongodb_uri", "" ),
-            'database_name': "kansas_city",
-            'collection_name': "food_businesses",
-            'smtp_server': "smtp.gmail.com",
-            'smtp_port': 587,
-            'sender_email': os.getenv( "gmail_sender_email", "" ),  # Your Gmail address
-            'sender_password': os.getenv( "gmail_sender_password", "" ),  # Your Gmail App Password
-            'recipient_email': os.getenv( "gmail_recipient_email", "" ),      # Where to send alerts
-            'email_subject': f"KC Food Business Alert - {datetime.now().strftime('%Y-%m-%d')}"
-        };
+    CONFIG = {
+        'mongodb_uri': os.getenv( "mongodb_uri", "" ),
+        'database_name': "kansas_city",
+        'collection_name': "food_businesses",
+        'smtp_server': "smtp.gmail.com",
+        'smtp_port': 587,
+        'sender_email': os.getenv( "gmail_sender_email", "" ),  # Your Gmail address
+        'sender_password': os.getenv( "gmail_sender_password", "" ),  # Your Gmail App Password
+        'recipient_email': os.getenv( "gmail_recipient_email", "" ),      # Where to send alerts
+        'email_subject': f"KC Food Business Alert - {datetime.now().strftime('%Y-%m-%d')}"
+    };
 
-        # Process additional command line arguments
-        if hasattr(args, 'enable_faulthandler') and args.enable_faulthandler:
-            faulthandler.enable();
-            logger.info("Faulthandler explicitly enabled");
-            
-        if hasattr(args, 'safe_access') and args.safe_access:
-            logger.info("Extra safe access mode enabled");
-
-        runner = KCRestaurant( CONFIG[ 'mongodb_uri' ], CONFIG[ 'database_name' ], CONFIG[ 'collection_name' ], dry_run=args.dry_run, enable_enrichment=not args.no_enrichment );
+    runner = KCRestaurant( CONFIG[ 'mongodb_uri' ], CONFIG[ 'database_name' ], CONFIG[ 'collection_name' ], dry_run=args.dry_run, enable_enrichment=not args.no_enrichment );
+    
+    #  ephemeral mode
+    if args.ephemeral:
+        print( "\nEPHEMERAL MODE: Running without MongoDB persistence (testing/debugging mode)" );
+        print( "   - No database connection will be established" );
+        print( "   - All businesses will be treated as 'new' for this run" );
+        print( "   - No data will be persisted between runs\n" );
+    elif args.dry_run:
+        print( "\nDRY-RUN MODE: Database operations will be simulated only" );
+        print( "   - MongoDB connection will be established but no writes will occur" );
+        print( "   - All INSERT, UPDATE, DELETE operations will be logged but skipped" );
+        print( "   - Safe for testing against production data\n" );
         
-        #  ephemeral mode
-        if args.ephemeral:
-            print( "\nEPHEMERAL MODE: Running without MongoDB persistence (testing/debugging mode)" );
-            print( "   - No database connection will be established" );
-            print( "   - All businesses will be treated as 'new' for this run" );
-            print( "   - No data will be persisted between runs\n" );
-        elif args.dry_run:
-            print( "\nDRY-RUN MODE: Database operations will be simulated only" );
-            print( "   - MongoDB connection will be established but no writes will occur" );
-            print( "   - All INSERT, UPDATE, DELETE operations will be logged but skipped" );
-            print( "   - Safe for testing against production data\n" );
-            
-            # In dry-run mode, we still need to connect to MongoDB for duplicate detection
-            if MONGODB_AVAILABLE:
-                if not runner.setup_mongodb():
-                    print( "\nMongoDB setup failed. Running in ephemeral mode." );
-            else:
-                print( "\nPyMongo not available. Running in ephemeral mode." );
-
-        elif MONGODB_AVAILABLE:
+        # In dry-run mode, we still need to connect to MongoDB for duplicate detection
+        if MONGODB_AVAILABLE:
             if not runner.setup_mongodb():
                 print( "\nMongoDB setup failed. Running in ephemeral mode." );
-            else:
-
-                if args.flush:
-                    print( "\nFLUSH MODE: Clearing all existing data from database..." );
-                    if runner.flush_database():
-                        print( "Database flushed successfully. All records will appear as new.\n" );
-                    else:
-                        print( "Failed to flush database. Exiting." );
-                        return;
         else:
             print( "\nPyMongo not available. Running in ephemeral mode." );
-        
-        # Run the main processing with crash protection
-        if enhanced_logging:
-            logger.safe_call(runner.run);
-        else:
-            runner.run();
 
-        if all( [ CONFIG[ 'sender_email' ], CONFIG[ 'sender_password' ], CONFIG[ 'recipient_email' ] ] ):
-            print( f"\nSending email alert..." );
-            success = runner.send_email_alert(
-                smtp_server=CONFIG[ 'smtp_server' ],
-                smtp_port=CONFIG[ 'smtp_port' ],
-                sender_email=CONFIG[ 'sender_email' ],
-                sender_password=CONFIG[ 'sender_password' ],
-                recipient_email=CONFIG[ 'recipient_email' ],
-                subject=CONFIG[ 'email_subject' ]
-            );
-            if success:
-                print( "Email alert sent successfully" );
-            else:
-                print( "Email alert failed" );
+    elif MONGODB_AVAILABLE:
+        if not runner.setup_mongodb():
+            print( "\nMongoDB setup failed. Running in ephemeral mode." );
         else:
-            print( f"\nEmail not configured:" );
-            print( "To enable email alerts, update the CONFIG section with:" );
-            print( "* sender_email: Your Gmail address" );
-            print( "* sender_password: Your Gmail App Password" );  
-            print( "* recipient_email: Where to send alerts" );
+
+            if args.flush:
+                print( "\nFLUSH MODE: Clearing all existing data from database..." );
+                if runner.flush_database():
+                    print( "Database flushed successfully. All records will appear as new.\n" );
+                else:
+                    print( "Failed to flush database. Exiting." );
+                    return;
+    else:
+        print( "\nPyMongo not available. Running in ephemeral mode." );
     
-    except Exception as e:
-        if enhanced_logging:
-            logger.log_crash(additional_context={"main_error": str(e)});
+    runner.run();
+
+    if all( [ CONFIG[ 'sender_email' ], CONFIG[ 'sender_password' ], CONFIG[ 'recipient_email' ] ] ):
+        print( f"\nSending email alert..." );
+        success = runner.send_email_alert(
+            smtp_server=CONFIG[ 'smtp_server' ],
+            smtp_port=CONFIG[ 'smtp_port' ],
+            sender_email=CONFIG[ 'sender_email' ],
+            sender_password=CONFIG[ 'sender_password' ],
+            recipient_email=CONFIG[ 'recipient_email' ],
+            subject=CONFIG[ 'email_subject' ]
+        );
+        if success:
+            print( "Email alert sent successfully" );
         else:
-            logger.error(f"Error in main function: {e}");
-        raise;
+            print( "Email alert failed" );
+    else:
+        print( f"\nEmail not configured:" );
+        print( "To enable email alerts, update the CONFIG section with:" );
+        print( "* sender_email: Your Gmail address" );
+        print( "* sender_password: Your Gmail App Password" );  
+        print( "* recipient_email: Where to send alerts" );
 
 if __name__ == "__main__":
-    try:
-        main();
-    except KeyboardInterrupt:
-        logger.info("Interrupted by user");
-        sys.exit(130);
-    except Exception as e:
-        if enhanced_logging:
-            logger.log_crash(additional_context={"main_function_error": str(e)});
-        else:
-            logger.error(f"Fatal error in main: {e}");
-            import traceback;
-            logger.error(traceback.format_exc());
-        sys.exit(1);
-    except:
-        # Catch any unexpected errors
-        if enhanced_logging:
-            logger.log_crash();
-        else:
-            logger.error("Unknown fatal error occurred");
-        sys.exit(1);
+    main();
 

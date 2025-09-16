@@ -2,6 +2,9 @@
 *.log
 logs/
 log/
+kc_new_restaurants_enhanced.log*
+kc_new_restaurants_enhanced.log.*
+crash_recovery_*.log
 
 # Python cache and bytecode
 __pycache__/
@@ -42,3 +45,4 @@ tmp/
 # Output files
 output/
 reports/
+__pycache__/

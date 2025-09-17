@@ -45,7 +45,7 @@ except ImportError as e:
 
 # Initialize logger first
 logging.basicConfig( level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s' );
-handlers = [ logging.FileHandler( "kc_new_restaurants.log" ), logging.StreamHandler() ];
+handlers = [ logging.FileHandler( "log/kc_new_restaurants.log" ), logging.StreamHandler() ];
 logging.getLogger().handlers = handlers;
 logger = logging.getLogger( __name__ );
 

@@ -1,7 +1,0 @@
-{
-  "backup_timestamp": "20250906_081009",
-  "database_name": "kansas_city",
-  "collection_name": "food_businesses",
-  "document_count": 379,
-  "backup_file": "backups/mongodb_backup_20250906_081009/food_businesses_backup.json"
-}

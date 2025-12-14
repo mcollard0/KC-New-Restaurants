@@ -42,3 +42,9 @@ tmp/
 # Output files
 output/
 reports/
+
+# Ignore auto backups (directory)
+backups/
+
+# Ignore manual backup directory
+backup/

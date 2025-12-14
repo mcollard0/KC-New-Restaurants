@@ -82,8 +82,8 @@ def main():
     print("KC New Restaurants - Dry-Run Functionality Test")
     print("=" * 50)
     
-    # Change to script directory
-    script_dir = os.path.dirname(os.path.abspath(__file__))
+    # Change to parent directory (project root) where the main script is located
+    script_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     os.chdir(script_dir)
     
     test_dry_run_flag_parsing()

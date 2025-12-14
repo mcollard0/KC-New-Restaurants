@@ -27,6 +27,12 @@ from email.mime.text import MIMEText;
 from email.mime.multipart import MIMEMultipart;
 from typing import List, Dict, Tuple, Optional;
 
+# Initialize logger first (before any imports that might use it)
+logging.basicConfig( level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s' );
+handlers = [ logging.FileHandler( "log/kc_new_restaurants.log" ), logging.StreamHandler() ];
+logging.getLogger().handlers = handlers;
+logger = logging.getLogger( __name__ );
+
 try:
     from pymongo import MongoClient;
     from pymongo.errors import ConnectionFailure;
@@ -43,12 +49,6 @@ except ImportError as e:
     logger.warning( f"Database manager not available: {e}" );
     DATABASE_MANAGER_AVAILABLE = False;
 
-# Initialize logger first
-logging.basicConfig( level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s' );
-handlers = [ logging.FileHandler( "log/kc_new_restaurants.log" ), logging.StreamHandler() ];
-logging.getLogger().handlers = handlers;
-logger = logging.getLogger( __name__ );
-
 # Import Google Places client for real-time enrichment
 try:
     from services.google_places_client import GooglePlacesClient, PlaceData;
@@ -58,28 +58,13 @@ except ImportError as e:
     GOOGLE_PLACES_AVAILABLE = False;
 
 
-#Distilled list of business types that are food related -- changed to just be restaurants and grocery stores
+# Only track actual restaurants (dining establishments)
 FOOD_BUSINESS_TYPES = frozenset( [
-    "Supermarkets and Other Grocery Retailers (except Convenience Retailers)",
-    #"Drinking Places (Alcoholic Beverages)",
-    #"Convenience Retailers",
-    "Retail Bakeries",
-    "All Other Specialty Food Retailers", 
-    #"Beer Wine and Liquor Retailers",
-    "Food (Health) Supplement Retailers",
-    "Mobile Food Services",
-    #"Caterers",
     "Full-Service Restaurants",
     "Limited-Service Restaurants",
-    #"Food Service Contractors",
-    "Snack and Nonalcoholic Beverage Bars",
-    #"Breweries",
-    #"Meat Retailers",
-    #"Distilleries",
-    "Confectionery and Nut Retailers",
-    #"Wineries", 
     "Cafeterias Grill Buffets and Buffets",
-    #"Ice Cream and Frozen Dessert Manufacturing"
+    "Snack and Nonalcoholic Beverage Bars",
+    # Exclude: Grocery stores, bakeries, specialty food retailers, health supplements, mobile food services
 ] );
 
 class KCRestaurant:
@@ -434,6 +419,13 @@ class KCRestaurant:
                     'ai_confidence_level': place_data.ai_confidence_level,
                     'ai_similar_restaurants_count': place_data.ai_similar_restaurants_count,
                     'ai_prediction_explanation': place_data.ai_prediction_explanation,
+                    # Add health inspection fields
+                    'health_inspection_grade': place_data.health_inspection_grade,
+                    'health_avg_critical': place_data.health_avg_critical,
+                    'health_avg_noncritical': place_data.health_avg_noncritical,
+                    'health_total_inspections': place_data.health_total_inspections,
+                    'health_last_inspection_date': place_data.health_last_inspection_date,
+                    'health_grade_explanation': place_data.health_grade_explanation,
                     'enriched_date': time.strftime( "%Y-%m-%d %H:%M:%S", time.localtime() ),
                     'api_fields_retrieved': place_data.api_fields_retrieved,
                     'last_updated': place_data.last_updated
@@ -609,10 +601,57 @@ class KCRestaurant:
             return price_level_mapping.get( price_level );
             
         return None;
+    
+    def ensure_all_restaurants_enriched( self ):
+        """
+        Ensure all restaurants in new_businesses have AI predictions and health grades.
+        If missing, fetch them before generating email.
+        """
+        logger.info( f"Ensuring all {len( self.new_businesses )} restaurants have enrichment data..." );
+        
+        enrichment_needed = 0;
+        enrichment_success = 0;
+        
+        for i, restaurant in enumerate( self.new_businesses ):
+            business_name = restaurant.get( 'business_name', '' );
+            address = restaurant.get( 'address', '' );
+            
+            # Check if AI prediction is missing
+            has_ai = restaurant.get( 'ai_predicted_rating' ) is not None and restaurant.get( 'ai_predicted_grade' ) is not None;
+            
+            # Check if health grade is missing
+            has_health = restaurant.get( 'health_inspection_grade' ) is not None;
+            
+            # If both present, skip
+            if has_ai and has_health:
+                continue;
+            
+            enrichment_needed += 1;
+            logger.info( f"Restaurant {i+1}/{len( self.new_businesses )}: {business_name} needs enrichment (AI: {has_ai}, Health: {has_health})" );
+            
+            # Enrich the restaurant
+            try:
+                enriched = self.enrich_restaurant_data( restaurant.copy() );
+                
+                # Update the restaurant in place
+                self.new_businesses[i].update( enriched );
+                enrichment_success += 1;
+                
+                logger.info( f"Successfully enriched {business_name}" );
+            except Exception as e:
+                logger.warning( f"Failed to enrich {business_name}: {e}" );
+        
+        if enrichment_needed > 0:
+            logger.info( f"Pre-email enrichment: {enrichment_success}/{enrichment_needed} restaurants enriched" );
+        else:
+            logger.info( "All restaurants already have enrichment data" );
         
     def generate_email_html( self ) -> str:
         if not self.new_businesses:
             return "<p>No new food businesses found this run.</p>";
+        
+        # Ensure all restaurants have both AI and health grades before generating email
+        self.ensure_all_restaurants_enriched();
 
         current_time = datetime.now().strftime( '%Y-%m-%d %H:%M:%S' );
         
@@ -632,6 +671,8 @@ class KCRestaurant:
                 .restaurant-row:hover {{ background-color: #e3f2fd; transition: background-color 0.3s; }}
                 .restaurant-info {{ padding: 20px; vertical-align: top; width: 60%; }}
                 .rating-cell {{ padding: 20px; text-align: center; vertical-align: middle; width: 40%; background-color: #fafafa; }}
+                .grades-container {{ display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; }}
+                .grade-box {{ flex: 1; min-width: 120px; padding: 10px; }}
                 .restaurant-name {{ font-size: 18px; font-weight: bold; color: #1a73e8; text-decoration: none; }}
                 .restaurant-name:hover {{ text-decoration: underline; }}
                 .restaurant-address {{ color: #666; margin: 8px 0; font-size: 14px; }}
@@ -653,7 +694,9 @@ class KCRestaurant:
                 .grade-c {{ color: #ffa500; }}
                 .grade-d {{ color: #dc143c; }}
                 .grade-f {{ color: #8b0000; }}
+                .grade-g {{ color: #5d0000; }}
                 .no-prediction {{ color: #999; font-style: italic; }}
+                .health-grade {{ color: #2e7d32; }}
                 .google-data {{ font-size: 13px; color: #555; margin-top: 8px; }}
                 .price-level {{ color: #2e7d32; font-weight: bold; }}
                 .footer {{ margin-top: 30px; padding-top: 20px; border-top: 1px solid #ddd; font-size: 12px; color: #666; text-align: center; }}
@@ -700,6 +743,11 @@ class KCRestaurant:
             ai_confidence_pct = food.get( 'ai_confidence_percentage' );
             ai_confidence_level = food.get( 'ai_confidence_level' );
             
+            # Extract health inspection data if available
+            health_grade = food.get( 'health_inspection_grade' );
+            health_explanation = food.get( 'health_grade_explanation', '' );
+            health_last_inspection = food.get( 'health_last_inspection_date' );
+            
             # Extract sentiment analysis data if available
             sentiment_distribution = food.get( 'sentiment_distribution', {} );
             review_keywords = food.get( 'review_keywords', [] );
@@ -723,7 +771,7 @@ class KCRestaurant:
                 dollar_signs = '$' * max( 1, converted_price_level );
                 price_display = f'<span class="price-level">{dollar_signs}</span>';
             
-            # Determine grade color class
+            # Determine grade color class for AI grade
             grade_class = 'no-prediction';
             if ai_grade:
                 if ai_grade.startswith( 'A' ): grade_class = 'grade-a';
@@ -731,6 +779,17 @@ class KCRestaurant:
                 elif ai_grade.startswith( 'C' ): grade_class = 'grade-c';
                 elif ai_grade.startswith( 'D' ): grade_class = 'grade-d';
                 elif ai_grade.startswith( 'F' ): grade_class = 'grade-f';
+                elif ai_grade.startswith( 'G' ): grade_class = 'grade-g';
+            
+            # Determine grade color class for health grade
+            health_grade_class = 'no-prediction';
+            if health_grade:
+                if health_grade.startswith( 'A' ): health_grade_class = 'grade-a';
+                elif health_grade.startswith( 'B' ): health_grade_class = 'grade-b';
+                elif health_grade.startswith( 'C' ): health_grade_class = 'grade-c';
+                elif health_grade.startswith( 'D' ): health_grade_class = 'grade-d';
+                elif health_grade.startswith( 'F' ): health_grade_class = 'grade-f';
+                elif health_grade.startswith( 'G' ) or health_grade.startswith( 'H' ) or health_grade.startswith( 'I' ): health_grade_class = 'grade-g';
             
             # Build sentiment badge display
             sentiment_badge_html = '';
@@ -772,8 +831,10 @@ class KCRestaurant:
                             {('<div class="google-data">' + google_data_html + '</div>') if google_data_html else ''}
                         </td>
                         <td class="rating-cell">
+                            <div class="grades-container">
             """;
             
+            # AI Enjoyment Grade
             if ai_rating and ai_grade:
                 # Build confidence display
                 confidence_html = '';
@@ -781,18 +842,56 @@ class KCRestaurant:
                     confidence_html = f'<div class="ai-confidence">{ai_confidence_pct}% confidence</div>';
                 
                 html += f"""
-                            <div class="ai-rating">{ai_rating:.1f}</div>
-                            <div class="ai-grade {grade_class}">{ai_grade}</div>
-                            {confidence_html}
-                            <div class="ai-label">AI Predicted</div>
+                                <div class="grade-box">
+                                    <div class="ai-rating">{ai_rating:.1f}</div>
+                                    <div class="ai-grade {grade_class}">{ai_grade}</div>
+                                    {confidence_html}
+                                    <div class="ai-label">Expected Enjoyment</div>
+                                </div>
                 """;
             else:
                 html += f"""
-                            <div class="no-prediction">Rating<br>Pending</div>
-                            <div class="ai-label">Analysis in progress</div>
+                                <div class="grade-box">
+                                    <div class="no-prediction">Rating<br>Pending</div>
+                                    <div class="ai-label">Analysis in progress</div>
+                                </div>
+                """;
+            
+            # Health Inspection Grade
+            if health_grade:
+                # Build health tooltip
+                health_tooltip = health_explanation if health_explanation else '';
+                
+                # Format date as "NOV 15 2024" style
+                date_display = '';
+                if health_last_inspection:
+                    try:
+                        # Parse date (assuming format like "11/15/2024")
+                        date_obj = datetime.strptime( health_last_inspection, "%m/%d/%Y" );
+                        date_display = f'as of {date_obj.strftime( "%b %d %Y" ).upper()}';
+                    except:
+                        # Fallback if parsing fails
+                        date_display = f'as of {health_last_inspection}';
+                
+                # Combine grade and date on same line
+                grade_with_date = f'{health_grade} {date_display}' if date_display else health_grade;
+                
+                html += f"""
+                                <div class="grade-box">
+                                    <div class="ai-grade health-grade {health_grade_class}" title="{health_tooltip}">{grade_with_date}</div>
+                                    <div class="ai-label">Health Grade</div>
+                                </div>
+                """;
+            else:
+                html += f"""
+                                <div class="grade-box">
+                                    <div class="no-prediction">Too new to rate</div>
+                                    <div class="ai-label">Health Grade</div>
+                                </div>
                 """;
             
             html += """
+                            </div>
                         </td>
                     </tr>
             """;
@@ -995,6 +1094,14 @@ def main():
         print( "   - No database connection will be established" );
         print( "   - All businesses will be treated as 'new' for this run" );
         print( "   - No data will be persisted between runs\n" );
+        
+        # Initialize Google Places client even in ephemeral mode (without MongoDB)
+        if GOOGLE_PLACES_AVAILABLE and not args.no_enrichment:
+            try:
+                runner.google_places_client = GooglePlacesClient( mongodb_collection=None );
+                logger.info( "Google Places enrichment enabled (ephemeral mode)" );
+            except Exception as e:
+                logger.warning( f"Could not initialize Google Places client in ephemeral mode: {e}" );
     elif args.dry_run:
         print( "\nDRY-RUN MODE: Database operations will be simulated only" );
         print( "   - MongoDB connection will be established but no writes will occur" );

@@ -28,6 +28,7 @@ try:
     from utils.retry_utils import robust_api_call, ErrorHandler, ErrorCategory;
     from .sentiment_analyzer import SentimentAnalyzer;
     from .ai_predictor import RestaurantAIPredictor, PredictionFeatures;
+    from .health_inspection_client import HealthInspectionClient, HealthGrade;
     UTILS_AVAILABLE = True;
 except ImportError as e:
     logging.warning( f"Utils not available: {e}" );
@@ -81,6 +82,14 @@ class PlaceData:
     ai_confidence_level: Optional[str] = None;
     ai_similar_restaurants_count: Optional[int] = None;
     ai_prediction_explanation: Optional[str] = None;
+    
+    # Health inspection data
+    health_inspection_grade: Optional[str] = None;
+    health_avg_critical: Optional[float] = None;
+    health_avg_noncritical: Optional[float] = None;
+    health_total_inspections: Optional[int] = None;
+    health_last_inspection_date: Optional[str] = None;
+    health_grade_explanation: Optional[str] = None;
     
     # Metadata
     last_updated: Optional[str] = None;
@@ -140,6 +149,7 @@ class GooglePlacesClient:
                  region: str = "us",
                  rate_limit_per_second: float = 8.0,
                  enable_sentiment_analysis: bool = True,
+                 enable_health_inspections: bool = True,
                  mongodb_collection = None ):
         """
         Initialize Google Places client.
@@ -149,6 +159,7 @@ class GooglePlacesClient:
             region: Region bias for search results (default: 'us')
             rate_limit_per_second: Rate limit for API calls (default: 8.0 req/s)
             enable_sentiment_analysis: Whether to enable sentiment analysis of reviews
+            enable_health_inspections: Whether to fetch KC health inspection grades
         """
         if not REQUESTS_AVAILABLE:
             raise ImportError( "requests library is required. Install with: pip install requests" );
@@ -191,6 +202,15 @@ class GooglePlacesClient:
                 logger.info( "AI predictor initialized for rating predictions" );
             except Exception as e:
                 logger.warning( f"Could not initialize AI predictor: {e}" );
+        
+        # Initialize health inspection client
+        self.health_inspection_client = None;
+        if enable_health_inspections and UTILS_AVAILABLE:
+            try:
+                self.health_inspection_client = HealthInspectionClient();
+                logger.info( "Health inspection client initialized for KC health grades" );
+            except Exception as e:
+                logger.warning( f"Could not initialize health inspection client: {e}" );
                 
         logger.info( f"Google Places client initialized (region: {region}, rate_limit: {rate_limit_per_second} req/s)" );
 
@@ -251,12 +271,10 @@ class GooglePlacesClient:
                 return None;
                 
         except requests.RequestException as e:
-            # Check if this is a permission error for new API
+            # Check if this is a permission error (403) - use mock data
             if hasattr( e, 'response' ) and e.response.status_code == 403:
-                error_msg = e.response.text if hasattr( e.response, 'text' ) else str( e );
-                if 'Places API (New)' in error_msg:
-                    logger.warning( f"Places API (New) not enabled. Using mock data for testing. Enable at: https://console.developers.google.com/apis/api/places.googleapis.com/overview" );
-                    return self._create_mock_place_id( business_name, address );
+                logger.warning( f"Google Places API not available (403 Forbidden). Using mock data for testing." );
+                return self._create_mock_place_id( business_name, address );
             
             self._handle_api_error( e, f"search_place({business_name})" );
             raise;
@@ -300,12 +318,10 @@ class GooglePlacesClient:
                 return None;
                 
         except requests.RequestException as e:
-            # Check if this is a permission error for new API
+            # Check if this is a permission error (403) - use mock data
             if hasattr( e, 'response' ) and e.response.status_code == 403:
-                error_msg = e.response.text if hasattr( e.response, 'text' ) else str( e );
-                if 'Places API (New)' in error_msg:
-                    logger.warning( f"Places API (New) not enabled. Using mock data for testing." );
-                    return self._create_mock_place_data( place_id );
+                logger.warning( f"Google Places API not available (403 Forbidden). Using mock data for testing." );
+                return self._create_mock_place_data( place_id );
             
             self._handle_api_error( e, f"get_place_details({place_id})" );
             raise;
@@ -348,12 +364,19 @@ class GooglePlacesClient:
         """Parse Google Places API result into structured PlaceData."""
         data = PlaceData();
         
-        # Basic information
-        data.place_id = place_result.get( 'place_id' );
-        data.name = place_result.get( 'name' );
-        data.formatted_address = place_result.get( 'formatted_address' );
+        # Basic information (new API v1 field names)
+        data.place_id = place_result.get( 'id' );  # Changed from 'place_id' to 'id'
         
-        # Rating and reviews
+        # Handle displayName object
+        display_name = place_result.get( 'displayName', {} );
+        if isinstance( display_name, dict ):
+            data.name = display_name.get( 'text' );  # Changed from 'name' to 'displayName.text'
+        else:
+            data.name = display_name;  # Fallback if it's a string
+            
+        data.formatted_address = place_result.get( 'formattedAddress' );  # Changed from 'formatted_address' to 'formattedAddress'
+        
+        # Rating and reviews (new API v1 field names)
         data.rating = place_result.get( 'rating' );
         data.user_ratings_total = place_result.get( 'userRatingCount' );
         data.price_level = self._convert_price_level( place_result.get( 'priceLevel' ) );
@@ -396,7 +419,13 @@ class GooglePlacesClient:
     def _determine_cuisine_type( self, place_result: Dict ) -> Optional[str]:
         """Determine primary cuisine type from place types and name."""
         types = place_result.get( 'types', [] );
-        name = place_result.get( 'name', '' ).lower();
+        
+        # Get name from displayName object (new API v1)
+        display_name = place_result.get( 'displayName', {} );
+        if isinstance( display_name, dict ):
+            name = display_name.get( 'text', '' ).lower();
+        else:
+            name = str( display_name ).lower() if display_name else '';
         
         # Map Google types to cuisine categories
         cuisine_mapping = {
@@ -827,7 +856,7 @@ class GooglePlacesClient:
 
     def enrich_restaurant_data( self, business_name: str, address: str ) -> Optional[PlaceData]:
         """
-        Complete workflow to enrich restaurant data from Google Places.
+        Complete workflow to enrich restaurant data from Google Places and health inspections.
         
         Args:
             business_name: Name of the restaurant
@@ -850,6 +879,23 @@ class GooglePlacesClient:
             if not place_data:
                 logger.warning( f"No details available for place_id: {place_id}" );
                 return None;
+            
+            # Step 3: Fetch health inspection grade
+            if self.health_inspection_client:
+                try:
+                    health_grade = self.health_inspection_client.get_health_grade( business_name, address );
+                    if health_grade:
+                        place_data.health_inspection_grade = health_grade.letter_grade;
+                        place_data.health_avg_critical = health_grade.average_critical;
+                        place_data.health_avg_noncritical = health_grade.average_noncritical;
+                        place_data.health_total_inspections = health_grade.total_inspections;
+                        place_data.health_last_inspection_date = health_grade.last_inspection_date;
+                        place_data.health_grade_explanation = health_grade.grade_explanation;
+                        logger.debug( f"Added health grade {health_grade.letter_grade} for {business_name}" );
+                    else:
+                        logger.debug( f"No health inspection data found for {business_name}" );
+                except Exception as e:
+                    logger.warning( f"Failed to fetch health inspection data for {business_name}: {e}" );
                 
             logger.info( f"Successfully enriched data for {business_name}" );
             return place_data;

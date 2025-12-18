@@ -185,6 +185,7 @@ class DatabaseManager:
                 establishment_name TEXT,
                 address TEXT,
                 inspection_date TEXT,
+                inspection_date_range TEXT,  -- Store date range as text (e.g. "Nov. 12 to 18")
                 inspection_type TEXT,
                 critical_violations INTEGER,
                 non_critical_violations INTEGER,
@@ -214,6 +215,12 @@ class DatabaseManager:
         cursor.execute('''
             CREATE INDEX IF NOT EXISTS idx_google_place_id 
             ON food_businesses(google_place_id)
+        ''')
+        
+        # Create unique index to prevent duplicates for same restaurant and date range
+        cursor.execute('''
+            CREATE UNIQUE INDEX IF NOT EXISTS idx_inspection_unique 
+            ON health_inspections(establishment_name, inspection_date_range)
         ''')
         
         self.sqlite_conn.commit()

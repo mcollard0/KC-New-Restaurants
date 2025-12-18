@@ -58,7 +58,7 @@ class ExaminerScraper:
         if self.playwright:
             self.playwright.stop()
 
-    def random_delay(self, min_seconds=2, max_seconds=5):
+    def random_delay(self, min_seconds=7, max_seconds=12):
         """Sleep for a random amount of time to mimic human behavior"""
         delay = random.uniform(min_seconds, max_seconds)
         logger.info(f"Waiting {delay:.2f}s...")
@@ -80,18 +80,18 @@ class ExaminerScraper:
 
             logger.info(f"Navigating to {self.login_url}")
             self.page.goto(self.login_url)
-            self.random_delay(2, 4)
+            self.random_delay(7, 10)
             
             # Wait for form
             self.page.wait_for_selector("#user_login")
-            self.random_delay(1, 2)
+            self.random_delay(7, 9)
             
             # Fill credentials with typing delay
             logger.info("Filling credentials...")
-            self.page.type("#user_login", self.username, delay=random.randint(50, 150))
-            self.random_delay(0.5, 1.5)
-            self.page.type("#user_pass", self.password, delay=random.randint(50, 150))
-            self.random_delay(1, 2)
+            self.page.type("#user_login", self.username, delay=random.randint(100, 200))
+            self.random_delay(7, 9)
+            self.page.type("#user_pass", self.password, delay=random.randint(100, 200))
+            self.random_delay(7, 10)
             
             # Click login with delay
             logger.info("Submitting login form...")
@@ -151,7 +151,7 @@ class ExaminerScraper:
         url = f"{self.base_url}/category/news/"
         logger.info(f"Scanning {url}")
         
-        self.random_delay(3, 6)
+        self.random_delay(7, 12)
         
         articles = []
         try:
@@ -194,7 +194,7 @@ class ExaminerScraper:
                     logger.error(f"Failed to inspect page after error: {dump_e}")
             
             # Wait a bit for any client-side redirects or checks
-            self.random_delay(3, 5)
+            self.random_delay(7, 10)
             
             # Dump content for debugging
             if self.debug_mode:
@@ -244,7 +244,7 @@ class ExaminerScraper:
     def fetch_article_content(self, url: str) -> Optional[str]:
         """Fetch content of a single article"""
         logger.info(f"Fetching article: {url}")
-        self.random_delay(3, 6)
+        self.random_delay(7, 12)
         
         try:
             self.page.goto(url, wait_until="domcontentloaded", timeout=60000)

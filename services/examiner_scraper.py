@@ -9,6 +9,7 @@ import re
 import logging
 import random
 import time
+import sqlite3
 from datetime import datetime
 from typing import List, Dict, Optional
 from playwright.sync_api import sync_playwright
@@ -88,9 +89,9 @@ class ExaminerScraper:
             
             # Fill credentials with typing delay
             logger.info("Filling credentials...")
-            self.page.type("#user_login", self.username, delay=random.randint(100, 200))
+            self.page.type("#user_login", self.username, delay=random.randint(100, 150))
             self.random_delay(7, 9)
-            self.page.type("#user_pass", self.password, delay=random.randint(100, 200))
+            self.page.type("#user_pass", self.password, delay=random.randint(100, 150))
             self.random_delay(7, 10)
             
             # Click login with delay
@@ -212,12 +213,16 @@ class ExaminerScraper:
                     
                 # Regex for "Health Inspection" or similar
                 if re.search(r'health\s*inspection', title, re.IGNORECASE):
+                    # Extract date range from title if present (e.g., "Nov. 12 to 18")
+                    date_range_match = re.search(r'(\w+\.?\s+\d+\s+(?:to|-|through)\s+\d+)', title, re.IGNORECASE)
+                    date_range = date_range_match.group(1) if date_range_match else datetime.now().strftime('%Y-%m-%d')
+                    
                     # Dedup
                     if not any(a['url'] == href for a in articles):
                         articles.append({
                             'title': title,
                             'url': href,
-                            'date': datetime.now().strftime('%Y-%m-%d') # Default
+                            'date_range': date_range
                         })
             
             logger.info(f"Found {len(articles)} health inspection articles")
@@ -270,26 +275,26 @@ class ExaminerScraper:
                 self.dump_html(html_content, f"article_{safe_name}.html")
                 logger.info(f"--- RAW HTML SNIPPET (First 1000 chars) ---\n{html_content[:1000]}\n------------------------------------------")
             
-            # Look for content
-            # Try standard WordPress content areas
+            # Look for content - but get HTML first to preserve structure
             content_selectors = [".entry-content", "article", ".post-content"]
             
-            content_text = ""
+            content_html = ""
             for selector in content_selectors:
                 element = self.page.query_selector(selector)
                 if element:
-                    content_text = element.inner_text()
+                    # Get HTML to preserve structure for better parsing
+                    content_html = self.page.evaluate(f"document.querySelector('{selector}').innerHTML")
                     break
             
-            if not content_text:
-                logger.warning("Specific content area not found, using full page text")
-                content_text = self.page.inner_text("body")
+            if not content_html:
+                logger.warning("Specific content area not found, using full page HTML")
+                content_html = self.page.content()
             
-            if not content_text:
-                logger.warning("Could not find any text content")
+            if not content_html:
+                logger.warning("Could not find any content")
                 return None
                 
-            return content_text
+            return content_html
             
         except Exception as e:
             logger.error(f"Error fetching article {url}: {e}")
@@ -301,9 +306,21 @@ class ExaminerScraper:
         """
         inspections = []
         
-        # Simplify text: normalize whitespace but keep newlines for line-based parsing
+        # First, preserve line breaks from HTML tags before stripping them
+        # Replace block-level tags with newlines
+        text = re.sub(r'</p>', '\n', text, flags=re.IGNORECASE)
+        text = re.sub(r'<br\s*/?>', '\n', text, flags=re.IGNORECASE)
+        text = re.sub(r'</div>', '\n', text, flags=re.IGNORECASE)
+        text = re.sub(r'</li>', '\n', text, flags=re.IGNORECASE)
+        text = re.sub(r'</h[1-6]>', '\n\n', text, flags=re.IGNORECASE)
+        
+        # Now strip all remaining HTML tags
+        text = re.sub(r'<[^>]+>', '', text)
+        
+        # Normalize whitespace
         clean_text = re.sub(r'\xa0', ' ', text)
         clean_text = re.sub(r'\r', '', clean_text)
+        clean_text = re.sub(r'\n{3,}', '\n\n', clean_text)  # Collapse excessive newlines
         
         # Strategy 1: Look for explicit "X critical, Y non-critical" summaries
         # Pattern: "Name, Address: X critical... Y non-critical"
@@ -474,7 +491,7 @@ class ExaminerScraper:
             
         return None
 
-    def save_inspections(self, inspections: List[Dict], source_url: str):
+    def save_inspections(self, inspections: List[Dict], source_url: str, date_range: str = None):
         """Save inspections to database"""
         if not self.db_manager:
             return
@@ -484,36 +501,43 @@ class ExaminerScraper:
         
         count = 0
         for insp in inspections:
-            # Check if duplicate (same name, date, violations)
-            # We don't have exact date in regex yet, using import date
-            cursor.execute('''
-                SELECT id FROM health_inspections 
-                WHERE establishment_name = ? AND source_url = ?
-            ''', (insp['establishment_name'], source_url))
+            # Check if duplicate (same name and date range)
+            inspection_date_range = date_range or insp.get('inspection_date_text', datetime.now().strftime('%Y-%m-%d'))
             
-            if cursor.fetchone():
-                continue # Skip duplicate
-            
-            # Find restaurant ID
-            restaurant_id = self.link_to_restaurant(insp)
-            
-            cursor.execute('''
-                INSERT INTO health_inspections 
-                (establishment_name, address, critical_violations, non_critical_violations, 
-                 violations_desc, source_url, inspection_type, inspection_date, restaurant_id)
-                VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-            ''', (
-                insp['establishment_name'],
-                insp['address'],
-                insp['critical_violations'],
-                insp['non_critical_violations'],
-                insp['violations_desc'],
-                source_url,
-                insp['inspection_type'],
-                datetime.now().strftime('%Y-%m-%d'), # Approximation
-                restaurant_id
-            ))
-            count += 1
+            try:
+                cursor.execute('''
+                    SELECT id FROM health_inspections 
+                    WHERE establishment_name = ? AND inspection_date_range = ?
+                ''', (insp['establishment_name'], inspection_date_range))
+                
+                if cursor.fetchone():
+                    logger.debug(f"Skipping duplicate: {insp['establishment_name']} for {inspection_date_range}")
+                    continue # Skip duplicate
+                
+                # Find restaurant ID
+                restaurant_id = self.link_to_restaurant(insp)
+                
+                cursor.execute('''
+                    INSERT INTO health_inspections 
+                    (establishment_name, address, critical_violations, non_critical_violations, 
+                     violations_desc, source_url, inspection_type, inspection_date, inspection_date_range, restaurant_id)
+                    VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ''', (
+                    insp['establishment_name'],
+                    insp['address'],
+                    insp['critical_violations'],
+                    insp['non_critical_violations'],
+                    insp['violations_desc'],
+                    source_url,
+                    insp['inspection_type'],
+                    datetime.now().strftime('%Y-%m-%d'), # Approximation
+                    inspection_date_range,
+                    restaurant_id
+                ))
+                count += 1
+            except sqlite3.IntegrityError as e:
+                logger.debug(f"Integrity error (likely duplicate): {e}")
+                continue
         
         conn.commit()
         if self.debug_mode:
@@ -561,7 +585,7 @@ class ExaminerScraper:
                     for insp in inspections:
                             print(f"    - {insp['establishment_name']} ({insp['address']}): {insp['critical_violations']} crit / {insp['non_critical_violations']} non-crit")
                     
-                    self.save_inspections(inspections, article['url'])
+                    self.save_inspections(inspections, article['url'], article.get('date_range'))
         finally:
             self.close_browser()
 

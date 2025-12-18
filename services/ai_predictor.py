@@ -301,27 +301,69 @@ class RestaurantAIPredictor:
         return predicted_rating, confidence_with_percentage, similar_restaurants;
     
     def predict_grade( self, rating: float ) -> str:
-        """Convert predicted rating to letter grade"""
+        """
+        Convert predicted rating to letter grade with spread-out scale.
+        Uses distance from nearest whole number for +/- modifiers.
+        
+        Scale:
+        - 4.5+: A range (excellent)
+        - 4.0-4.5: B range (good)
+        - 3.3-4.0: C range (average)
+        - 2.0-3.3: D range (below average)
+        - <2.0: F (poor)
+        """
+        # Handle poor ratings
+        if rating < 2.0:
+            return 'F';
+        
+        # Determine base grade
         if rating >= 4.5:
-            return 'A+';
-        elif rating >= 4.2:
-            return 'A';
-        elif rating >= 3.8:
-            return 'A-';
-        elif rating >= 3.5:
-            return 'B+';
-        elif rating >= 3.2:
-            return 'B';
-        elif rating >= 2.8:
-            return 'B-';
-        elif rating >= 2.5:
-            return 'C+';
-        elif rating >= 2.0:
-            return 'C';
-        elif rating >= 1.5:
-            return 'C-';
+            base = 'A';
+            threshold = 4.5;
+        elif rating >= 4.0:
+            base = 'B';
+            threshold = 4.0;
+        elif rating >= 3.3:
+            base = 'C';
+            threshold = 3.3;
+        else:  # 2.0 - 3.3
+            base = 'D';
+            threshold = 2.0;
+        
+        # Calculate distance from threshold to next grade
+        if base == 'A':
+            range_size = 0.5;  # 4.5 to 5.0
+            position_in_range = rating - threshold;
+        elif base == 'B':
+            range_size = 0.5;  # 4.0 to 4.5
+            position_in_range = rating - threshold;
+        elif base == 'C':
+            range_size = 0.7;  # 3.3 to 4.0
+            position_in_range = rating - threshold;
+        else:  # D
+            range_size = 1.3;  # 2.0 to 3.3
+            position_in_range = rating - threshold;
+        
+        # Determine +/- modifier based on position in range
+        # Bottom third gets no modifier, middle third gets +, top third goes to next grade with -
+        relative_position = position_in_range / range_size;
+        
+        if relative_position < 0.33:
+            modifier = '';
+        elif relative_position < 0.67:
+            modifier = '+';
         else:
-            return 'D';
+            # Top third - should be next grade with -
+            if base == 'D':
+                return 'C-';
+            elif base == 'C':
+                return 'B-';
+            elif base == 'B':
+                return 'A-';
+            else:  # A
+                return 'A+';  # Can't go higher
+        
+        return base + modifier;
     
     def retrain_prediction( self, features: PredictionFeatures, actual_rating: float ) -> Dict[str, Any]:
         """

@@ -8,6 +8,8 @@ import os
 import sqlite3
 import json
 import logging
+import ssl
+import certifi
 from typing import Dict, List, Optional, Any, Union
 from datetime import datetime
 from pymongo import MongoClient
@@ -51,7 +53,26 @@ class DatabaseManager:
             return
             
         try:
-            self.mongo_client = MongoClient(self.mongodb_uri)
+            # Configure SSL/TLS for MongoDB Atlas connections
+            try:
+                # First attempt: Use certifi CA bundle with TLS
+                self.mongo_client = MongoClient(
+                    self.mongodb_uri,
+                    tls=True,
+                    tlsCAFile=certifi.where(),
+                    serverSelectionTimeoutMS=10000,
+                    tlsAllowInvalidCertificates=False
+                )
+            except Exception as ssl_error:
+                logger.warning(f"Standard TLS connection failed, trying fallback with relaxed settings: {ssl_error}")
+                # Second attempt: Allow invalid certificates (fallback for systems with old SSL)
+                self.mongo_client = MongoClient(
+                    self.mongodb_uri,
+                    tls=True,
+                    serverSelectionTimeoutMS=10000,
+                    tlsAllowInvalidCertificates=True
+                )
+            
             # Test connection
             self.mongo_client.server_info()
             
@@ -139,12 +160,38 @@ class DatabaseManager:
                 ai_similar_restaurants_count INTEGER,
                 ai_prediction_explanation TEXT,
                 
+                -- Health inspection data
+                health_inspection_grade TEXT,
+                health_avg_critical REAL,
+                health_avg_noncritical REAL,
+                health_total_inspections INTEGER,
+                health_last_inspection_date TEXT,
+                health_grade_explanation TEXT,
+                
                 -- Metadata
                 enriched_date TEXT,
                 api_fields_retrieved TEXT,  -- JSON array
                 last_updated TEXT,
                 
                 UNIQUE(business_name, address)
+            )
+        ''')
+        
+        # Create health_inspections table
+        cursor.execute('''
+            CREATE TABLE IF NOT EXISTS health_inspections (
+                id INTEGER PRIMARY KEY AUTOINCREMENT,
+                restaurant_id INTEGER,  -- Link to food_businesses.id
+                establishment_name TEXT,
+                address TEXT,
+                inspection_date TEXT,
+                inspection_type TEXT,
+                critical_violations INTEGER,
+                non_critical_violations INTEGER,
+                violations_desc TEXT,
+                source_url TEXT,
+                created_at TEXT DEFAULT CURRENT_TIMESTAMP,
+                FOREIGN KEY(restaurant_id) REFERENCES food_businesses(id)
             )
         ''')
         
@@ -285,6 +332,13 @@ class DatabaseManager:
         
         return cursor.rowcount > 0
     
+    def find(self, query: Dict[str, Any] = None, limit: int = 0):
+        """
+        MongoDB-compatible find method (returns iterable)
+        Used by AI predictor and other components expecting MongoDB interface
+        """
+        return self.find_documents(query, limit)
+    
     def find_documents(self, query: Dict[str, Any] = None, limit: int = 0) -> List[Dict[str, Any]]:
         """
         Find documents from primary database (MongoDB preferred, SQLite fallback)
@@ -320,10 +374,10 @@ class DatabaseManager:
         return []
     
     def _find_sqlite_documents(self, query: Dict[str, Any], limit: int) -> List[Dict[str, Any]]:
-        """Find documents in SQLite database"""
+        """Find documents in SQLite database with MongoDB-style operators"""
         cursor = self.sqlite_conn.cursor()
         
-        # Build WHERE clause from query (simplified)
+        # Build WHERE clause from query (with MongoDB operator support)
         where_parts = []
         params = []
         
@@ -332,6 +386,32 @@ class DatabaseManager:
                 if field == 'deleted' and isinstance(value, bool):
                     where_parts.append(f"{field} = ?")
                     params.append(1 if value else 0)
+                elif isinstance(value, dict):
+                    # Handle MongoDB operators
+                    for operator, op_value in value.items():
+                        if operator == '$exists':
+                            if op_value:
+                                where_parts.append(f"{field} IS NOT NULL")
+                            else:
+                                where_parts.append(f"{field} IS NULL")
+                        elif operator == '$ne':
+                            if op_value is None:
+                                where_parts.append(f"{field} IS NOT NULL")
+                            else:
+                                where_parts.append(f"({field} IS NULL OR {field} != ?)")
+                                params.append(op_value)
+                        elif operator == '$gte':
+                            where_parts.append(f"{field} >= ?")
+                            params.append(op_value)
+                        elif operator == '$lte':
+                            where_parts.append(f"{field} <= ?")
+                            params.append(op_value)
+                        elif operator == '$gt':
+                            where_parts.append(f"{field} > ?")
+                            params.append(op_value)
+                        elif operator == '$lt':
+                            where_parts.append(f"{field} < ?")
+                            params.append(op_value)
                 elif isinstance(value, (str, int, float)):
                     where_parts.append(f"{field} = ?")
                     params.append(value)
@@ -408,8 +488,14 @@ class DatabaseManager:
         
         return 0
     
-    def delete_many(self, query: Dict[str, Any] = None) -> int:
+    def delete_many(self, query: Dict[str, Any] = None):
         """Delete documents from both databases"""
+        
+        # Create a result object compatible with pymongo
+        class DeleteResult:
+            def __init__(self, count):
+                self.deleted_count = count
+        
         deleted_count = 0
         
         # Delete from MongoDB
@@ -448,12 +534,14 @@ class DatabaseManager:
                 self.sqlite_conn.commit()
                 
                 sqlite_deleted = cursor.rowcount
+                if sqlite_deleted > 0:
+                    deleted_count = sqlite_deleted
                 logger.info(f"Deleted {sqlite_deleted} documents from SQLite")
                 
             except Exception as e:
                 logger.error(f"Failed to delete from SQLite: {e}")
         
-        return deleted_count
+        return DeleteResult(deleted_count)
     
     def get_collection(self) -> Optional[Union[Collection, 'DatabaseManager']]:
         """

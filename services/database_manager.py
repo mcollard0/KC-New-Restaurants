@@ -196,6 +196,26 @@ class DatabaseManager:
             )
         ''')
         
+        # Schema migration for existing DBs (CREATE TABLE IF NOT EXISTS does not add columns)
+        try:
+            cursor.execute("PRAGMA table_info(health_inspections)")
+            existing_columns = [row[1] for row in cursor.fetchall()]
+            
+            if 'inspection_date_range' not in existing_columns:
+                logger.info("Migrating SQLite: adding health_inspections.inspection_date_range")
+                cursor.execute("ALTER TABLE health_inspections ADD COLUMN inspection_date_range TEXT")
+        except Exception as e:
+            logger.warning(f"SQLite schema migration check failed for health_inspections: {e}")
+        
+        # Create unique index to prevent duplicates for same restaurant and date range
+        try:
+            cursor.execute('''
+                CREATE UNIQUE INDEX IF NOT EXISTS idx_inspection_unique
+                ON health_inspections(establishment_name, inspection_date_range)
+            ''')
+        except Exception as e:
+            logger.warning(f"SQLite index creation failed for health_inspections: {e}")
+        
         # Create indexes for performance
         cursor.execute('''
             CREATE INDEX IF NOT EXISTS idx_business_name 
@@ -215,12 +235,6 @@ class DatabaseManager:
         cursor.execute('''
             CREATE INDEX IF NOT EXISTS idx_google_place_id 
             ON food_businesses(google_place_id)
-        ''')
-        
-        # Create unique index to prevent duplicates for same restaurant and date range
-        cursor.execute('''
-            CREATE UNIQUE INDEX IF NOT EXISTS idx_inspection_unique 
-            ON health_inspections(establishment_name, inspection_date_range)
         ''')
         
         self.sqlite_conn.commit()

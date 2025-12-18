@@ -46,6 +46,16 @@ class DatabaseStatusChecker:
             return True;
         except Exception as e:
             logger.error( f"Failed to connect to MongoDB: {e}" );
+            print( "\n❌ MONGODB CONNECTION FAILED" );
+            print( "---------------------------------------------------" );
+            print( "Possible causes:" );
+            print( "1. IP Address Restriction (Most likely)" );
+            print( "2. Cluster is paused (Free tier)" );
+            print( "---------------------------------------------------" );
+            print( "FIX INSTRUCTIONS:" );
+            print( "Please read 'FIX_MONGODB.md' for step-by-step instructions." );
+            print( "You likely need to whitelist IP: 136.33.18.34" );
+            print( "---------------------------------------------------\n" );
             return False;
             
     def analyze_current_schema( self ) -> Dict:

@@ -457,7 +457,7 @@ class KCRestaurant:
 
         try: 
             logging.debug( f"Checking if exists: {business_name} at {address} ({business_type})" );
-            existing_count = self.collection.count_documents( query_filter, limit=1 );
+            existing_count = self.collection.count_documents( query_filter );
             return existing_count > 0;
         except Exception as e:
             logging.error( f"Error checking restaurant in DB: {e}" );
@@ -1055,9 +1055,9 @@ def main():
         help='Run in dry-run mode - no database modifications will be performed (safe testing mode)'
     );
     parser.add_argument(
-        '--no-enrichment',
+        '--scrape-examiner',
         action='store_true',
-        help='Disable Google Places enrichment (faster processing, basic data only)'
+        help='Scrape health inspections from The Independence Examiner'
     );
     
     args = parser.parse_args();
@@ -1085,6 +1085,23 @@ def main():
         'recipient_email': os.getenv( "gmail_recipient_email", "" ),      # Where to send alerts
         'email_subject': f"KC Food Business Alert - {datetime.now().strftime('%Y-%m-%d')}"
     };
+
+    # Handle Examiner Scraping
+    if args.scrape_examiner:
+        try:
+            from services.examiner_scraper import ExaminerScraper
+            # Initialize DB manager specifically for scraper
+            db_manager = None
+            if MONGODB_AVAILABLE and DATABASE_MANAGER_AVAILABLE:
+                db_manager = DatabaseManager(mongodb_uri=CONFIG['mongodb_uri'])
+            
+            scraper = ExaminerScraper(db_manager=db_manager, debug_mode=True)
+            scraper.run()
+            print("Examiner scraping completed.")
+            return # Exit after scraping unless combined with other flags? Usually a separate task.
+        except Exception as e:
+            logger.error(f"Error running Examiner scraper: {e}")
+            return
 
     runner = KCRestaurant( CONFIG[ 'mongodb_uri' ], CONFIG[ 'database_name' ], CONFIG[ 'collection_name' ], dry_run=args.dry_run, enable_enrichment=not args.no_enrichment );
     

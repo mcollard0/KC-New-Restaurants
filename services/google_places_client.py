@@ -756,6 +756,81 @@ class GooglePlacesClient:
         # Cap at reasonable bounds
         return min( 5.0, max( 1.5, predicted ) );
     
+    def _adjust_rating_for_health( self, rating: float, health_grade: Optional[str], 
+                                    avg_critical: Optional[float], 
+                                    last_inspection_date: Optional[str] ) -> float:
+        """
+        Adjust AI predicted rating based on health inspection results.
+        Poor health scores reduce the rating, with recent violations weighted more heavily.
+        
+        Args:
+            rating: Base AI predicted rating
+            health_grade: Health inspection letter grade (A+ to F)
+            avg_critical: Average critical violations per inspection
+            last_inspection_date: Date of last inspection (MM/DD/YYYY)
+            
+        Returns:
+            Adjusted rating
+        """
+        if not health_grade:
+            return rating;  # No health data, return original rating
+        
+        # Calculate recency weight (more recent = higher weight)
+        recency_weight = 1.0;  # Default weight
+        if last_inspection_date:
+            try:
+                from datetime import datetime;
+                last_inspection = datetime.strptime( last_inspection_date, "%m/%d/%Y" );
+                days_ago = ( datetime.now() - last_inspection ).days;
+                
+                # Decay weight over time: full weight for recent (< 180 days), half weight at 2 years
+                if days_ago < 180:
+                    recency_weight = 1.0;
+                elif days_ago < 365:
+                    recency_weight = 0.8;
+                elif days_ago < 730:  # 2 years
+                    recency_weight = 0.5;
+                else:
+                    recency_weight = 0.3;  # Older than 2 years, minimal impact
+                    
+                logger.debug( f"Health inspection {days_ago} days ago, recency weight: {recency_weight:.2f}" );
+            except Exception as e:
+                logger.debug( f"Could not parse inspection date: {e}" );
+        
+        # Calculate health penalty based on grade
+        health_penalty = 0.0;
+        
+        # Map health grades to penalties
+        if health_grade.startswith( 'F' ) or health_grade.startswith( 'G' ):
+            health_penalty = 1.5;  # Severe penalty for F/G
+        elif health_grade.startswith( 'D' ):
+            health_penalty = 1.0;  # Major penalty for D
+        elif health_grade.startswith( 'C' ) and not health_grade.endswith( '+' ):
+            health_penalty = 0.5;  # Moderate penalty for C/C-
+        elif health_grade == 'C+':
+            health_penalty = 0.2;  # Small penalty for C+
+        elif health_grade.startswith( 'B' ) and health_grade != 'B+':
+            health_penalty = 0.1;  # Minor penalty for B/B-
+        # A range gets no penalty
+        
+        # Additional penalty for high critical violations
+        if avg_critical and avg_critical >= 2.0:
+            health_penalty += 0.3;  # Extra penalty for 2+ critical violations average
+        elif avg_critical and avg_critical >= 1.0:
+            health_penalty += 0.15;  # Small extra penalty for 1+ critical
+        
+        # Apply penalty with recency weight
+        adjusted_penalty = health_penalty * recency_weight;
+        adjusted_rating = rating - adjusted_penalty;
+        
+        # Don't go below 1.0
+        adjusted_rating = max( 1.0, adjusted_rating );
+        
+        if adjusted_penalty > 0.1:
+            logger.info( f"Health grade {health_grade} reduced rating by {adjusted_penalty:.2f} (from {rating:.2f} to {adjusted_rating:.2f})" );
+        
+        return adjusted_rating;
+    
     def _predict_grade( self, rating: Optional[float] ) -> Optional[str]:
         """Convert predicted rating to letter grade using AI predictor or fallback."""
         if not rating:
@@ -892,6 +967,21 @@ class GooglePlacesClient:
                         place_data.health_last_inspection_date = health_grade.last_inspection_date;
                         place_data.health_grade_explanation = health_grade.grade_explanation;
                         logger.debug( f"Added health grade {health_grade.letter_grade} for {business_name}" );
+                        
+                        # Step 4: Adjust AI rating based on health inspection results
+                        if place_data.ai_predicted_rating:
+                            original_rating = place_data.ai_predicted_rating;
+                            place_data.ai_predicted_rating = self._adjust_rating_for_health(
+                                place_data.ai_predicted_rating,
+                                health_grade.letter_grade,
+                                health_grade.average_critical,
+                                health_grade.last_inspection_date
+                            );
+                            # Recalculate grade based on adjusted rating
+                            place_data.ai_predicted_grade = self._predict_grade( place_data.ai_predicted_rating );
+                            
+                            if original_rating != place_data.ai_predicted_rating:
+                                logger.info( f"Adjusted AI rating for {business_name} from {original_rating:.2f} to {place_data.ai_predicted_rating:.2f} due to health grade {health_grade.letter_grade}" );
                     else:
                         logger.debug( f"No health inspection data found for {business_name}" );
                 except Exception as e:

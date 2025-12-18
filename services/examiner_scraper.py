@@ -276,15 +276,27 @@ class ExaminerScraper:
                 logger.info(f"--- RAW HTML SNIPPET (First 1000 chars) ---\n{html_content[:1000]}\n------------------------------------------")
             
             # Look for content - but get HTML first to preserve structure
-            content_selectors = [".entry-content", "article", ".post-content"]
+            # Use more specific selector for article content
+            content_selectors = [
+                ".entry-content.is-layout-flow",  # Most specific - actual article content
+                ".entry-content",
+                "article .entry-content",
+                ".post-content"
+            ]
             
             content_html = ""
             for selector in content_selectors:
-                element = self.page.query_selector(selector)
-                if element:
-                    # Get HTML to preserve structure for better parsing
-                    content_html = self.page.evaluate(f"document.querySelector('{selector}').innerHTML")
-                    break
+                try:
+                    element = self.page.query_selector(selector)
+                    if element:
+                        # Get HTML to preserve structure for better parsing
+                        content_html = self.page.evaluate(f"document.querySelector('{selector}').innerHTML")
+                        if content_html and len(content_html) > 100:
+                            logger.info(f"Found content using selector: {selector}")
+                            break
+                except Exception as e:
+                    logger.debug(f"Selector {selector} failed: {e}")
+                    continue
             
             if not content_html:
                 logger.warning("Specific content area not found, using full page HTML")
@@ -313,6 +325,16 @@ class ExaminerScraper:
         text = re.sub(r'</div>', '\n', text, flags=re.IGNORECASE)
         text = re.sub(r'</li>', '\n', text, flags=re.IGNORECASE)
         text = re.sub(r'</h[1-6]>', '\n\n', text, flags=re.IGNORECASE)
+        text = re.sub(r'</ul>', '\n', text, flags=re.IGNORECASE)
+        
+        # Replace HTML entities
+        text = text.replace('&rsquo;', "'")
+        text = text.replace('&#8217;', "'")
+        text = text.replace('&nbsp;', ' ')
+        text = text.replace('&amp;', '&')
+        text = text.replace('&lt;', '<')
+        text = text.replace('&gt;', '>')
+        text = text.replace('&quot;', '"')
         
         # Now strip all remaining HTML tags
         text = re.sub(r'<[^>]+>', '', text)
@@ -349,70 +371,58 @@ class ExaminerScraper:
                 inspections.append(inspection)
             return inspections
             
-        # Strategy 2: Line-by-line parsing for "Name: Address, inspected Date" format
-        logger.info("No summary matches found, trying detailed format parsing")
+        # Strategy 2: Parse based on HTML structure
+        # Restaurant names are in <strong> tags followed by address and "inspected" date
+        logger.info("No summary matches found, trying HTML structure-based parsing")
         
         # Pattern: "Name: Address, inspected Date"
-        # e.g. "Wendy’s: 310 NW Missouri 7, inspected Nov. 12."
+        # e.g. "Wendy's: 310 NW Missouri 7, inspected Nov. 12."
         header_pattern = re.compile(
-            r'^(?P<name>.+?):\s+(?P<address>.+?),\s+inspected\s+(?P<date>.*?)(?:\.|$)',
-            re.IGNORECASE
+            r'^(.+?):[ \t]+(.+?),[ \t]+inspected[ \t]+(.+?)\.$',
+            re.IGNORECASE | re.MULTILINE
         )
         
-        lines = clean_text.split('\n')
-        current_inspection = None
-        current_violations = []
-        
-        for line in lines:
-            line = line.strip()
-            if not line:
+        # Find all restaurant entries using the pattern
+        for match in header_pattern.finditer(clean_text):
+            name = match.group(1).strip()
+            address = match.group(2).strip()
+            date = match.group(3).strip()
+            
+            # Skip headers/noise
+            if "Health Inspections" in name or len(name) > 100:
                 continue
-                
-            # Check if this line starts a new restaurant
-            match = header_pattern.match(line)
-            if match:
-                # Save previous inspection if exists
-                if current_inspection:
-                    current_inspection['violations_desc'] = "\n".join(current_violations)
-                    # Count violations (approximate)
-                    # Count lines that start with "Observed" or seem to be descriptions
-                    viol_count = len([v for v in current_violations if v])
-                    # Simple heuristic: "Corrected" usually implies critical/priority
-                    crit_count = len([v for v in current_violations if "Corrected" in v])
-                    current_inspection['critical_violations'] = crit_count
-                    current_inspection['non_critical_violations'] = max(0, viol_count - crit_count)
-                    inspections.append(current_inspection)
-                
-                # Start new inspection
-                name = match.group('name').strip()
-                # Filter out noise (e.g. "Jackson County Health Inspections: ...")
-                if "Health Inspections" in name or len(name) > 100:
-                    current_inspection = None
-                    current_violations = []
-                    continue
-                    
-                current_inspection = {
-                    'establishment_name': name,
-                    'address': match.group('address').strip(),
-                    'inspection_type': inspection_type,
-                    'inspection_date_text': match.group('date').strip()
-                }
-                current_violations = []
-            elif current_inspection:
-                # Append to current inspection's violations
-                # Skip some common UI text if it sneaks in
-                if line.upper() in ["LOGOUT", "HOME", "NEWS", "CONTACT US"]:
-                    continue
-                current_violations.append(line)
-        
-        # Save last inspection
-        if current_inspection:
-            current_inspection['violations_desc'] = "\n".join(current_violations)
-            viol_count = len([v for v in current_violations if v])
-            crit_count = len([v for v in current_violations if "Corrected" in v])
-            current_inspection['critical_violations'] = crit_count
-            current_inspection['non_critical_violations'] = max(0, viol_count - crit_count)
-            inspections.append(current_inspection)
+            
+            # Find violations after this restaurant entry
+            start_pos = match.end()
+            # Find next restaurant or end of text
+            next_match = header_pattern.search(clean_text, start_pos)
+            if next_match:
+                end_pos = next_match.start()
+            else:
+                end_pos = len(clean_text)
+            
+            # Extract violations text
+            violations_text = clean_text[start_pos:end_pos].strip()
+            
+            # Count violations
+            if violations_text.strip().lower().startswith('no violations'):
+                crit_count = 0
+                non_crit_count = 0
+            else:
+                violations = [line.strip() for line in violations_text.split('\n') if line.strip() and len(line.strip()) > 10]
+                crit_count = len([v for v in violations if 'Corrected' in v])
+                non_crit_count = max(0, len(violations) - crit_count)
+            
+            inspection = {
+                'establishment_name': name,
+                'address': address,
+                'inspection_type': inspection_type,
+                'inspection_date_text': date,
+                'critical_violations': crit_count,
+                'non_critical_violations': non_crit_count,
+                'violations_desc': violations_text
+            }
+            inspections.append(inspection)
             
         return inspections
 
@@ -569,7 +579,8 @@ class ExaminerScraper:
                         insp_type = "Jackson County"
                     elif "Blue Springs" in article['title']:
                         insp_type = "Blue Springs"
-                        
+                
+                # Parse the HTML content
                 inspections = self.parse_inspections(content, insp_type)
                 
                 if self.debug_mode:

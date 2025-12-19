@@ -6,7 +6,7 @@
 #
 
 # Set script directory and log paths
-SCRIPT_DIR="/media/michael/FASTESTARCHIVE/Archive/Programming/Python/KC New Restaurants"
+SCRIPT_DIR="/ARCHIVE/Programming/KC-New-Restaurants"
 LOG_DIR="$SCRIPT_DIR/log"
 SCRIPT_FILE="KC New Restaurants.py"
 

@@ -1060,6 +1060,12 @@ def main():
         help='Scrape health inspections from The Independence Examiner'
     );
     
+    parser.add_argument(
+        '--no-enrichment',
+        action='store_true',
+        help='Disable Google Places enrichment (saves API costs/time)'
+    );
+    
     args = parser.parse_args();
     
     # Display dry-run banner if enabled
